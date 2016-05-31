@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FLAnimatedImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +42,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4BCB949BA602F888C370F3890401CFE1</key>
+		<key>1A79BA86DB198181905CBBFC1F1E6701</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3DD074EDA35BC8A87CE959C6D296E12C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,17 +57,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>845AB9DAC06722400FDB878E50EA61AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C9859F505CF12E7540C39E977B3B3EE9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D061916B8EC027DBC3F872E3E80EE301</key>
+		<key>D67BAF520F2BE80412A4D7CD1D872D82</key>
 		<dict>
 			<key>primary</key>
 			<true/>

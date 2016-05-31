@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D061916B8EC027DBC3F872E3E80EE301'
+               BlueprintIdentifier = 'D67BAF520F2BE80412A4D7CD1D872D82'
                BlueprintName = 'SpaceCommander'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libSpaceCommander.a'>

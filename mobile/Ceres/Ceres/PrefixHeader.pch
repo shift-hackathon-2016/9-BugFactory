@@ -4,6 +4,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ObjectiveSugar/ObjectiveSugar.h>
+#import <FLAnimatedImage/FLAnimatedImage.h>
 
 #import "CEAPIClient.h"
 

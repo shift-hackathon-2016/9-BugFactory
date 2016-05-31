@@ -32,6 +32,9 @@
 		388808F31CFDA54700D68AFE /* CELocalKeychainStorageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808F21CFDA54700D68AFE /* CELocalKeychainStorageService.m */; };
 		388808FB1CFDA87200D68AFE /* CELocalDeviceUDIDProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808FA1CFDA87200D68AFE /* CELocalDeviceUDIDProvider.m */; };
 		388809001CFDA88D00D68AFE /* CELocalDeviceNotificationsTokenProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808FF1CFDA88D00D68AFE /* CELocalDeviceNotificationsTokenProvider.m */; };
+		388809041CFDAB0800D68AFE /* CEAuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388809031CFDAB0800D68AFE /* CEAuthenticationViewController.m */; };
+		388809091CFDB1A500D68AFE /* CEUserAuthenticationUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 388809081CFDB1A500D68AFE /* CEUserAuthenticationUseCase.m */; };
+		3888090F1CFDBC7B00D68AFE /* login.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3888090E1CFDBC7B00D68AFE /* login.gif */; };
 		77A58D38AC2A139890930E51 /* libPods-Ceres.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4354B7A8CCB9F75BA7F221B /* libPods-Ceres.a */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +98,11 @@
 		388808FC1CFDA87F00D68AFE /* CEDeviceNotificationsTokenProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEDeviceNotificationsTokenProvider.h; sourceTree = "<group>"; };
 		388808FE1CFDA88D00D68AFE /* CELocalDeviceNotificationsTokenProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CELocalDeviceNotificationsTokenProvider.h; sourceTree = "<group>"; };
 		388808FF1CFDA88D00D68AFE /* CELocalDeviceNotificationsTokenProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CELocalDeviceNotificationsTokenProvider.m; sourceTree = "<group>"; };
+		388809021CFDAB0800D68AFE /* CEAuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEAuthenticationViewController.h; sourceTree = "<group>"; };
+		388809031CFDAB0800D68AFE /* CEAuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEAuthenticationViewController.m; sourceTree = "<group>"; };
+		388809071CFDB1A500D68AFE /* CEUserAuthenticationUseCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEUserAuthenticationUseCase.h; sourceTree = "<group>"; };
+		388809081CFDB1A500D68AFE /* CEUserAuthenticationUseCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEUserAuthenticationUseCase.m; sourceTree = "<group>"; };
+		3888090E1CFDBC7B00D68AFE /* login.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = login.gif; sourceTree = "<group>"; };
 		8256A205A9242BD6CB3A49A7 /* Pods-Ceres.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ceres.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ceres/Pods-Ceres.release.xcconfig"; sourceTree = "<group>"; };
 		B9BA6EB06461DF84068F3F11 /* Pods-Ceres.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ceres.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ceres/Pods-Ceres.debug.xcconfig"; sourceTree = "<group>"; };
 		F4354B7A8CCB9F75BA7F221B /* libPods-Ceres.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ceres.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +141,7 @@
 		388808641CFD7DDD00D68AFE /* Ceres */ = {
 			isa = PBXGroup;
 			children = (
+				388809051CFDB18600D68AFE /* UseCase */,
 				388808CB1CFD97B500D68AFE /* UI */,
 				388808681CFD7DDD00D68AFE /* AppDelegate.h */,
 				388808691CFD7DDD00D68AFE /* AppDelegate.m */,
@@ -369,6 +378,7 @@
 		388808C81CFD979900D68AFE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3888090D1CFDBC6900D68AFE /* Gifs */,
 				388808C91CFD979900D68AFE /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -385,6 +395,7 @@
 		388808CC1CFD97BA00D68AFE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				388809011CFDAAF700D68AFE /* Authentication */,
 				388808CD1CFD97C000D68AFE /* Root */,
 			);
 			path = ViewControllers;
@@ -507,6 +518,40 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
+		388809011CFDAAF700D68AFE /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				388809021CFDAB0800D68AFE /* CEAuthenticationViewController.h */,
+				388809031CFDAB0800D68AFE /* CEAuthenticationViewController.m */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		388809051CFDB18600D68AFE /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				388809061CFDB19400D68AFE /* UserAuthentication */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		388809061CFDB19400D68AFE /* UserAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				388809071CFDB1A500D68AFE /* CEUserAuthenticationUseCase.h */,
+				388809081CFDB1A500D68AFE /* CEUserAuthenticationUseCase.m */,
+			);
+			path = UserAuthentication;
+			sourceTree = "<group>";
+		};
+		3888090D1CFDBC6900D68AFE /* Gifs */ = {
+			isa = PBXGroup;
+			children = (
+				3888090E1CFDBC7B00D68AFE /* login.gif */,
+			);
+			path = Gifs;
+			sourceTree = "<group>";
+		};
 		5BBB5D3B8FCA0D733D761C24 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,6 +631,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				388808CA1CFD979900D68AFE /* Assets.xcassets in Resources */,
+				3888090F1CFDBC7B00D68AFE /* login.gif in Resources */,
 				388808751CFD7DDD00D68AFE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,9 +708,11 @@
 				388808891CFD84F800D68AFE /* CEResourceRequestSerializer.m in Sources */,
 				388808A31CFD8D2E00D68AFE /* CEResourceNetworkService.m in Sources */,
 				388808E61CFDA3B300D68AFE /* CEDevice+CurrentDevice.m in Sources */,
+				388809091CFDB1A500D68AFE /* CEUserAuthenticationUseCase.m in Sources */,
 				388808BB1CFD8F7E00D68AFE /* CEObjectProperty.m in Sources */,
 				388808D01CFD97CE00D68AFE /* CERootViewController.m in Sources */,
 				388808851CFD816400D68AFE /* CEAPIClient.m in Sources */,
+				388809041CFDAB0800D68AFE /* CEAuthenticationViewController.m in Sources */,
 				3888086A1CFD7DDD00D68AFE /* AppDelegate.m in Sources */,
 				388808671CFD7DDD00D68AFE /* main.m in Sources */,
 				388808DF1CFD9E3F00D68AFE /* CEDevice.m in Sources */,

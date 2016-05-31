@@ -9,6 +9,7 @@ def commonPods
     pod 'SpaceCommander'
     pod 'ObjectiveSugar'
     pod 'Masonry'
+    pod 'FLAnimatedImage', '~> 1.0'
 end
 
 target 'Ceres' do

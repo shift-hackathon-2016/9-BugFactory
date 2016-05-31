@@ -8,6 +8,7 @@
 
 //providers
 #import "CELocalDeviceUDIDProvider.h"
+#import "CELocalDeviceNotificationsTokenProvider.h"
 
 @implementation CEContext
 
@@ -38,7 +39,8 @@
 + (NSArray <Class> *)providers
 {
     return @[
-             [CELocalDeviceUDIDProvider class]
+             [CELocalDeviceUDIDProvider class],
+             [CELocalDeviceNotificationsTokenProvider class]
              ];
 }
 

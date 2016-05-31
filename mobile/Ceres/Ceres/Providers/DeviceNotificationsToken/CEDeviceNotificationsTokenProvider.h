@@ -2,4 +2,6 @@
 
 @protocol CEDeviceNotificationsTokenProvider <NSObject>
 
+- (nullable NSString *)currentDeviceNotificationsToken;
+
 @end
