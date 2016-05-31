@@ -6,10 +6,13 @@
 #import "CENetworkAuthenticationService.h"
 #import "CELocalKeychainStorageService.h"
 #import "CELocalPushNotificationService.h"
+#import "CELocalNavigationService.h"
+#import "CENetworkNotificationService.h"
 
 //providers
 #import "CELocalDeviceUDIDProvider.h"
 #import "CELocalDeviceNotificationsTokenProvider.h"
+#import "CELocalNavigationProvider.h"
 
 @implementation CEContext
 
@@ -33,7 +36,9 @@
     return @[
              [CENetworkAuthenticationService class],
              [CELocalKeychainStorageService class],
-             [CELocalPushNotificationService class]
+             [CELocalPushNotificationService class],
+             [CELocalNavigationService class],
+             [CENetworkNotificationService class]
              ];
 }
 
@@ -42,7 +47,8 @@
 {
     return @[
              [CELocalDeviceUDIDProvider class],
-             [CELocalDeviceNotificationsTokenProvider class]
+             [CELocalDeviceNotificationsTokenProvider class],
+             [CELocalNavigationProvider class]
              ];
 }
 

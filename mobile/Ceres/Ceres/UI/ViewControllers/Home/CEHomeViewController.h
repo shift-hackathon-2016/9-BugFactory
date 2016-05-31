@@ -1,5 +1,7 @@
 #import <UIKit/UIKit.h>
 
-@interface CEHomeViewController : UITabBarController
+#import "CERoutable.h"
+
+@interface CEHomeViewController : UITabBarController <CERoutable>
 
 @end

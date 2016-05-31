@@ -17,6 +17,8 @@
 		3826BD231CFE03CD00E049D5 /* CENetworkNotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD221CFE03CD00E049D5 /* CENetworkNotificationService.m */; };
 		3826BD271CFE09DB00E049D5 /* CENotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD261CFE09DB00E049D5 /* CENotification.m */; };
 		3826BD2B1CFE0A1100E049D5 /* CENotification+CEJSONMappable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD2A1CFE0A1100E049D5 /* CENotification+CEJSONMappable.m */; };
+		3826BD321CFE0CC200E049D5 /* CELocalNavigationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD311CFE0CC200E049D5 /* CELocalNavigationService.m */; };
+		3826BD381CFE0E1C00E049D5 /* CELocalNavigationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD371CFE0E1C00E049D5 /* CELocalNavigationProvider.m */; };
 		388808671CFD7DDD00D68AFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808661CFD7DDD00D68AFE /* main.m */; };
 		3888086A1CFD7DDD00D68AFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808691CFD7DDD00D68AFE /* AppDelegate.m */; };
 		388808751CFD7DDD00D68AFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388808731CFD7DDD00D68AFE /* LaunchScreen.storyboard */; };
@@ -71,6 +73,13 @@
 		3826BD261CFE09DB00E049D5 /* CENotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENotification.m; sourceTree = "<group>"; };
 		3826BD291CFE0A1100E049D5 /* CENotification+CEJSONMappable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CENotification+CEJSONMappable.h"; sourceTree = "<group>"; };
 		3826BD2A1CFE0A1100E049D5 /* CENotification+CEJSONMappable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CENotification+CEJSONMappable.m"; sourceTree = "<group>"; };
+		3826BD2D1CFE0C2400E049D5 /* CENavigationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENavigationService.h; sourceTree = "<group>"; };
+		3826BD2F1CFE0C9900E049D5 /* CERoutable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CERoutable.h; sourceTree = "<group>"; };
+		3826BD301CFE0CC200E049D5 /* CELocalNavigationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CELocalNavigationService.h; sourceTree = "<group>"; };
+		3826BD311CFE0CC200E049D5 /* CELocalNavigationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CELocalNavigationService.m; sourceTree = "<group>"; };
+		3826BD341CFE0DFE00E049D5 /* CENavigationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENavigationProvider.h; sourceTree = "<group>"; };
+		3826BD361CFE0E1C00E049D5 /* CELocalNavigationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CELocalNavigationProvider.h; sourceTree = "<group>"; };
+		3826BD371CFE0E1C00E049D5 /* CELocalNavigationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CELocalNavigationProvider.m; sourceTree = "<group>"; };
 		388808621CFD7DDD00D68AFE /* Ceres.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ceres.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		388808661CFD7DDD00D68AFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		388808681CFD7DDD00D68AFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -265,8 +274,38 @@
 		3826BD2C1CFE0BFB00E049D5 /* NavigationService */ = {
 			isa = PBXGroup;
 			children = (
+				3826BD2E1CFE0C2900E049D5 /* Local */,
+				3826BD2D1CFE0C2400E049D5 /* CENavigationService.h */,
+				3826BD2F1CFE0C9900E049D5 /* CERoutable.h */,
 			);
 			path = NavigationService;
+			sourceTree = "<group>";
+		};
+		3826BD2E1CFE0C2900E049D5 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD301CFE0CC200E049D5 /* CELocalNavigationService.h */,
+				3826BD311CFE0CC200E049D5 /* CELocalNavigationService.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		3826BD331CFE0DCE00E049D5 /* NavigationProvider */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD351CFE0E1500E049D5 /* Local */,
+				3826BD341CFE0DFE00E049D5 /* CENavigationProvider.h */,
+			);
+			path = NavigationProvider;
+			sourceTree = "<group>";
+		};
+		3826BD351CFE0E1500E049D5 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD361CFE0E1C00E049D5 /* CELocalNavigationProvider.h */,
+				3826BD371CFE0E1C00E049D5 /* CELocalNavigationProvider.m */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 		388808591CFD7DDD00D68AFE = {
@@ -615,6 +654,7 @@
 		388808E71CFDA42D00D68AFE /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				3826BD331CFE0DCE00E049D5 /* NavigationProvider */,
 				388808F51CFDA87200D68AFE /* DeviceNotificationsToken */,
 				388808F61CFDA87200D68AFE /* DeviceUDID */,
 			);
@@ -854,6 +894,7 @@
 				3888088C1CFD851E00D68AFE /* CEResourceResponseSerializer.m in Sources */,
 				388809001CFDA88D00D68AFE /* CELocalDeviceNotificationsTokenProvider.m in Sources */,
 				388808E31CFD9E5D00D68AFE /* CEDevice+CEJSONMappable.m in Sources */,
+				3826BD321CFE0CC200E049D5 /* CELocalNavigationService.m in Sources */,
 				3826BD0D1CFDE48B00E049D5 /* CEMapViewController.m in Sources */,
 				388808BF1CFD939E00D68AFE /* CEUser.m in Sources */,
 				3888089F1CFD87D000D68AFE /* CEResourceErrorContext.m in Sources */,
@@ -884,6 +925,7 @@
 				3826BD111CFDFE6800E049D5 /* CENotificationsViewController.m in Sources */,
 				3826BD1D1CFE02FA00E049D5 /* CENotificationsUseCase.m in Sources */,
 				388808DF1CFD9E3F00D68AFE /* CEDevice.m in Sources */,
+				3826BD381CFE0E1C00E049D5 /* CELocalNavigationProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

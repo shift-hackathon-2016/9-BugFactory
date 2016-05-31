@@ -30,6 +30,11 @@
     [super viewDidLoad];
     
     [self loadSubviews];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
     [self loadData];
 }

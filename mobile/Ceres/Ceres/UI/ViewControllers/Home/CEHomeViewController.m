@@ -12,14 +12,13 @@
 
 @implementation CEHomeViewController
 
-- (instancetype)init
+- (instancetype)initWithParams:(NSDictionary *)params
 {
-    self = [super init];
+    self = [self init];
     
     
     return self;
 }
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -32,8 +31,8 @@
 - (void)loadViewControllers
 {
     NSArray *viewControllers = @[
-             self.mapViewController,
-             self.notificationsViewController
+             [[UINavigationController alloc] initWithRootViewController:self.mapViewController],
+             [[UINavigationController alloc] initWithRootViewController:self.notificationsViewController]
              ];
     
     [viewControllers each:^(__kindof UIViewController *viewController) {

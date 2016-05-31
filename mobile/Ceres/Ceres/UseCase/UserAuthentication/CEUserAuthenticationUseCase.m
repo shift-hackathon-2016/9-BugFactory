@@ -5,6 +5,7 @@
 @property (strong, nonatomic, nonnull) id <CEAuthenticationService> authenticationService;
 @property (strong, nonatomic, nonnull) id <CEPushNotificationService> pushNotificationService;
 @property (strong, nonatomic, nonnull) id <CEDeviceService> deviceService;
+@property (strong, nonatomic, nonnull) id <CENavigationService> navigationService;
 
 @end
 
@@ -12,8 +13,12 @@
 
 - (RACSignal *)authenticateWithEmail:(NSString *)email password:(NSString *)password
 {
-    return [[self.authenticationService authenticateWithEmail:email password:password] map:^id(id value) {
+    return [[[self.authenticationService authenticateWithEmail:email password:password] map:^id(id value) {
         return nil;
+    }] doNext:^(id x) {
+        [self.navigationService openRoute:@"home" params:nil navigationType:CENavigationTypeModal completion:^(UIViewController * _Nullable viewController, NSError * _Nullable error) {
+            
+        }];
     }];
 }
 
@@ -45,4 +50,8 @@
     return [CEContext defaultContext].deviceService;
 }
 
+- (id<CENavigationService>)navigationService
+{
+    return [CEContext defaultContext].navigationService;
+}
 @end

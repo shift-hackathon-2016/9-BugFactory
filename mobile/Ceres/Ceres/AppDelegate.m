@@ -15,7 +15,8 @@
 
     [self.window makeKeyAndVisible];
     
-    
+    id <CENavigationProvider> provider = [CEContext defaultContext].navigationProvider;
+    provider.rootViewController = self.rootViewController;
     
     return YES;
 }

@@ -19,7 +19,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self showAuthenticationViewController];
-//    [self showHomeViewController];
     
     return self;
 }
