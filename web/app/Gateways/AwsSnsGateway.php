@@ -14,6 +14,9 @@ class AwsSnsGateway
     }
 
     public function registerMobileDevice(Device $device) {
+        if ($device->notifications_token === null) {
+            return null;
+        }
         $endpointArn = $device->aws_notifications_token;
         $updateNeeded = false;
         $createNeeded = ($endpointArn == null);

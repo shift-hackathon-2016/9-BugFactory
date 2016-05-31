@@ -11,6 +11,7 @@ class Device extends Model
         'name',
         'notifications_token',
         'aws_notifications_token',
+        'udid',
     ];
 
     public function pushNotifications()

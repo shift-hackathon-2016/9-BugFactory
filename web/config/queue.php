@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('QUEUE_DRIVER', 'sync'),
+    'default' => 'async',
 
     /*
     |--------------------------------------------------------------------------
@@ -29,6 +29,13 @@ return [
     */
 
     'connections' => [
+
+        'async' => array(
+            'driver' => 'async',
+            'table' => 'jobs',
+            'queue' => 'default',
+            'expire' => 60,
+        ),
 
         'sync' => [
             'driver' => 'sync',

@@ -11,6 +11,10 @@ class PushNotification extends Model
         'payload',
     ];
 
+    protected $casts = [
+        'payload' => 'array'
+    ];
+
     public function userDevice()
     {
         return $this->belongsTo(Device::class);
