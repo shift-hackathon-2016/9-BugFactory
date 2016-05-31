@@ -56,17 +56,14 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
         Route::post('/devices/create', 'DevicesController@store');
 
 
-        Route::group(['prefix' => 'payment'], function() {
+        Route::group(['prefix' => 'transaction'], function() {
 
-            Route::get('/token', 'TransactionController@getToken');
             Route::post('/', 'TransactionController@create');
-
+            Route::get('/{id}', 'TransactionController@index')->where('id', '[0-9]+');
+            Route::get('/user/{id}', 'TransactionController@getByUser')->where('id', '[0-9]+');
+            Route::get('/token', 'TransactionController@getToken');
         });
-
-
     });
-
-
 });
 
 Route::group(['namespace' => 'Web'], function() {

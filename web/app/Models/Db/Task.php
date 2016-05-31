@@ -9,6 +9,13 @@ class Task extends Model
 {
     use SoftDeletes;
 
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        'starts_at',
+        'ends_at',
+    ];
+
     protected $fillable = [
         'category_id',
         'user_id',
