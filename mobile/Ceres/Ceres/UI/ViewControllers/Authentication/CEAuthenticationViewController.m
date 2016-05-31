@@ -145,7 +145,7 @@
     if (!_emailTextField) {
         _emailTextField = [UITextField new];
         _emailTextField.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
-        _emailTextField.text = @"toni.peric@trikoder.net";
+        _emailTextField.text = @"aron@trikoder.net";
     }
     
     return _emailTextField;

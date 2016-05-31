@@ -1,10 +1,12 @@
 #import "CEHomeViewController.h"
 
 #import "CEMapViewController.h"
+#import "CENotificationsViewController.h"
 
 @interface CEHomeViewController ()
 
 @property (strong, nonatomic, nonnull) CEMapViewController *mapViewController;
+@property (strong, nonatomic, nonnull) CENotificationsViewController *notificationsViewController;
 
 @end
 
@@ -22,16 +24,23 @@
 {
     [super viewDidLoad];
     
-    [self setViewControllers:@[[self tabBarViewControllers]] animated:NO];
+    [self loadViewControllers];
 }
 
 #pragma mark - Private
 
-- (NSArray *)tabBarViewControllers
+- (void)loadViewControllers
 {
-    return @[
-             self.mapViewController
+    NSArray *viewControllers = @[
+             self.mapViewController,
+             self.notificationsViewController
              ];
+    
+    [viewControllers each:^(__kindof UIViewController *viewController) {
+        [self addChildViewController:viewController];
+    }];
+    
+    [self setViewControllers:viewControllers animated:NO];
 }
 
 #pragma mark - Properties
@@ -45,6 +54,14 @@
     return _mapViewController;
 }
 
-
+- (CENotificationsViewController *)notificationsViewController
+{
+    if (!_notificationsViewController) {
+        _notificationsViewController = [CENotificationsViewController new];
+        
+    }
+    
+    return _notificationsViewController;
+}
 
 @end

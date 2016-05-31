@@ -24,6 +24,7 @@
 //models
 #import "CEErrorContext.h"
 #import "CEUser.h"
+#import "CENotification.h"
 
 //services
 #import "CEAuthenticationService.h"

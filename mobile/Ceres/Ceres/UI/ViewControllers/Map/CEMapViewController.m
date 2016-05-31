@@ -25,6 +25,8 @@
 
 - (void)loadSubviews
 {
+    [self.view addSubview:self.mapView];
+    
     [self.view setNeedsUpdateConstraints];
     [self.view updateConstraintsIfNeeded];
 }

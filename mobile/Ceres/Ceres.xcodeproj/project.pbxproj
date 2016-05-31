@@ -10,6 +10,13 @@
 		3826BD051CFDD15900E049D5 /* CELocalPushNotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD041CFDD15900E049D5 /* CELocalPushNotificationService.m */; };
 		3826BD091CFDDF2700E049D5 /* CEHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD081CFDDF2700E049D5 /* CEHomeViewController.m */; };
 		3826BD0D1CFDE48B00E049D5 /* CEMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD0C1CFDE48B00E049D5 /* CEMapViewController.m */; };
+		3826BD111CFDFE6800E049D5 /* CENotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD101CFDFE6800E049D5 /* CENotificationsViewController.m */; };
+		3826BD151CFDFFCA00E049D5 /* CENotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD141CFDFFCA00E049D5 /* CENotificationCell.m */; };
+		3826BD191CFDFFD800E049D5 /* CENotificationCellPresentable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD181CFDFFD800E049D5 /* CENotificationCellPresentable.m */; };
+		3826BD1D1CFE02FA00E049D5 /* CENotificationsUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD1C1CFE02FA00E049D5 /* CENotificationsUseCase.m */; };
+		3826BD231CFE03CD00E049D5 /* CENetworkNotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD221CFE03CD00E049D5 /* CENetworkNotificationService.m */; };
+		3826BD271CFE09DB00E049D5 /* CENotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD261CFE09DB00E049D5 /* CENotification.m */; };
+		3826BD2B1CFE0A1100E049D5 /* CENotification+CEJSONMappable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD2A1CFE0A1100E049D5 /* CENotification+CEJSONMappable.m */; };
 		388808671CFD7DDD00D68AFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808661CFD7DDD00D68AFE /* main.m */; };
 		3888086A1CFD7DDD00D68AFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808691CFD7DDD00D68AFE /* AppDelegate.m */; };
 		388808751CFD7DDD00D68AFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388808731CFD7DDD00D68AFE /* LaunchScreen.storyboard */; };
@@ -49,6 +56,21 @@
 		3826BD081CFDDF2700E049D5 /* CEHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEHomeViewController.m; sourceTree = "<group>"; };
 		3826BD0B1CFDE48B00E049D5 /* CEMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEMapViewController.h; sourceTree = "<group>"; };
 		3826BD0C1CFDE48B00E049D5 /* CEMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEMapViewController.m; sourceTree = "<group>"; };
+		3826BD0F1CFDFE6800E049D5 /* CENotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENotificationsViewController.h; sourceTree = "<group>"; };
+		3826BD101CFDFE6800E049D5 /* CENotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENotificationsViewController.m; sourceTree = "<group>"; };
+		3826BD131CFDFFCA00E049D5 /* CENotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENotificationCell.h; sourceTree = "<group>"; };
+		3826BD141CFDFFCA00E049D5 /* CENotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENotificationCell.m; sourceTree = "<group>"; };
+		3826BD171CFDFFD800E049D5 /* CENotificationCellPresentable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENotificationCellPresentable.h; sourceTree = "<group>"; };
+		3826BD181CFDFFD800E049D5 /* CENotificationCellPresentable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENotificationCellPresentable.m; sourceTree = "<group>"; };
+		3826BD1B1CFE02FA00E049D5 /* CENotificationsUseCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENotificationsUseCase.h; sourceTree = "<group>"; };
+		3826BD1C1CFE02FA00E049D5 /* CENotificationsUseCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENotificationsUseCase.m; sourceTree = "<group>"; };
+		3826BD1F1CFE03B600E049D5 /* CENotificationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENotificationService.h; sourceTree = "<group>"; };
+		3826BD211CFE03CD00E049D5 /* CENetworkNotificationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENetworkNotificationService.h; sourceTree = "<group>"; };
+		3826BD221CFE03CD00E049D5 /* CENetworkNotificationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENetworkNotificationService.m; sourceTree = "<group>"; };
+		3826BD251CFE09DB00E049D5 /* CENotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENotification.h; sourceTree = "<group>"; };
+		3826BD261CFE09DB00E049D5 /* CENotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENotification.m; sourceTree = "<group>"; };
+		3826BD291CFE0A1100E049D5 /* CENotification+CEJSONMappable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CENotification+CEJSONMappable.h"; sourceTree = "<group>"; };
+		3826BD2A1CFE0A1100E049D5 /* CENotification+CEJSONMappable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CENotification+CEJSONMappable.m"; sourceTree = "<group>"; };
 		388808621CFD7DDD00D68AFE /* Ceres.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ceres.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		388808661CFD7DDD00D68AFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		388808681CFD7DDD00D68AFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -166,6 +188,87 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		3826BD0E1CFDFE5E00E049D5 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD161CFDFFD000E049D5 /* Presentables */,
+				3826BD121CFDFFA500E049D5 /* Cells */,
+				3826BD0F1CFDFE6800E049D5 /* CENotificationsViewController.h */,
+				3826BD101CFDFE6800E049D5 /* CENotificationsViewController.m */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		3826BD121CFDFFA500E049D5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD131CFDFFCA00E049D5 /* CENotificationCell.h */,
+				3826BD141CFDFFCA00E049D5 /* CENotificationCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3826BD161CFDFFD000E049D5 /* Presentables */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD171CFDFFD800E049D5 /* CENotificationCellPresentable.h */,
+				3826BD181CFDFFD800E049D5 /* CENotificationCellPresentable.m */,
+			);
+			path = Presentables;
+			sourceTree = "<group>";
+		};
+		3826BD1A1CFE02E600E049D5 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD1B1CFE02FA00E049D5 /* CENotificationsUseCase.h */,
+				3826BD1C1CFE02FA00E049D5 /* CENotificationsUseCase.m */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		3826BD1E1CFE039D00E049D5 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD201CFE03BF00E049D5 /* Network */,
+				3826BD1F1CFE03B600E049D5 /* CENotificationService.h */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		3826BD201CFE03BF00E049D5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD211CFE03CD00E049D5 /* CENetworkNotificationService.h */,
+				3826BD221CFE03CD00E049D5 /* CENetworkNotificationService.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3826BD241CFE09CE00E049D5 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD251CFE09DB00E049D5 /* CENotification.h */,
+				3826BD261CFE09DB00E049D5 /* CENotification.m */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		3826BD281CFE0A0000E049D5 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD291CFE0A1100E049D5 /* CENotification+CEJSONMappable.h */,
+				3826BD2A1CFE0A1100E049D5 /* CENotification+CEJSONMappable.m */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		3826BD2C1CFE0BFB00E049D5 /* NavigationService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NavigationService;
+			sourceTree = "<group>";
+		};
 		388808591CFD7DDD00D68AFE = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +322,8 @@
 		3888087C1CFD80CD00D68AFE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3826BD2C1CFE0BFB00E049D5 /* NavigationService */,
+				3826BD1E1CFE039D00E049D5 /* Notification */,
 				3826BD001CFDD13E00E049D5 /* PushNotification */,
 				388808EE1CFDA51C00D68AFE /* KeychainStorage */,
 				388808D11CFD9BEE00D68AFE /* Device */,
@@ -298,6 +403,7 @@
 		388808961CFD864900D68AFE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3826BD241CFE09CE00E049D5 /* Notification */,
 				388808DC1CFD9E3700D68AFE /* Device */,
 				388808BC1CFD918500D68AFE /* User */,
 				388808B81CFD8F7400D68AFE /* ObjectProperty */,
@@ -399,6 +505,7 @@
 		388808C01CFD93AA00D68AFE /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
+				3826BD281CFE0A0000E049D5 /* Notification */,
 				388808E01CFD9E4D00D68AFE /* Device */,
 				388808C11CFD93B000D68AFE /* User */,
 			);
@@ -442,9 +549,10 @@
 		388808CC1CFD97BA00D68AFE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3826BD0E1CFDFE5E00E049D5 /* Notifications */,
 				3826BD0A1CFDE48000E049D5 /* Map */,
-				3826BD061CFDDF1D00E049D5 /* Home */,
 				388809011CFDAAF700D68AFE /* Authentication */,
+				3826BD061CFDDF1D00E049D5 /* Home */,
 				388808CD1CFD97C000D68AFE /* Root */,
 			);
 			path = ViewControllers;
@@ -579,6 +687,7 @@
 		388809051CFDB18600D68AFE /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				3826BD1A1CFE02E600E049D5 /* Notifications */,
 				388809061CFDB19400D68AFE /* UserAuthentication */,
 			);
 			path = UseCase;
@@ -749,9 +858,12 @@
 				388808BF1CFD939E00D68AFE /* CEUser.m in Sources */,
 				3888089F1CFD87D000D68AFE /* CEResourceErrorContext.m in Sources */,
 				388808B31CFD8F0100D68AFE /* CEContext.m in Sources */,
+				3826BD231CFE03CD00E049D5 /* CENetworkNotificationService.m in Sources */,
 				388808C41CFD93CC00D68AFE /* CEUser+CEJSONMappable.m in Sources */,
 				388808AF1CFD8E7E00D68AFE /* CENetworkAuthenticationService.m in Sources */,
 				388808D61CFD9C7D00D68AFE /* CENetworkDeviceService.m in Sources */,
+				3826BD2B1CFE0A1100E049D5 /* CENotification+CEJSONMappable.m in Sources */,
+				3826BD151CFDFFCA00E049D5 /* CENotificationCell.m in Sources */,
 				388808A91CFD8DFE00D68AFE /* CENetworkAuthorizationService.m in Sources */,
 				388808B71CFD8F4200D68AFE /* NSObject+PropertyEnumerator.m in Sources */,
 				388808FB1CFDA87200D68AFE /* CELocalDeviceUDIDProvider.m in Sources */,
@@ -762,11 +874,15 @@
 				388808BB1CFD8F7E00D68AFE /* CEObjectProperty.m in Sources */,
 				388808D01CFD97CE00D68AFE /* CERootViewController.m in Sources */,
 				388808851CFD816400D68AFE /* CEAPIClient.m in Sources */,
+				3826BD271CFE09DB00E049D5 /* CENotification.m in Sources */,
 				388809041CFDAB0800D68AFE /* CEAuthenticationViewController.m in Sources */,
 				3826BD091CFDDF2700E049D5 /* CEHomeViewController.m in Sources */,
+				3826BD191CFDFFD800E049D5 /* CENotificationCellPresentable.m in Sources */,
 				3888086A1CFD7DDD00D68AFE /* AppDelegate.m in Sources */,
 				388808671CFD7DDD00D68AFE /* main.m in Sources */,
 				3826BD051CFDD15900E049D5 /* CELocalPushNotificationService.m in Sources */,
+				3826BD111CFDFE6800E049D5 /* CENotificationsViewController.m in Sources */,
+				3826BD1D1CFE02FA00E049D5 /* CENotificationsUseCase.m in Sources */,
 				388808DF1CFD9E3F00D68AFE /* CEDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
