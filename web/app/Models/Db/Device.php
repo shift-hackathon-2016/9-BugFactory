@@ -4,7 +4,7 @@ namespace App\Models\Db;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserDevice extends Model
+class Device extends Model
 {
     protected $fillable = [
         'user_id',
