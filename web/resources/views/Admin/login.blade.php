@@ -60,7 +60,7 @@
 
                     <div class="separator">
                         <div>
-                            <p>©2016 All Rights Reserved. Made with love at Shift hackaton ❤️</p>
+                            <p>©2016 All Rights Reserved. Made with ❤ at Shift hackaton️</p>
                         </div>
                     </div>
                 </form>

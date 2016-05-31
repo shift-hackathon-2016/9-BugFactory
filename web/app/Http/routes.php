@@ -65,9 +65,7 @@ Route::get('/tasks/nearby', 'TasksController@nearby');
             Route::get('/token', 'TransactionController@getToken');
         });
 
-
     });
-
 
 });
 
