@@ -13,6 +13,10 @@
 		388808721CFD7DDD00D68AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 388808711CFD7DDD00D68AFE /* Assets.xcassets */; };
 		388808751CFD7DDD00D68AFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388808731CFD7DDD00D68AFE /* LaunchScreen.storyboard */; };
 		388808851CFD816400D68AFE /* CEAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808841CFD816400D68AFE /* CEAPIClient.m */; };
+		388808891CFD84F800D68AFE /* CEResourceRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808881CFD84F800D68AFE /* CEResourceRequestSerializer.m */; };
+		3888088C1CFD851E00D68AFE /* CEResourceResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888088B1CFD851E00D68AFE /* CEResourceResponseSerializer.m */; };
+		388808951CFD858600D68AFE /* NSError+CEErrorContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808941CFD858600D68AFE /* NSError+CEErrorContext.m */; };
+		3888089F1CFD87D000D68AFE /* CEResourceErrorContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888089E1CFD87D000D68AFE /* CEResourceErrorContext.m */; };
 		77A58D38AC2A139890930E51 /* libPods-Ceres.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4354B7A8CCB9F75BA7F221B /* libPods-Ceres.a */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +33,15 @@
 		388808831CFD816400D68AFE /* CEAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEAPIClient.h; sourceTree = "<group>"; };
 		388808841CFD816400D68AFE /* CEAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEAPIClient.m; sourceTree = "<group>"; };
 		388808861CFD81E200D68AFE /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		388808871CFD84F800D68AFE /* CEResourceRequestSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEResourceRequestSerializer.h; sourceTree = "<group>"; };
+		388808881CFD84F800D68AFE /* CEResourceRequestSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEResourceRequestSerializer.m; sourceTree = "<group>"; };
+		3888088A1CFD851E00D68AFE /* CEResourceResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEResourceResponseSerializer.h; sourceTree = "<group>"; };
+		3888088B1CFD851E00D68AFE /* CEResourceResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEResourceResponseSerializer.m; sourceTree = "<group>"; };
+		388808931CFD858600D68AFE /* NSError+CEErrorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+CEErrorContext.h"; sourceTree = "<group>"; };
+		388808941CFD858600D68AFE /* NSError+CEErrorContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+CEErrorContext.m"; sourceTree = "<group>"; };
+		388808991CFD86AF00D68AFE /* CEErrorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEErrorContext.h; sourceTree = "<group>"; };
+		3888089D1CFD87D000D68AFE /* CEResourceErrorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEResourceErrorContext.h; sourceTree = "<group>"; };
+		3888089E1CFD87D000D68AFE /* CEResourceErrorContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEResourceErrorContext.m; sourceTree = "<group>"; };
 		8256A205A9242BD6CB3A49A7 /* Pods-Ceres.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ceres.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ceres/Pods-Ceres.release.xcconfig"; sourceTree = "<group>"; };
 		B9BA6EB06461DF84068F3F11 /* Pods-Ceres.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ceres.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ceres/Pods-Ceres.debug.xcconfig"; sourceTree = "<group>"; };
 		F4354B7A8CCB9F75BA7F221B /* libPods-Ceres.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ceres.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +80,8 @@
 		388808641CFD7DDD00D68AFE /* Ceres */ = {
 			isa = PBXGroup;
 			children = (
+				388808961CFD864900D68AFE /* Models */,
+				3888088D1CFD854500D68AFE /* Extensions */,
 				3888087E1CFD812300D68AFE /* Networking */,
 				3888087C1CFD80CD00D68AFE /* Services */,
 				388808681CFD7DDD00D68AFE /* AppDelegate.h */,
@@ -134,8 +149,55 @@
 		388808821CFD814900D68AFE /* Serializers */ = {
 			isa = PBXGroup;
 			children = (
+				388808871CFD84F800D68AFE /* CEResourceRequestSerializer.h */,
+				388808881CFD84F800D68AFE /* CEResourceRequestSerializer.m */,
+				3888088A1CFD851E00D68AFE /* CEResourceResponseSerializer.h */,
+				3888088B1CFD851E00D68AFE /* CEResourceResponseSerializer.m */,
 			);
 			path = Serializers;
+			sourceTree = "<group>";
+		};
+		3888088D1CFD854500D68AFE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				388808921CFD858600D68AFE /* NSError */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		388808921CFD858600D68AFE /* NSError */ = {
+			isa = PBXGroup;
+			children = (
+				388808931CFD858600D68AFE /* NSError+CEErrorContext.h */,
+				388808941CFD858600D68AFE /* NSError+CEErrorContext.m */,
+			);
+			path = NSError;
+			sourceTree = "<group>";
+		};
+		388808961CFD864900D68AFE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				388808981CFD86A800D68AFE /* ErrorContext */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		388808981CFD86A800D68AFE /* ErrorContext */ = {
+			isa = PBXGroup;
+			children = (
+				3888089C1CFD87C600D68AFE /* Resource */,
+				388808991CFD86AF00D68AFE /* CEErrorContext.h */,
+			);
+			path = ErrorContext;
+			sourceTree = "<group>";
+		};
+		3888089C1CFD87C600D68AFE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3888089D1CFD87D000D68AFE /* CEResourceErrorContext.h */,
+				3888089E1CFD87D000D68AFE /* CEResourceErrorContext.m */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		5BBB5D3B8FCA0D733D761C24 /* Pods */ = {
@@ -276,7 +338,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				388808951CFD858600D68AFE /* NSError+CEErrorContext.m in Sources */,
+				3888088C1CFD851E00D68AFE /* CEResourceResponseSerializer.m in Sources */,
+				3888089F1CFD87D000D68AFE /* CEResourceErrorContext.m in Sources */,
 				3888086D1CFD7DDD00D68AFE /* ViewController.m in Sources */,
+				388808891CFD84F800D68AFE /* CEResourceRequestSerializer.m in Sources */,
 				388808851CFD816400D68AFE /* CEAPIClient.m in Sources */,
 				3888086A1CFD7DDD00D68AFE /* AppDelegate.m in Sources */,
 				388808671CFD7DDD00D68AFE /* main.m in Sources */,
