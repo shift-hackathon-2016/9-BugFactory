@@ -52,16 +52,16 @@ class AuthController extends Controller
 
     protected function responseOk()
     {
-        return ['status' => Response::HTTP_OK];
+        return ['status' => 'OK'];
     }
 
     protected function responseError($message)
     {
-        return [
+        return response([
             'status' => Response::HTTP_BAD_REQUEST,
             'title' => 'Error',
             'message' => $message
-        ];
+        ], Response::HTTP_BAD_REQUEST);
     }
 
     protected function validator(array $data)
