@@ -12,12 +12,24 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/dashboard');
 });
 
-Route::group(['namespace' => 'Admin'], function () {
+Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
+    Route::group(['prefix' => 'auth'], function() {
+        Route::post('/login', 'AuthController@login');
+        Route::post('/register', 'AuthController@register');
+        Route::get('/logout', 'AuthController@logout');
+    });
+});
 
-    Route::get('admin/login', 'AdminLoginController@showLogin');
-    Route::get('admin/example', 'AdminLoginController@showExample');
+Route::group(['namespace' => 'Web'], function() {
+    Route::get('/login', 'AuthController@showLogin');
+    Route::get('/example', 'AuthController@showExample');
+    Route::post('/login', 'AuthController@login');
+    Route::get('/logout', 'AuthController@logout');
+});
 
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('dashboard', 'DashboardController@index');
 });
