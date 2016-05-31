@@ -10,4 +10,9 @@ class PushNotification extends Model
         'user_device_id',
         'payload',
     ];
+
+    public function userDevice()
+    {
+        return $this->belongsTo(UserDevice::class);
+    }
 }

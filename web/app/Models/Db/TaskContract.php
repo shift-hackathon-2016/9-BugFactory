@@ -10,4 +10,14 @@ class TaskContract extends Model
         'user_id',
         'task_id',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function task()
+    {
+        return $this->belongsTo(Task::class);
+    }
 }

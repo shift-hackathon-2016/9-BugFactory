@@ -14,4 +14,9 @@ class Location extends Model
         'street',
         'zip',
     ];
+
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
 }

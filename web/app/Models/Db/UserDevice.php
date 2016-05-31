@@ -12,4 +12,14 @@ class UserDevice extends Model
         'notifications_token',
         'aws_notifications_token',
     ];
+
+    public function pushNotifications()
+    {
+        return $this->hasMany(PushNotification::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
