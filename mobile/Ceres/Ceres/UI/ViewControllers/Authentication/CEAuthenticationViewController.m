@@ -90,7 +90,6 @@
     [[[self.loginButton rac_signalForControlEvents:UIControlEventTouchUpInside] flattenMap:^RACStream *(id value) {
         @strongify(self);
         
-        //return [self.userAuthenticationUseCase registerDeviceToPushNotifications];
         return [self login];
     }] subscribeNext:^(NSString *token) {
         

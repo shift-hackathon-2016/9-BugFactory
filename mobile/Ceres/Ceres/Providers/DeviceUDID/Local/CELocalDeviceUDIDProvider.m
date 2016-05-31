@@ -11,7 +11,7 @@ static NSString * const CEDeviceUUIDUserDefaultsStorageKey = @"CEDeviceUUIDUserD
 
 @implementation CELocalDeviceUDIDProvider
 
-- (NSUUID *)currentDeviceUUID
+- (NSUUID *)currentDeviceUDID
 {
     NSString *UUIDString;
     

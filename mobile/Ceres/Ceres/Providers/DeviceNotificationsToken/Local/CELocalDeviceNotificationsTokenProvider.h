@@ -1,7 +1,5 @@
 #import <Foundation/Foundation.h>
 
-@interface CELocalDeviceNotificationsTokenProvider : NSObject
-
-- (nonnull NSString *)currentDeviceNotificationsToken;
+@interface CELocalDeviceNotificationsTokenProvider : NSObject <CEDeviceNotificationsTokenProvider>
 
 @end

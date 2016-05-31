@@ -15,6 +15,11 @@ static NSString * const CEDeviceNotificationsTokenKeychainStorageKey = @"CEDevic
     return [self.keychainStorageService objectForKey:CEDeviceNotificationsTokenKeychainStorageKey error:nil];
 }
 
+- (void)storeNotificationsToken:(NSString *)notificationsToken
+{
+    [self.keychainStorageService storeObject:notificationsToken forKey:CEDeviceNotificationsTokenKeychainStorageKey inService:nil error:nil];
+}
+
 #pragma mark - Properties
 
 - (id<CEKeychainStorageService>)keychainStorageService

@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
 
-@interface CELocalDeviceUDIDProvider : NSObject
+@interface CELocalDeviceUDIDProvider : NSObject <CEDeviceUDIDProvider>
 
 @end

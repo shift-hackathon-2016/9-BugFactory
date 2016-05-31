@@ -11,13 +11,16 @@
 - (RACSignal *)registerDevice
 {
     NSString *notificationsToken = [self.deviceNotificationsTokenProvider currentDeviceNotificationsToken];
+    
+    CEDevice *currentDevice = [CEDevice currentDevice];
+    
     NSDictionary *parameters = @{
-                                 @"udid": [CEDevice currentDevice].UUID.UUIDString,
-                                 @"name": [CEDevice currentDevice].name,
+                                 @"udid": currentDevice.UUID.UUIDString,
+                                 @"name": currentDevice.name,
                                  @"notifications_token": notificationsToken ? notificationsToken : [NSNull null]
                                  };
     
-    return [[self.APIClient PATCH:@"device/register" parameters:parameters] tryMap:^id(RACTuple *tuple, NSError *__autoreleasing *errorPtr) {
+    return [[self.APIClient POST:@"devices/create" parameters:parameters] tryMap:^id(RACTuple *tuple, NSError *__autoreleasing *errorPtr) {
         return tuple.second;
     }];
 }

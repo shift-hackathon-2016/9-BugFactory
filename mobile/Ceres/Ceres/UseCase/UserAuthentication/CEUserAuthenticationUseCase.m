@@ -13,8 +13,8 @@
 
 - (RACSignal *)authenticateWithEmail:(NSString *)email password:(NSString *)password
 {
-    return [[[self.authenticationService authenticateWithEmail:email password:password] map:^id(id value) {
-        return nil;
+    return [[[self.authenticationService authenticateWithEmail:email password:password] flattenMap:^RACStream *(id value) {
+        return [self registerDeviceToPushNotifications];
     }] doNext:^(id x) {
         [self.navigationService openRoute:@"home" params:nil navigationType:CENavigationTypeModal completion:^(UIViewController * _Nullable viewController, NSError * _Nullable error) {
             
@@ -25,10 +25,12 @@
 - (RACSignal *)registerDeviceToPushNotifications
 {
     @weakify(self);
-    return [[[self.pushNotificationService registerDeviceToPushNotifications] flattenMap:^RACStream *(id value) {
+    return [[[[[self.pushNotificationService registerDeviceToPushNotifications] flattenMap:^RACStream *(id value) {
         @strongify(self);
         return [self.deviceService registerDevice];
-    }] map:^id(id value) {
+    }] doError:^(NSError *error) {
+        
+    }] materialize] map:^id(id value) {
         return nil;
     }];
 }
@@ -42,7 +44,9 @@
 
 - (id<CEPushNotificationService>)pushNotificationService
 {
-    return [CEContext defaultContext].pushNotificationService;
+    id service = [CEContext defaultContext].pushNotificationService;
+    
+    return service;
 }
 
 - (id<CEDeviceService>)deviceService

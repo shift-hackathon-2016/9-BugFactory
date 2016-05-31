@@ -2,11 +2,13 @@
 
 #import "CEMapViewController.h"
 #import "CENotificationsViewController.h"
+#import "CECreateTaskViewController.h"
 
 @interface CEHomeViewController ()
 
 @property (strong, nonatomic, nonnull) CEMapViewController *mapViewController;
 @property (strong, nonatomic, nonnull) CENotificationsViewController *notificationsViewController;
+@property (strong, nonatomic, nonnull) CECreateTaskViewController *createTaskViewController;
 
 @end
 
@@ -15,7 +17,6 @@
 - (instancetype)initWithParams:(NSDictionary *)params
 {
     self = [self init];
-    
     
     return self;
 }
@@ -32,7 +33,8 @@
 {
     NSArray *viewControllers = @[
              [[UINavigationController alloc] initWithRootViewController:self.mapViewController],
-             [[UINavigationController alloc] initWithRootViewController:self.notificationsViewController]
+             [[UINavigationController alloc] initWithRootViewController:self.notificationsViewController],
+             [[UINavigationController alloc] initWithRootViewController:self.createTaskViewController]
              ];
     
     [viewControllers each:^(__kindof UIViewController *viewController) {
@@ -61,6 +63,15 @@
     }
     
     return _notificationsViewController;
+}
+
+- (CECreateTaskViewController *)createTaskViewController
+{
+    if (!_createTaskViewController) {
+        _createTaskViewController = [CECreateTaskViewController new];
+    }
+    
+    return _createTaskViewController;
 }
 
 @end

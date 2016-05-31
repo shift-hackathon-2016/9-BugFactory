@@ -7,6 +7,7 @@
 #import "CELocalKeychainStorageService.h"
 #import "CELocalPushNotificationService.h"
 #import "CELocalNavigationService.h"
+#import "CENetworkDeviceService.h"
 #import "CENetworkNotificationService.h"
 
 //providers
@@ -38,7 +39,8 @@
              [CELocalKeychainStorageService class],
              [CELocalPushNotificationService class],
              [CELocalNavigationService class],
-             [CENetworkNotificationService class]
+             [CENetworkNotificationService class],
+             [CENetworkDeviceService class]
              ];
 }
 
