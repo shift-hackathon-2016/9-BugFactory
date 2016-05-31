@@ -48,6 +48,7 @@ Route::group(['middleware' => 'admin'], function() {
 
         Route::get('dashboard', 'DashboardController@index');
         Route::get('user/edit/{id}', 'AdminUserController@showEdit');
+        Route::get('user/list', 'AdminUserController@showList');
         Route::post('user/save/{id}', [
             'as' => 'user/save',
             'uses' => 'AdminUserController@saveUser'

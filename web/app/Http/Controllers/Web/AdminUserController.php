@@ -94,6 +94,11 @@ class AdminUserController extends Controller
         return redirect('/'); // @todo redirect to user list
     }
 
+    public function showList()
+    {
+        $users = User::all();
 
+        return view('Admin.users')->with('users', $users);
+    }
 
 }
