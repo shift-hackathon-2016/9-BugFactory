@@ -67,4 +67,20 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = app('hash')->make($value);
     }
+
+    public function getAvatarUrl()
+    {
+        return sprintf(
+            'https://www.gravatar.com/avatar/%s?d=%s&s=%s',
+            md5(strtolower(trim($this->email))),
+            urlencode('http://i.imgur.com/q2YkB62.jpg'), // emily ratajkowski ftw
+            40 // size
+        );
+    }
+
+    public function getFullName()
+    {
+        return $this->first_name . ' ' . $this->last_name;
+    }
+
 }
