@@ -54,6 +54,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
         });
 
         Route::post('/devices/create', 'DevicesController@store');
+Route::get('/tasks/nearby', 'TasksController@nearby');
 
 
         Route::group(['prefix' => 'transaction'], function() {
@@ -63,7 +64,11 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
             Route::get('/user/{id}', 'TransactionController@getByUser')->where('id', '[0-9]+');
             Route::get('/token', 'TransactionController@getToken');
         });
+
+
     });
+
+
 });
 
 Route::group(['namespace' => 'Web'], function() {
@@ -82,6 +87,7 @@ Route::group(['middleware' => 'admin'], function() {
 
         Route::group(['prefix' => 'user'], function() {
 
+
             Route::get('/edit/{id}', 'AdminUserController@showEdit');
             Route::get('/list', 'AdminUserController@showList');
             Route::post('/save/{id}', [
@@ -96,6 +102,7 @@ Route::group(['middleware' => 'admin'], function() {
             Route::get('/create', 'TaskCategoriesController@getCreate');
             Route::get('/edit/{id}', 'TaskCategoriesController@edit')->where('id', '[0-9]+');
             Route::post('/edit/{id}', 'TaskCategoriesController@save')->where('id', '[0-9]+');
+            Route::get('/{id}', 'TaskCategoriesController@index')->where('id', '[0-9]+');
             Route::post('/create', 'TaskCategoriesController@create');
         });
 

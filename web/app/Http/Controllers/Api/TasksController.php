@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Db\Task;
+use App\Repositories\LocationPointRepository;
+use App\Repositories\LocationRepository;
+use App\Repositories\TaskRepository;
 use App\UseCase\TaskUseCase;
 use Illuminate\Http\Request;
 
@@ -63,5 +66,21 @@ class TasksController extends BaseApiController
             'starts_at' => 'required|int',
             'ends_at' => 'required|int',
         ]);
+    }
+
+    public function nearby(Request $request, TaskRepository $taskRepository, LocationPointRepository $locationPointRepository)
+    {
+        $lat = $request->latitude;
+        $lon = $request->longitude;
+
+        if (!$lat || !$lon) {
+            return $this->responseError('Invalid latitude or longitude specified');
+        }
+
+        $locationIds = $locationPointRepository->getLocationPointsInEnvelope($lat, $lon, 15, 'km')->get()->map(function($item) {
+            return $item->location_id;
+        })->toArray();
+
+        return $taskRepository->findByLocationIds($locationIds);
     }
 }
