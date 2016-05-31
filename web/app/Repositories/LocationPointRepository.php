@@ -41,7 +41,7 @@ class LocationPointRepository
 
     public function syncWithLocation(Location $location) {
         // do not sync if there is no lat or lon
-        if (!$location->latitude || !$location->logitude) {
+        if (!$location->latitude || !$location->longitude) {
             return;
         }
 
@@ -50,7 +50,6 @@ class LocationPointRepository
         if (!$locationPoint) {
             $locationPoint = new LocationPoint();
         }
-
         $locationPoint->location_id = $location->id;
         $locationPoint->point = DB::raw("GeomFromText('POINT(" . $location->latitude . " " . $location->longitude . ")')");
 
