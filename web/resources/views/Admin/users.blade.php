@@ -33,13 +33,14 @@
 
                                 <div class="clearfix"></div>
 
-                                @for($i = 0; $i < 20; $i++)
+                                {{-- @todo-mario: remove placeholders --}}
+                                @foreach($users as $user)
                                 <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
                                     <div class="well profile_view">
                                         <div class="col-sm-12">
                                             <h4 class="brief"><i>Digital Strategist</i></h4>
                                             <div class="left col-xs-7">
-                                                <h2>Nicole Pearson</h2>
+                                                <h2>{{ $user->getFullName() }}</h2>
                                                 <p><strong>About: </strong> Web Designer / UX / Graphic Artist / Coffee Lover </p>
                                                 <ul class="list-unstyled">
                                                     <li><i class="fa fa-building"></i> Address: </li>
@@ -71,7 +72,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                @endfor
+                                @endforeach
 
                             </div>
                         </div>
