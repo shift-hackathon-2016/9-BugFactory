@@ -12,6 +12,11 @@ class UserTransaction extends Model
         'amount',
     ];
 
+    public function setAmountAttribute($value)
+    {
+        $this->attributes['amount'] = round($value, 2);
+    }
+
     public function currency()
     {
         return $this->belongsTo(Currency::class);

@@ -29,6 +29,10 @@ class TasksController extends BaseApiController
             'category_id' => $request->category_id,
             'user_id' => Auth::id(),
             'description' => $request->description,
+            'currency_id' => $request->currency_id,
+            'amount' => $request->amount,
+            'starts_at' => $request->starts_at,
+            'ends_at' => $request->ends_at,
 
         ];
 
@@ -54,6 +58,10 @@ class TasksController extends BaseApiController
             'category_id' => 'required|int',
             'location_id' => 'int',
             'description' => 'required',
+            'currency_id' => 'required',
+            'amount' => 'required',
+            'starts_at' => 'required|int',
+            'ends_at' => 'required|int',
         ]);
     }
 }

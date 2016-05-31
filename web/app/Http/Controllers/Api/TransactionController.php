@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Db\UserTransaction;
+use App\UseCase\TransactionUseCase;
 use Braintree_ClientToken;
 use Braintree_Transaction;
 use Illuminate\Http\JsonResponse;
@@ -29,11 +30,7 @@ class TransactionController extends BaseApiController
         $amount = $request->get('amount');
 
         if ($amount < 1) {
-            return response([
-                'status' => Response::HTTP_BAD_REQUEST,
-                'title' => 'Error',
-                'message' => 'Amount cant be smaller than 0'
-            ], Response::HTTP_BAD_REQUEST);
+            return $this->responseError('Amount can\'t be less than 0');
         }
 
         $result = Braintree_Transaction::sale([
@@ -57,4 +54,13 @@ class TransactionController extends BaseApiController
         return $this->responseOk();
     }
 
+    public function index($id, TransactionUseCase $useCase)
+    {
+        return $useCase->getById($id);
+    }
+
+    public function getByUser($userId, TransactionUseCase $useCase)
+    {
+        return $useCase->getByUserId($userId);
+    }
 }

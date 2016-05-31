@@ -9,12 +9,28 @@ class Task extends Model
 {
     use SoftDeletes;
 
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        'ends_at',
+        'starts_at',
+    ];
+
     protected $fillable = [
         'category_id',
         'user_id',
         'location_id',
         'description',
+        'currency_id',
+        'amount',
+        'ends_at',
+        'starts_at'
     ];
+
+    public function setAmountAttribute($value)
+    {
+        $this->attributes['amount'] = round($value, 2);
+    }
 
     public function location()
     {
@@ -24,6 +40,11 @@ class Task extends Model
     public function category()
     {
         return $this->belongsTo(TaskCategory::class);
+    }
+
+    public function currency()
+    {
+        return $this->belongsTo(Currency::class);
     }
 
     public function applications()

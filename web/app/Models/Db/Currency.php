@@ -20,4 +20,9 @@ class Currency extends Model
     {
         return $this->hasMany(PayoffRequest::class);
     }
+
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
 }
