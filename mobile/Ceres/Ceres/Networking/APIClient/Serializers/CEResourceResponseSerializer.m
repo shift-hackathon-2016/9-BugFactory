@@ -20,6 +20,8 @@
             
             if (!serializationError && errorJSONObject) {
                 errorContext = [CEResourceErrorContext new];
+                errorContext.statusCode = [errorJSONObject[@"status"] integerValue];
+                errorContext.title = errorJSONObject[@"title"];
                 errorContext.message = errorJSONObject[@"message"];
                 errorContext.HTTPStatusCode = httpResponse.statusCode;
             }

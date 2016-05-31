@@ -1,14 +1,10 @@
-//
-//  AppDelegate.m
-//  Ceres
-//
-//  Created by Aron Balog on 31/05/16.
-//  Copyright © 2016 Ceres. All rights reserved.
-//
-
 #import "AppDelegate.h"
 
+#import "CERootViewController.h"
+
 @interface AppDelegate ()
+
+@property (strong, nonatomic, nonnull) __kindof UIViewController *rootViewController;
 
 @end
 
@@ -16,7 +12,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -40,6 +38,27 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Properties
+
+- (UIWindow *)window
+{
+    if (!_window) {
+        _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        _window.rootViewController = self.rootViewController;
+    }
+    
+    return _window;
+}
+
+- (UIViewController *)rootViewController
+{
+    if (!_rootViewController) {
+        _rootViewController = [CERootViewController new];
+    }
+    
+    return _rootViewController;
 }
 
 @end

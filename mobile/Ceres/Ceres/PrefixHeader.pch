@@ -10,10 +10,27 @@
 #define MAS_SHORTHAND
 #import <Masonry/Masonry.h>
 
+#import "CEContext.h"
+
+//protocols
+#import "CEJSONMappable.h"
+
 //extensions
 #import "NSError+CEErrorContext.h"
+#import "NSObject+PropertyEnumerator.h"
+#import "CEDevice+CurrentDevice.h"
 
 //models
 #import "CEErrorContext.h"
+#import "CEUser.h"
+
+//services
+#import "CEAuthenticationService.h"
+#import "CEDeviceService.h"
+#import "CEKeychainStorageService.h"
+
+//providers
+#import "CEDeviceUDIDProvider.h"
+#import "CEDeviceNotificationsTokenProvider.h"
 
 #endif
