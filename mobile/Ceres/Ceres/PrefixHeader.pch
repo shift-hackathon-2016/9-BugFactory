@@ -1,0 +1,13 @@
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <AFNetworking/AFNetworking.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ObjectiveSugar/ObjectiveSugar.h>
+
+#import "CEAPIClient.h"
+
+#define MAS_SHORTHAND
+#import <Masonry/Masonry.h>
+
+#endif

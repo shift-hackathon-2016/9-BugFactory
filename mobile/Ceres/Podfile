@@ -1,0 +1,16 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '9.0'
+
+inhibit_all_warnings!
+
+def commonPods
+    pod 'AFNetworking', '~> 3.0'
+    pod 'ReactiveCocoa', '~> 2.5'
+    pod 'SpaceCommander'
+    pod 'ObjectiveSugar'
+    pod 'Masonry'
+end
+
+target 'Ceres' do
+    commonPods
+end
