@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Gateways\PushNotificationGateways;
+namespace App\Gateways;
 use app\Models\Db\Device;
 use app\Models\Db\PushNotification;
 
@@ -27,7 +27,6 @@ class AwsSnsGateway
             $result = $this->client->getEndpointAttributes(array(
                 'EndpointArn' => $endpointArn,
             ));
-
             $tokenIsEqual = $result["Token"] != $device->notifications_token;
             $endpointEnabled = strtolower($result["Enabled"]) == "true";
             $updateNeeded = !$tokenIsEqual || !$endpointEnabled;
@@ -70,9 +69,9 @@ class AwsSnsGateway
         return $result["MessageId"];
     }
 
-    private function updateEndpointForMobileDevice($endpontArn, Device $mobileDevice) {
+    private function updateEndpointForMobileDevice($endpointArn, Device $mobileDevice) {
         $this->client->setEndpointAttributes(array(
-            'EndpointArn' => $endpontArn,
+            'EndpointArn' => $endpointArn,
             'Attributes' => [
                 'CustomUserData' => "User_".$mobileDevice->user_id,
                 'Enabled' => "true",
