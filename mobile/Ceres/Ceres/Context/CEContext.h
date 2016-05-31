@@ -2,6 +2,8 @@
 
 #import "CEAuthenticationService.h"
 #import "CEKeychainStorageService.h"
+#import "CEPushNotificationService.h"
+#import "CEDeviceService.h"
 
 #import "CEDeviceUDIDProvider.h"
 #import "CEDeviceNotificationsTokenProvider.h"
@@ -11,6 +13,8 @@
 //services
 @property (strong, nonatomic, nonnull) id <CEAuthenticationService> authenticationService;
 @property (strong, nonatomic, nonnull) id <CEKeychainStorageService> keychainStorageService;
+@property (strong, nonatomic, nonnull) id <CEPushNotificationService> pushNotificationService;
+@property (strong, nonatomic, nonnull) id <CEDeviceService> deviceService;
 
 //providers
 @property (strong, nonatomic, nonnull) id <CEDeviceUDIDProvider> deviceUDIDProvider;

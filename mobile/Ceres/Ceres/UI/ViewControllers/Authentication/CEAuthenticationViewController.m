@@ -5,6 +5,7 @@
 @interface CEAuthenticationViewController ()
 
 @property (strong, nonatomic, nonnull) FLAnimatedImageView *backgroundImageView;
+@property (strong, nonatomic, nonnull) UIVisualEffectView *blurView;
 @property (strong, nonatomic, nonnull) UIView *containerView;
 @property (strong, nonatomic, nonnull) UITextField *emailTextField;
 @property (strong, nonatomic, nonnull) UITextField *passwordTextField;
@@ -37,6 +38,7 @@
 - (void)loadSubviews
 {
     [self.view addSubview:self.backgroundImageView];
+    [self.view addSubview:self.blurView];
     [self.view addSubview:self.containerView];
     [self.containerView addSubview:self.emailTextField];
     [self.containerView addSubview:self.passwordTextField];
@@ -52,6 +54,10 @@
         make.top.bottom.left.right.equalTo(self.view);
     }];
     
+    [self.blurView remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.bottom.right.equalTo(self.view);
+    }];
+    
     [self.containerView remakeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.view);
         make.left.right.equalTo(self.view).with.insets(UIEdgeInsetsMake(0, 20, 0, 20));
@@ -63,8 +69,9 @@
     }];
     
     [self.passwordTextField remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.emailTextField.bottom);
+        make.top.equalTo(self.emailTextField.bottom).with.insets(UIEdgeInsetsMake(10, 0, 0, 0));
         make.left.right.equalTo(self.containerView);
+        make.height.equalTo(@40);
     }];
     
     [self.loginButton remakeConstraints:^(MASConstraintMaker *make) {
@@ -80,10 +87,13 @@
 - (void)startObserving
 {
     @weakify(self);
-    [[self.loginButton rac_signalForControlEvents:UIControlEventTouchUpInside] flattenMap:^RACStream *(id value) {
+    [[[self.loginButton rac_signalForControlEvents:UIControlEventTouchUpInside] flattenMap:^RACStream *(id value) {
         @strongify(self);
         
-        return [self login];
+        return [self.userAuthenticationUseCase registerDeviceToPushNotifications];
+        //return [self login];
+    }] subscribeNext:^(NSString *token) {
+        
     }];
 }
 
@@ -108,6 +118,17 @@
     }
     
     return _backgroundImageView;
+}
+
+- (UIVisualEffectView *)blurView
+{
+    if (!_blurView) {
+        UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        _blurView = [[UIVisualEffectView alloc] initWithEffect:blur];
+        _blurView.alpha = 0.8;
+    }
+    
+    return _blurView;
 }
 
 - (UIView *)containerView
@@ -142,7 +163,7 @@
 - (UIButton *)loginButton
 {
     if (!_loginButton) {
-        _loginButton = [UIButton new];
+        _loginButton = [UIButton buttonWithType:UIButtonTypeSystem];
         [_loginButton setTitle:NSLocalizedString(@"Login", nil) forState:UIControlStateNormal];
     }
     

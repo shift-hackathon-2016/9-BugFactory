@@ -1,9 +1,12 @@
 #import "CERootViewController.h"
 
 #import "CEAuthenticationViewController.h"
+#import "CEHomeViewController.h"
+
 @interface CERootViewController ()
 
 @property (strong, nonatomic, nonnull) CEAuthenticationViewController *authenticationViewController;
+@property (strong, nonatomic, nonnull) CEHomeViewController *homeViewController;
 
 @end
 
@@ -29,7 +32,9 @@
 
 - (void)showHomeViewController
 {
-    
+    [self addChildViewController:self.homeViewController];
+    [self.view addSubview:self.homeViewController.view];
+    [self.homeViewController didMoveToParentViewController:self];
 }
 
 #pragma mark - Properties
@@ -42,4 +47,14 @@
     
     return _authenticationViewController;
 }
+
+- (CEHomeViewController *)homeViewController
+{
+    if (!_homeViewController) {
+        _homeViewController = [CEHomeViewController new];
+    }
+    
+    return _homeViewController;
+}
+
 @end

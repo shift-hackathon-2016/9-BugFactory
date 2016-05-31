@@ -5,6 +5,7 @@
 //services
 #import "CENetworkAuthenticationService.h"
 #import "CELocalKeychainStorageService.h"
+#import "CELocalPushNotificationService.h"
 
 //providers
 #import "CELocalDeviceUDIDProvider.h"
@@ -31,7 +32,8 @@
 {
     return @[
              [CENetworkAuthenticationService class],
-             [CELocalKeychainStorageService class]
+             [CELocalKeychainStorageService class],
+             [CELocalPushNotificationService class]
              ];
 }
 

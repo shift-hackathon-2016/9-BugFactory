@@ -29,6 +29,7 @@
 #import "CEAuthenticationService.h"
 #import "CEDeviceService.h"
 #import "CEKeychainStorageService.h"
+#import "CEPushNotificationService.h"
 
 //providers
 #import "CEDeviceUDIDProvider.h"
