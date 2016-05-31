@@ -25,6 +25,13 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
     Route::group(['prefix' => 'notifications', 'middleware' => 'api_auth'], function() {
         Route::get('/', 'NotificationsController@index');
     });
+
+    Route::group(['prefix' => 'task', 'middleware' => 'api_auth'], function() {
+        Route::group(['prefix' => 'categories'], function() {
+            Route::get('/all', 'TaskCategoriesController@getAll');
+            Route::get('/{id}', 'TaskCategoriesController@children')->where('id', '[0-9]+');
+        });
+    });
 });
 
 Route::group(['namespace' => 'Web'], function() {
@@ -40,6 +47,15 @@ Route::group(['middleware' => 'admin'], function() {
     Route::group(['namespace' => 'Web'], function() {
 
         Route::get('dashboard', 'DashboardController@index');
+
+        Route::group(['prefix' => 'task'], function() {
+            Route::group(['prefix' => 'categories'], function() {
+                Route::get('/all', 'TaskCategoriesController@getAll');
+                Route::get('/create', 'TaskCategoriesController@getCreate');
+                Route::get('/{id}', 'TaskCategoriesController@index')->where('id', '[0-9]+');
+                Route::post('/create', 'TaskCategoriesController@create');
+            });
+        });
 
     });
 
