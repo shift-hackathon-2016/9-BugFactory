@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['namespace' => 'Admin'], function () {
+
+    Route::get('admin/login', 'AdminLoginController@showLogin');
+    Route::get('admin/example', 'AdminLoginController@showExample');
+
+});
