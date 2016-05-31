@@ -14,12 +14,30 @@ class TaskCategoriesController extends Controller
 {
     public function getAll(TaskCategoriesUseCase $useCase)
     {
-        return $useCase->getAllCategories();
+        $categories = $useCase->getAllCategories();
+
+        return view('Admin.task_categories')->with('categories', $categories);
     }
 
-    public function index($id, TaskCategoriesUseCase $useCase)
+    public function edit($id, TaskCategoriesUseCase $useCase)
     {
-        return $useCase->getCategory($id); // @todo: render view here
+        if (!$category = TaskCategory::find($id)) {
+            return redirect('/');
+        }
+
+        return view('Admin.cat_edit')->with('category', $category);
+    }
+
+    public function save($id, Request $request)
+    {
+        if (!$category = TaskCategory::find($id)) {
+            return redirect('/');
+        }
+
+        $category->fill($request->all());
+        $category->save();
+
+        return redirect('/');
     }
 
     public function getCreate($id = null)
