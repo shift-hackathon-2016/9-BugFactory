@@ -14,7 +14,9 @@ class TaskCategoriesController extends Controller
 {
     public function getAll(TaskCategoriesUseCase $useCase)
     {
-        return $useCase->getAllCategories();
+        $categories = $useCase->getAllCategories();
+
+        return view('Admin.task_categories')->with('categories', $categories);
     }
 
     public function index($id, TaskCategoriesUseCase $useCase)

@@ -85,7 +85,6 @@ Route::group(['middleware' => 'admin'], function() {
 
         Route::group(['prefix' => 'user'], function() {
 
-
             Route::get('/edit/{id}', 'AdminUserController@showEdit');
             Route::get('/list', 'AdminUserController@showList');
             Route::post('/save/{id}', [
