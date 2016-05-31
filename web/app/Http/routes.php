@@ -21,6 +21,10 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
         Route::post('/register', 'AuthController@register');
         Route::get('/logout', 'AuthController@logout');
     });
+
+    Route::group(['prefix' => 'notifications', 'middleware' => 'api_auth'], function() {
+        Route::get('/', 'NotificationsController@index');
+    });
 });
 
 Route::group(['namespace' => 'Web'], function() {
