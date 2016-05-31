@@ -10,4 +10,14 @@ class Currency extends Model
         'code',
         'name',
     ];
+
+    public function transactions()
+    {
+        return $this->hasMany(UserTransaction::class);
+    }
+
+    public function payoffRequests()
+    {
+        return $this->hasMany(PayoffRequest::class);
+    }
 }

@@ -28,4 +28,39 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public function notifications()
+    {
+        return $this->hasMany(Notification::class);
+    }
+
+    public function devices()
+    {
+        return $this->hasMany(UserDevice::class);
+    }
+
+    public function payoffRequests()
+    {
+        return $this->hasMany(PayoffRequest::class);
+    }
+
+    public function transactions()
+    {
+        return $this->hasMany(UserTransaction::class);
+    }
+
+    public function applications()
+    {
+        return $this->hasMany(TaskApplication::class);
+    }
+
+    public function contracts()
+    {
+        return $this->hasMany(TaskContract::class);
+    }
+
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
 }

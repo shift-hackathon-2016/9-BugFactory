@@ -11,4 +11,14 @@ class UserTransaction extends Model
         'currency_id',
         'amount',
     ];
+
+    public function currency()
+    {
+        return $this->belongsTo(Currency::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
