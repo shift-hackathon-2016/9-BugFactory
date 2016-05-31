@@ -40,15 +40,15 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
 
         Route::group(['prefix' => 'task-applications'], function() {
             Route::get('/{id}', 'TaskApplicationsController@index')->where('id', '[0-9]+');
-            Route::get('/user/{id}', 'TaskApplicationsController@getByUser')->where('id', '[0-9]+');//WIP
-            Route::get('/task/{id}', 'TaskApplicationsController@getByTask')->where('id', '[0-9]+');//WIP
+            Route::get('/user/{id}', 'TaskApplicationsController@getByUser')->where('id', '[0-9]+');
+            Route::get('/task/{id}', 'TaskApplicationsController@getByTask')->where('id', '[0-9]+');
             Route::post('/', 'TaskApplicationsController@create');
         });
 
         Route::group(['prefix' => 'task-contracts'], function() {
-            Route::get('/{id}', 'TaskContractsController@index')->where('id', '[0-9]+');//WIP
-            Route::get('/user/{id}', 'TaskContractsController@getByUser')->where('id', '[0-9]+');//WIP
-            Route::get('/task/{id}', 'TaskContractsController@getByTask')->where('id', '[0-9]+');//WIP
+            Route::get('/{id}', 'TaskContractsController@index')->where('id', '[0-9]+');
+            Route::get('/user/{id}', 'TaskContractsController@getByUser')->where('id', '[0-9]+');
+            Route::get('/task/{id}', 'TaskContractsController@getByTask')->where('id', '[0-9]+');
             Route::post('/', 'TaskContractsController@create');//
         });
 

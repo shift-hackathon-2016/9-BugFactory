@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Db\TaskApplication;
+use App\UseCase\TaskApplicationsUseCase;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -26,6 +27,21 @@ class TaskApplicationsController extends BaseApiController
         ]);
 
         return $this->responseOk();
+    }
+
+    public function index($id, TaskApplicationsUseCase $useCase)
+    {
+        return $useCase->getById($id);
+    }
+
+    public function getByUser($id, TaskApplicationsUseCase $useCase)
+    {
+        return $useCase->getByUserId($id);
+    }
+
+    public function getByTask($id, TaskApplicationsUseCase $useCase)
+    {
+        return $useCase->getByTaskId($id);
     }
 
     protected function validator(array $data)
