@@ -134,7 +134,7 @@ static NSString * const kAPIURL = @"http://api.getceres.com";
             if (downloadProgressSubject) {
                 [downloadProgressSubject sendNext:downloadProgress];
             }
-        } completionHandler:^(NSURLResponse *_Nonnull response, id _Nullable responseObject, NSError *_Nullable error) {            
+        } completionHandler:^(NSURLResponse *_Nonnull response, id _Nullable responseObject, NSError *_Nullable error) {
             if (uploadProgressSubject) {
                 [uploadProgressSubject sendCompleted];
             }
