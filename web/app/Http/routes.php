@@ -97,7 +97,8 @@ Route::group(['middleware' => 'admin'], function() {
         Route::group(['prefix' => 'task-categories'], function() {
             Route::get('/all', 'TaskCategoriesController@getAll');
             Route::get('/create', 'TaskCategoriesController@getCreate');
-            Route::get('/{id}', 'TaskCategoriesController@index')->where('id', '[0-9]+');
+            Route::get('/edit/{id}', 'TaskCategoriesController@edit')->where('id', '[0-9]+');
+            Route::post('/edit/{id}', 'TaskCategoriesController@save')->where('id', '[0-9]+');
             Route::post('/create', 'TaskCategoriesController@create');
         });
 
