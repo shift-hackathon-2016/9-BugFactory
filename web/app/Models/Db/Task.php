@@ -12,8 +12,8 @@ class Task extends Model
     protected $dates = [
         'created_at',
         'updated_at',
-        'starts_at',
         'ends_at',
+        'starts_at',
     ];
 
     protected $fillable = [
@@ -21,7 +21,16 @@ class Task extends Model
         'user_id',
         'location_id',
         'description',
+        'currency_id',
+        'amount',
+        'ends_at',
+        'starts_at'
     ];
+
+    public function setAmountAttribute($value)
+    {
+        $this->attributes['amount'] = round($value, 2);
+    }
 
     public function location()
     {
@@ -31,6 +40,11 @@ class Task extends Model
     public function category()
     {
         return $this->belongsTo(TaskCategory::class);
+    }
+
+    public function currency()
+    {
+        return $this->belongsTo(Currency::class);
     }
 
     public function applications()

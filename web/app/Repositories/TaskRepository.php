@@ -8,6 +8,6 @@ class TaskRepository
 {
     public function find($id)
     {
-        return Task::with('owner', 'category')->find($id);
+        return Task::with('owner', 'category', 'currency')->find($id);
     }
 }
