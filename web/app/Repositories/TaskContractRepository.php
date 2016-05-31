@@ -7,9 +7,9 @@ use App\Models\Db\TaskContract;
 class TaskContractRepository
 {
 
-    public function findById($id)
+    public function find($id)
     {
-        return TaskContract::with('user')->where('id', $id)->get();
+        return TaskContract::with('user')->find($id);
     }
 
     public function findByUserId($userId)

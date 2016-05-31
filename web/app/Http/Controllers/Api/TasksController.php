@@ -41,6 +41,13 @@ class TasksController extends BaseApiController
         return $this->responseOk();
     }
 
+    public function delete($id, TaskUseCase $useCase)
+    {
+        $useCase->delete($id);
+
+        return $this->responseOk();
+    }
+
     protected function validator(array $data)
     {
         return Validator::make($data, [

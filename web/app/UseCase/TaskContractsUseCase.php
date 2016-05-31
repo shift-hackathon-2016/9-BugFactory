@@ -24,7 +24,7 @@ class TaskContractsUseCase
 
     public function getById($id)
     {
-        return $this->taskContractRepository->findById($id);
+        return $this->taskContractRepository->find($id);
     }
 
     public function getByUserId($userId)

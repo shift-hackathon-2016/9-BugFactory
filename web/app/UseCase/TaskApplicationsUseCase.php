@@ -24,7 +24,7 @@ class TaskApplicationsUseCase
 
     public function getById($id)
     {
-        return $this->taskApplicationRepository->findById($id);
+        return $this->taskApplicationRepository->find($id);
     }
 
     public function getByUserId($userId)
