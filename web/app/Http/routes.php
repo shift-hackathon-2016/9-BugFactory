@@ -54,6 +54,14 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
 
         Route::post('/devices/create', 'DevicesController@store');
     });
+
+    Route::group(['prefix' => 'payment'], function() {
+
+        Route::get('token', 'PaymentController@getToken');
+        Route::post('make', 'PaymentController@makePayment');
+
+    });
+
 });
 
 Route::group(['namespace' => 'Web'], function() {

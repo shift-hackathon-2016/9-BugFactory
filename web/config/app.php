@@ -156,6 +156,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Oureastudios\Laravel\BraintreeServiceProvider::class,
         App\Providers\ModelObserverServiceProvider::class,
         Aws\Laravel\AwsServiceProvider::class,
 
