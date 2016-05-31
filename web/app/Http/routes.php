@@ -30,8 +30,9 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
         });
 
         Route::group(['prefix' => 'tasks', 'middleware' => 'api_auth'], function() {
-            Route::get('/{id}', 'TasksController@index')->where('id', '[0-9]+');
             Route::post('/', 'TasksController@create');
+            Route::get('/{id}', 'TasksController@index')->where('id', '[0-9]+');
+            Route::delete('/{id}', 'TasksController@delete')->where('id', '[0-9]+');
         });
 
         Route::group(['prefix' => 'task-categories'], function() {

@@ -15,9 +15,9 @@ class TaskCategoryRepository
         return TaskCategory::where('parent_id', $parentId)->get();
     }
 
-    public function findById($id)
+    public function find($id)
     {
-        return TaskCategory::where('id', $id)->get();
+        return TaskCategory::find($id);
     }
 
     public function all()

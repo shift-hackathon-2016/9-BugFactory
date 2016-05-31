@@ -7,9 +7,9 @@ use App\Models\Db\TaskApplication;
 class TaskApplicationRepository
 {
 
-    public function findById($id)
+    public function find($id)
     {
-        return TaskApplication::with('user')->where('id', $id)->get();
+        return TaskApplication::with('user')->find($id);
     }
 
     public function findByUserId($userId)

@@ -24,6 +24,14 @@ class TaskUseCase
 
     public function getTask($id)
     {
-        return $this->taskRepository->findById($id);
+        return $this->taskRepository->find($id);
+    }
+
+    public function delete($id)
+    {
+        $task = $this->taskRepository->find($id);
+        if (null !== $task) {
+            $task->delete();
+        }
     }
 }

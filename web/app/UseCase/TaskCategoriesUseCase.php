@@ -29,7 +29,7 @@ class TaskCategoriesUseCase
 
     public function getCategory($id)
     {
-        return $this->taskCategoryRepository->findById($id);
+        return $this->taskCategoryRepository->find($id);
     }
 
     public function getAllCategories()
