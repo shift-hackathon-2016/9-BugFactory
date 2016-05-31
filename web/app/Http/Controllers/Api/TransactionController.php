@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Auth;
 
-class PaymentController extends Controller
+class TransactionController extends BaseApiController
 {
 
     public function getToken()
@@ -23,7 +23,7 @@ class PaymentController extends Controller
         ]);
     }
 
-    public function makePayment(Request $request)
+    public function create(Request $request)
     {
         $token = $request->get('token');
         $amount = $request->get('amount');
@@ -44,12 +44,8 @@ class PaymentController extends Controller
             ]
         ]);
 
-        if ($result->success) {
-            return response([
-                'status' => Response::HTTP_BAD_REQUEST,
-                'title' => 'Error',
-                'message' => 'There was an error'
-            ], Response::HTTP_BAD_REQUEST);
+        if (false === $result->success) {
+            return $this->responseError('There was an error');
         }
 
         UserTransaction::create([
@@ -58,9 +54,7 @@ class PaymentController extends Controller
             'amount' => $amount
         ]);
 
-        return response([
-            'message' => 'Success'
-        ]);
+        return $this->responseOk();
     }
 
 }
