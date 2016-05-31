@@ -1,5 +1,5 @@
 #import <UIKit/UIKit.h>
 
-@interface CEHomeViewController : UIViewController
+@interface CEHomeViewController : UITabBarController
 
 @end

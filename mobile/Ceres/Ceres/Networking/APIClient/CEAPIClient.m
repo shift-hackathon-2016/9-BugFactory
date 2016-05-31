@@ -3,7 +3,7 @@
 #import "CEResourceRequestSerializer.h"
 #import "CEResourceResponseSerializer.h"
 
-static NSString * const kAPIURL = @"http://api.getceres.com";
+static NSString * const kAPIURL = @"http://api.getceres.com/api/";
 
 @implementation CEAPIClient
 
@@ -99,7 +99,7 @@ static NSString * const kAPIURL = @"http://api.getceres.com";
         
         NSError *serializerError = nil;
         NSString *URLString = [[NSURL URLWithString:path
-                                      relativeToURL:self.baseURL] absoluteString];
+                                      relativeToURL:[NSURL URLWithString:kAPIURL]] absoluteString];
         
         NSURLRequest *request = [[self requestSerializer] requestWithMethod:method URLString:URLString parameters:parameters error:&serializerError];
 

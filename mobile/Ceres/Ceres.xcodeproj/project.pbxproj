@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3826BD051CFDD15900E049D5 /* CELocalPushNotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD041CFDD15900E049D5 /* CELocalPushNotificationService.m */; };
 		3826BD091CFDDF2700E049D5 /* CEHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD081CFDDF2700E049D5 /* CEHomeViewController.m */; };
+		3826BD0D1CFDE48B00E049D5 /* CEMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD0C1CFDE48B00E049D5 /* CEMapViewController.m */; };
 		388808671CFD7DDD00D68AFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808661CFD7DDD00D68AFE /* main.m */; };
 		3888086A1CFD7DDD00D68AFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808691CFD7DDD00D68AFE /* AppDelegate.m */; };
 		388808751CFD7DDD00D68AFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388808731CFD7DDD00D68AFE /* LaunchScreen.storyboard */; };
@@ -46,6 +47,8 @@
 		3826BD041CFDD15900E049D5 /* CELocalPushNotificationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CELocalPushNotificationService.m; sourceTree = "<group>"; };
 		3826BD071CFDDF2700E049D5 /* CEHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEHomeViewController.h; sourceTree = "<group>"; };
 		3826BD081CFDDF2700E049D5 /* CEHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEHomeViewController.m; sourceTree = "<group>"; };
+		3826BD0B1CFDE48B00E049D5 /* CEMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEMapViewController.h; sourceTree = "<group>"; };
+		3826BD0C1CFDE48B00E049D5 /* CEMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEMapViewController.m; sourceTree = "<group>"; };
 		388808621CFD7DDD00D68AFE /* Ceres.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ceres.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		388808661CFD7DDD00D68AFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		388808681CFD7DDD00D68AFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -152,6 +155,15 @@
 				3826BD081CFDDF2700E049D5 /* CEHomeViewController.m */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		3826BD0A1CFDE48000E049D5 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD0B1CFDE48B00E049D5 /* CEMapViewController.h */,
+				3826BD0C1CFDE48B00E049D5 /* CEMapViewController.m */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		388808591CFD7DDD00D68AFE = {
@@ -430,6 +442,7 @@
 		388808CC1CFD97BA00D68AFE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3826BD0A1CFDE48000E049D5 /* Map */,
 				3826BD061CFDDF1D00E049D5 /* Home */,
 				388809011CFDAAF700D68AFE /* Authentication */,
 				388808CD1CFD97C000D68AFE /* Root */,
@@ -732,6 +745,7 @@
 				3888088C1CFD851E00D68AFE /* CEResourceResponseSerializer.m in Sources */,
 				388809001CFDA88D00D68AFE /* CELocalDeviceNotificationsTokenProvider.m in Sources */,
 				388808E31CFD9E5D00D68AFE /* CEDevice+CEJSONMappable.m in Sources */,
+				3826BD0D1CFDE48B00E049D5 /* CEMapViewController.m in Sources */,
 				388808BF1CFD939E00D68AFE /* CEUser.m in Sources */,
 				3888089F1CFD87D000D68AFE /* CEResourceErrorContext.m in Sources */,
 				388808B31CFD8F0100D68AFE /* CEContext.m in Sources */,

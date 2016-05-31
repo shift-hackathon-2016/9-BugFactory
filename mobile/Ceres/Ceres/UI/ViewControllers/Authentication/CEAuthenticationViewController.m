@@ -59,7 +59,7 @@
     }];
     
     [self.containerView remakeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.view);
+        make.top.equalTo(self.view);
         make.left.right.equalTo(self.view).with.insets(UIEdgeInsetsMake(0, 20, 0, 20));
     }];
     
@@ -90,8 +90,8 @@
     [[[self.loginButton rac_signalForControlEvents:UIControlEventTouchUpInside] flattenMap:^RACStream *(id value) {
         @strongify(self);
         
-        return [self.userAuthenticationUseCase registerDeviceToPushNotifications];
-        //return [self login];
+        //return [self.userAuthenticationUseCase registerDeviceToPushNotifications];
+        return [self login];
     }] subscribeNext:^(NSString *token) {
         
     }];
@@ -145,6 +145,7 @@
     if (!_emailTextField) {
         _emailTextField = [UITextField new];
         _emailTextField.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
+        _emailTextField.text = @"toni.peric@trikoder.net";
     }
     
     return _emailTextField;
@@ -155,6 +156,7 @@
     if (!_passwordTextField) {
         _passwordTextField = [UITextField new];
         _passwordTextField.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
+        _passwordTextField.text = @"test123";
     }
     
     return _passwordTextField;
