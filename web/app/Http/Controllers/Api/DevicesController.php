@@ -8,7 +8,7 @@ use App\Models\Db\Device;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class DevicesController extends Controller
+class DevicesController extends BaseApiController
 {
     public function store(Request $request, AwsSnsGateway $aws)
     {
@@ -20,9 +20,9 @@ class DevicesController extends Controller
             $awsToken = $aws->registerMobileDevice($device);
             $device->update(['aws_notifications_token' => $awsToken]);
         } catch (\Exception $e) {
-            return response(['status' => 400, 'message' => 'Unable to register device'], 400);
+            return $this->responseError('Unable to register device');
         }
 
-        return ['status' => 200];
+        return $this->responseOk();
     }
 }

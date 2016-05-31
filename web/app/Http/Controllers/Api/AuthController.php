@@ -25,7 +25,7 @@ class AuthController extends BaseApiController
             return $this->responseOk();
         }
 
-        return ['status' => Response::HTTP_UNAUTHORIZED];
+        return $this->responseUnauthorized();
     }
 
     public function register(Request $request)

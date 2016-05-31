@@ -28,4 +28,9 @@ class BaseApiController extends Controller
             'message' => $message
         ], Response::HTTP_BAD_REQUEST);
     }
+
+    protected function responseUnauthorized()
+    {
+        return response(['status' => Response::HTTP_UNAUTHORIZED], Response::HTTP_UNAUTHORIZED);
+    }
 }
