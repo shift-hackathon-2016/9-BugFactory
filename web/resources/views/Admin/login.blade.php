@@ -25,7 +25,7 @@
             display: block;
             line-height: 40px;
             border-radius: 3px;
-            color: #fff;\
+            color: #fff;
             text-shadow: none;
             font-weight:bold;
         }
