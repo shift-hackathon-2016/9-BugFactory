@@ -21,9 +21,9 @@ class AuthController extends Controller
     {
         $this->validateLogin($request);
 
-        $credentials = $this->getCredentials($request);
+        $credentials = $request->only(["email", "password"]);
 
-        if (Auth::guard($this->getGuard())->attempt($credentials, true)) {
+        if (Auth::attempt($credentials, true)) {
             return $this->responseOk();
         }
 
