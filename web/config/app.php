@@ -159,6 +159,9 @@ return [
         App\Providers\ModelObserverServiceProvider::class,
         Aws\Laravel\AwsServiceProvider::class,
 
+        Barryvdh\Queue\AsyncServiceProvider::class,
+
+
     ],
 
     /*

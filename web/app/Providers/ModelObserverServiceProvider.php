@@ -3,7 +3,11 @@
 namespace App\Providers;
 
 use App\Models\Db\Location;
+use App\Models\Db\Notification;
+use App\Models\Db\PushNotification;
 use App\Observers\LocationObserver;
+use App\Observers\NotificationObserver;
+use App\Observers\PushNotificationObserver;
 use Illuminate\Support\ServiceProvider;
 
 class ModelObserverServiceProvider extends ServiceProvider
@@ -16,6 +20,8 @@ class ModelObserverServiceProvider extends ServiceProvider
     public function boot()
     {
         Location::observe(new LocationObserver());
+        Notification::observe(new NotificationObserver());
+        PushNotification::observe(new PushNotificationObserver());
     }
 
     /**

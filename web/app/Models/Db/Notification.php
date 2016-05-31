@@ -8,7 +8,9 @@ class Notification extends Model
 {
     protected $fillable = [
         'user_id',
-        'read'
+        'read',
+        'object_type',
+        'object_id',
     ];
 
     public function user()
