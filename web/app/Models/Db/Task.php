@@ -10,7 +10,6 @@ class Task extends Model
         'category_id',
         'user_id',
         'location_id',
-        'title',
         'description',
     ];
 
@@ -36,6 +35,6 @@ class Task extends Model
 
     public function owner()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

@@ -22,14 +22,34 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
         Route::get('/logout', 'AuthController@logout');
     });
 
-    Route::group(['prefix' => 'notifications', 'middleware' => 'api_auth'], function() {
-        Route::get('/', 'NotificationsController@index');
-    });
 
-    Route::group(['prefix' => 'task', 'middleware' => 'api_auth'], function() {
-        Route::group(['prefix' => 'categories'], function() {
-            Route::get('/all', 'TaskCategoriesController@getAll');
+    Route::group(['middleware' => 'api_auth'], function() {
+
+        Route::group(['prefix' => 'notifications'], function() {
+            Route::get('/', 'NotificationsController@index');
+        });
+
+        Route::group(['prefix' => 'tasks', 'middleware' => 'api_auth'], function() {
+            Route::get('/{id}', 'TasksController@index')->where('id', '[0-9]+');
+            Route::post('/', 'TasksController@create');
+        });
+
+        Route::group(['prefix' => 'task-categories'], function() {
             Route::get('/{id}', 'TaskCategoriesController@children')->where('id', '[0-9]+');
+        });
+
+        Route::group(['prefix' => 'task-applications'], function() {
+            Route::get('/{id}', 'TaskApplicationsController@index')->where('id', '[0-9]+');//WIP
+            Route::get('/user/{id}', 'TaskApplicationsController@getByUser')->where('id', '[0-9]+');//WIP
+            Route::get('/task/{id}', 'TaskApplicationsController@getByTask')->where('id', '[0-9]+');//WIP
+            Route::post('/', 'TaskApplicationsController@create');
+        });
+
+        Route::group(['prefix' => 'task-contracts'], function() {
+            Route::get('/{id}', 'TaskContractsController@index')->where('id', '[0-9]+');//WIP
+            Route::get('/user/{id}', 'TaskContractsController@getByUser')->where('id', '[0-9]+');//WIP
+            Route::get('/task/{id}', 'TaskContractsController@getByTask')->where('id', '[0-9]+');//WIP
+            Route::post('/', 'TaskContractsController@create');//
         });
     });
 });
@@ -60,13 +80,11 @@ Route::group(['middleware' => 'admin'], function() {
 
         });
 
-        Route::group(['prefix' => 'task'], function() {
-            Route::group(['prefix' => 'categories'], function() {
-                Route::get('/all', 'TaskCategoriesController@getAll');
-                Route::get('/create', 'TaskCategoriesController@getCreate');
-                Route::get('/{id}', 'TaskCategoriesController@index')->where('id', '[0-9]+');
-                Route::post('/create', 'TaskCategoriesController@create');
-            });
+        Route::group(['prefix' => 'task-categories'], function() {
+            Route::get('/all', 'TaskCategoriesController@getAll');
+            Route::get('/create', 'TaskCategoriesController@getCreate');
+            Route::get('/{id}', 'TaskCategoriesController@index')->where('id', '[0-9]+');
+            Route::post('/create', 'TaskCategoriesController@create');
         });
 
     });
