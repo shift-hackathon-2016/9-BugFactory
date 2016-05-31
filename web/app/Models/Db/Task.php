@@ -4,16 +4,13 @@ namespace App\Models\Db;
 
 use Illuminate\Database\Eloquent\Model;
 
-class LocationPoint extends Model
+class Task extends Model
 {
     protected $fillable = [
+        'category_id',
+        'user_id',
         'location_id',
-        'point'
+        'title',
+        'description',
     ];
-
-    public $hidden = [
-        'point'
-    ];
-
-    public $timestamps = false;
 }
