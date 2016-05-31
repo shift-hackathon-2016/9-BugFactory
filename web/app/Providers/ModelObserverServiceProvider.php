@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Db\Location;
 use App\Observers\LocationObserver;
 use Illuminate\Support\ServiceProvider;
 
