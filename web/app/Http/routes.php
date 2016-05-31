@@ -51,6 +51,8 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
             Route::get('/task/{id}', 'TaskContractsController@getByTask')->where('id', '[0-9]+');//WIP
             Route::post('/', 'TaskContractsController@create');//
         });
+
+        Route::post('/devices/create', 'DevicesController@store');
     });
 });
 
@@ -89,4 +91,8 @@ Route::group(['middleware' => 'admin'], function() {
 
     });
 
+});
+
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('dashboard', 'DashboardController@index');
 });
