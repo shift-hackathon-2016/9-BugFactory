@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Web;
 
 use App\Models\Db\User;
 use Validator;
@@ -10,6 +10,8 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
+    public $redirectPath = '/';
+
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
@@ -68,5 +70,15 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function showLogin()
+    {
+        return view('Admin.login');
+    }
+
+    public function showExample()
+    {
+        return view('Admin.example');
     }
 }
