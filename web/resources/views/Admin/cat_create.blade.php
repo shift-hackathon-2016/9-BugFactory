@@ -1,73 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('Admin.Base.outer')
 
-    <title>Admin login | Ceres</title>
+@section('content')
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Form Elements</h3>
+                </div>
 
-    <!-- Bootstrap -->
-    <link href="{{ asset('assets/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="{{ asset('assets/build/css/custom.min.css') }}" rel="stylesheet">
-
-    <style>
-        .error {
-            background: #e74c3c;
-            font-size: 14px;
-            width: 100%;
-            display: block;
-            line-height: 40px;
-            border-radius: 3px;
-            color: #fff;
-            text-shadow: none;
-            font-weight:bold;
-        }
-    </style>
-</head>
-
-<body class="login">
-<div>
-
-    <div class="login_wrapper">
-        <div class="animate form login_form">
-            <section class="login_content">
-                <form method="post">
-                    <h1>Category</h1>
-                        {{ csrf_field() }}
-                    <div>
-                        <input type="text" class="form-control" placeholder="Parent category ID" name="parent_id"/>
-                    </div>
-                    <div>
-                        <input type="text" class="form-control" placeholder="Name" name="name" required="" />
-                    </div>
-                    <div>
-                        <p class="error">Invalid credentials</p>
-                    </div>
-                    <div>
-                        <button type="submit" class="btn btn-default submit">Create</button>
-                        {{--<a class="reset_pass" href="#">Lost your password?</a>--}}
-                        {{-- @todo-mario: do we need forgot pw? --}}
-                    </div>
-
-                    <div class="clearfix"></div>
-
-                    <div class="separator">
-                        <div>
-                            <p>©2016 All Rights Reserved. Made with love at Shift hackaton ❤️</p>
+                <div class="title_right">
+                    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
                         </div>
                     </div>
-                </form>
-            </section>
-        </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Form Design <small>different form elements</small></h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Settings 1</a>
+                                        </li>
+                                        <li><a href="#">Settings 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <br />
+                            <form method="post" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                                {{ csrf_field() }}
 
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Parent category ID<span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="text" name="parent_id" value="@if(old('parent_id') !== null){{ old('parent_id') }}@endif" required="required" class="form-control col-md-7 col-xs-12">
+
+                                        @if($errors->has('parent_id'))
+                                            <ul class="parsley-errors-list filled" id="parsley-id-5">
+                                                <li class="parsley-required">{{ $errors->first('parent_id') }}</li>
+                                            </ul>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Name<span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="text" name="name" value="@if(old('name') !== null){{ old('name') }}@endif" required="required" class="form-control col-md-7 col-xs-12">
+
+                                        @if($errors->has('name'))
+                                            <ul class="parsley-errors-list filled" id="parsley-id-5">
+                                                <li class="parsley-required">{{ $errors->first('name') }}</li>
+                                            </ul>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="ln_solid"></div>
+                                <div class="form-group">
+                                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                        <button type="reset" class="btn btn-primary">Cancel</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-</div>
-</body>
-</html>
+@stop

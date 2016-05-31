@@ -19,12 +19,14 @@ class TaskCategoriesController extends Controller
 
     public function index($id, TaskCategoriesUseCase $useCase)
     {
-        return $useCase->getCategory($id);
+        return $useCase->getCategory($id); // @todo: render view here
     }
 
-    public function getCreate()
+    public function getCreate($id = null)
     {
-        return view('Admin.cat_create');
+        $parentId = null;
+        $name = '';
+        return view('Admin.cat_create')->with('parentId', $parentId)->with('name', $name);
     }
 
     public function create(Request $request)
