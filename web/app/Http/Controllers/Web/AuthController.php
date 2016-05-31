@@ -11,6 +11,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 class AuthController extends Controller
 {
     public $redirectPath = '/';
+    public $redirectAfterLogout = '/login';
 
     /*
     |--------------------------------------------------------------------------
