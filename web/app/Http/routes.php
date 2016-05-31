@@ -47,6 +47,11 @@ Route::group(['middleware' => 'admin'], function() {
     Route::group(['namespace' => 'Web'], function() {
 
         Route::get('dashboard', 'DashboardController@index');
+        Route::get('user/edit/{id}', 'AdminUserController@showEdit');
+        Route::post('user/save/{id}', [
+            'as' => 'user/save',
+            'uses' => 'AdminUserController@saveUser'
+        ]);
 
         Route::group(['prefix' => 'task'], function() {
             Route::group(['prefix' => 'categories'], function() {
