@@ -4,7 +4,7 @@
 #import "CENotificationsViewController.h"
 #import "CECreateTaskViewController.h"
 
-@interface CEHomeViewController ()
+@interface CEHomeViewController () <UITabBarControllerDelegate>
 
 @property (strong, nonatomic, nonnull) CEMapViewController *mapViewController;
 @property (strong, nonatomic, nonnull) CENotificationsViewController *notificationsViewController;
@@ -18,6 +18,8 @@
 {
     self = [self init];
     
+    self.delegate = self;
+    
     return self;
 }
 - (void)viewDidLoad
@@ -25,6 +27,15 @@
     [super viewDidLoad];
     
     [self loadViewControllers];
+}
+
+#pragma mark - UITabBarControllerDelegate
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    [[CEContext defaultContext].navigationProvider setCurrentViewController:viewController];
+    
+    return YES;
 }
 
 #pragma mark - Private

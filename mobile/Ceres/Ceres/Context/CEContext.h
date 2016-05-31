@@ -6,6 +6,8 @@
 #import "CENotificationService.h"
 #import "CEDeviceService.h"
 #import "CENavigationService.h"
+#import "CETaskService.h"
+#import "CEDeviceLocationService.h"
 
 #import "CEDeviceUDIDProvider.h"
 #import "CEDeviceNotificationsTokenProvider.h"
@@ -20,6 +22,8 @@
 @property (strong, nonatomic, nonnull) id <CEDeviceService> deviceService;
 @property (strong, nonatomic, nonnull) id <CENotificationService> notificationService;
 @property (strong, nonatomic, nonnull) id <CENavigationService> navigationService;
+@property (strong, nonatomic, nonnull) id <CETaskService> taskService;
+@property (strong, nonatomic, nonnull) id <CEDeviceLocationService> deviceLocationService;
 
 //providers
 @property (strong, nonatomic, nonnull) id <CEDeviceUDIDProvider> deviceUDIDProvider;

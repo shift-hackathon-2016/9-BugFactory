@@ -4,6 +4,7 @@
 #import "CERoutable.h"
 
 #import "CEHomeViewController.h"
+#import "CECreateTaskMapViewController.h"
 
 static NSString * const kRouteParamPrefix = @":";
 
@@ -19,6 +20,7 @@ static NSString * const kRouteParamPrefix = @":";
 {
     return @{
              @"home":[CEHomeViewController class],
+             @"task/map":[CECreateTaskMapViewController class]
              };
 }
 

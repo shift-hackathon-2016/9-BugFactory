@@ -9,6 +9,8 @@
 @property (strong, nonatomic, nonnull) UITableView *tableView;
 @property (strong, nonatomic, nonnull) NSArray *presentables;
 
+@property (strong, nonatomic, nonnull) UIBarButtonItem *nextButton;
+
 @property (strong, nonatomic, nonnull) CETaskUseCase *taskUseCase;
 
 @end
@@ -22,8 +24,16 @@
     [self loadSubviews];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self loadData];
+}
+
 - (void)loadSubviews
 {
+    [self.navigationItem setRightBarButtonItem:self.nextButton animated:YES];
     [self.view addSubview:self.tableView];
     
     [self.view setNeedsUpdateConstraints];
@@ -37,6 +47,18 @@
     }];
     
     [super updateViewConstraints];
+}
+
+- (void)loadData
+{
+    @weakify(self);
+    [[self.taskUseCase presentFormElements] subscribeNext:^(NSArray *presentables) {
+        @strongify(self);
+        
+        self.presentables = presentables;
+        
+        [self.tableView reloadData];
+    }];
 }
 
 #pragma mark - UITableViewDataSource
@@ -64,6 +86,13 @@
 
 #pragma mark - UITableViewDelegate
 
+#pragma mark - Private
+
+- (void)nextScreen
+{
+    [[CEContext defaultContext].navigationService openRoute:@"task/map" params:nil navigationType:CENavigationTypePush completion:nil];
+}
+
 #pragma mark - Properties
 
 - (UITableView *)tableView
@@ -73,6 +102,8 @@
         _tableView.dataSource = self;
         _tableView.delegate = self;
         [_tableView registerClass:[CECreateTaskFormElementCell class] forCellReuseIdentifier:[CECreateTaskFormElementCell reuseIdentifier]];
+        _tableView.rowHeight = UITableViewAutomaticDimension;
+        _tableView.estimatedRowHeight = 50.0;
     }
     
     return _tableView;
@@ -85,6 +116,15 @@
     }
     
     return _taskUseCase;
+}
+
+- (UIBarButtonItem *)nextButton
+{
+    if (!_nextButton) {
+        _nextButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Next", nil) style:UIBarButtonItemStylePlain target:self action:@selector(nextScreen)];
+    }
+    
+    return _nextButton;
 }
 
 @end

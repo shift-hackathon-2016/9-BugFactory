@@ -9,6 +9,8 @@
 #import "CELocalNavigationService.h"
 #import "CENetworkDeviceService.h"
 #import "CENetworkNotificationService.h"
+#import "CENetworkTaskService.h"
+#import "CELocalDeviceLocationService.h"
 
 //providers
 #import "CELocalDeviceUDIDProvider.h"
@@ -40,7 +42,9 @@
              [CELocalPushNotificationService class],
              [CELocalNavigationService class],
              [CENetworkNotificationService class],
-             [CENetworkDeviceService class]
+             [CENetworkDeviceService class],
+             [CENetworkTaskService class],
+             [CELocalDeviceLocationService class]
              ];
 }
 
