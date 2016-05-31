@@ -53,9 +53,9 @@ class PaymentController extends Controller
         }
 
         UserTransaction::create([
-            Auth::id(),
-            2, // @todo-mario: fix currency
-            $amount
+            'user_id' => Auth::id(),
+            'currency_id' => 2, // @todo-mario: fix currency
+            'amount' => $amount
         ]);
 
         return response([

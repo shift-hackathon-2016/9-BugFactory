@@ -6,3 +6,4 @@ web/Homestead.json
 web/.env
 web/.idea/*
 .idea/
+*.orig
