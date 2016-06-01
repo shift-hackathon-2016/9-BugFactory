@@ -1,6 +1,6 @@
 #import "CETextFieldFormElement.h"
 
-@interface CETextFieldFormElement ()
+@interface CETextFieldFormElement () <UITextViewDelegate>
 
 @property (strong, nonatomic, nonnull) UITextView *textView;
 
@@ -48,6 +48,10 @@
     if (!_textView) {
         _textView = [UITextView new];
         _textView.backgroundColor = [UIColor clearColor];
+        _textView.delegate = self;
+        _textView.font = [UIFont systemFontOfSize:21.0];
+        _textView.textColor = [UIColor whiteColor];
+        _textView.tintColor = [UIColor whiteColor];
     }
     
     return _textView;

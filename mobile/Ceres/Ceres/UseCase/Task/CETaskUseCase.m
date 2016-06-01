@@ -50,6 +50,10 @@
 - (RACSignal *)createTask
 {
     return [[self.taskService createTask:[self submitableTask]] map:^id(id value) {
+        [self submitableTask].descriptionObject = nil;
+        [self submitableTask].startsAt = nil;
+        [self submitableTask].location = nil;
+        
         return nil;
     }];
 }

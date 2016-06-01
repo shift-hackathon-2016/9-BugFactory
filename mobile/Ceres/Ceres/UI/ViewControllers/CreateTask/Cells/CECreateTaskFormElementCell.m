@@ -73,6 +73,9 @@
 {
     if (!_titleLabel) {
         _titleLabel = [UILabel new];
+        _titleLabel.font = [UIFont systemFontOfSize:21];
+        _titleLabel.textColor = [UIColor whiteColor];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
     }
     
     return _titleLabel;

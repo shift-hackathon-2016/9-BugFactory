@@ -13,7 +13,6 @@
 @property (strong, nonatomic, nonnull) UIButton *closeButton;
 @property (strong, nonatomic, nonnull) UIButton *applyButton;
 @property (strong, nonatomic, nonnull) UIImageView *iconImageView;
-@property (strong, nonatomic, nonnull) UITextView *descriptionTextView;
 
 @property (strong, nonatomic, nonnull) CETaskUseCase *taskUseCase;
 
@@ -50,7 +49,6 @@
     [self.view addSubview:self.containerView];
     [self.containerView addSubview:self.iconImageView];
     [self.containerView addSubview:self.descriptionLabel];
-    [self.containerView addSubview:self.descriptionTextView];
     [self.containerView addSubview:self.closeButton];
     [self.containerView addSubview:self.applyButton];
     
@@ -73,20 +71,14 @@
     }];
     
     [self.iconImageView remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.equalTo(self.view).with.insets(UIEdgeInsetsMake(40, 20, 0, 40));
-        make.width.height.equalTo(@60);
+        make.top.equalTo(self.view).with.insets(UIEdgeInsetsMake(50, 20, 0, 40));
+        make.centerX.equalTo(self.view);
+        make.width.height.equalTo(@120);
     }];
     
     [self.descriptionLabel remakeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.view).with.insets(UIEdgeInsetsMake(40, 40, 0, 40));
-        make.left.equalTo(self.iconImageView.right).with.offset(10.0);
-        make.centerY.equalTo(self.iconImageView);
-    }];
-    
-    [self.descriptionTextView remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.iconImageView.bottom);
-        make.left.right.equalTo(self.view);
-        make.bottom.equalTo(self.closeButton.top);
+        make.left.right.equalTo(self.view).with.insets(UIEdgeInsetsMake(40, 40, 0, 40));
+        make.top.equalTo(self.iconImageView.bottom).with.offset(50.0);
     }];
     
     [self.closeButton remakeConstraints:^(MASConstraintMaker *make) {
@@ -118,13 +110,19 @@
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
     
-    
     [[[self.applyButton rac_signalForControlEvents:UIControlEventTouchUpInside] flattenMap:^RACStream *(id value) {
         @strongify(self);
         return [self.taskUseCase applyToTaskWithTaskId:self.taskId];
     }] subscribeNext:^(id x) {
         @strongify(self);
-        [self dismissViewControllerAnimated:YES completion:nil];
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Thank you!" message:@"Task was posted successfully. You'll get notified when someone applies." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }];
+        [alert addAction:ok];
+
+        [self presentViewController:alert animated:YES completion:nil];
     } error:^(NSError *error) {
         
     }];
@@ -171,6 +169,9 @@
     if (!_descriptionLabel) {
         _descriptionLabel = [UILabel new];
         _descriptionLabel.numberOfLines = 0;
+        _descriptionLabel.font = [UIFont systemFontOfSize:21.0];
+        _descriptionLabel.textColor = [UIColor whiteColor];
+        _descriptionLabel.textAlignment = NSTextAlignmentCenter;
     }
     
     return _descriptionLabel;
@@ -181,7 +182,7 @@
     if (!_iconImageView) {
         _iconImageView = [UIImageView new];
         _iconImageView.backgroundColor = [UIColor darkGrayColor];
-        _iconImageView.layer.cornerRadius = 30.0;
+        _iconImageView.layer.cornerRadius = 60.0;
         _iconImageView.layer.masksToBounds = YES;
     }
     
@@ -219,16 +220,6 @@
     }
     
     return _applyButton;
-}
-
-- (UITextView *)descriptionTextView
-{
-    if (!_descriptionTextView) {
-        _descriptionTextView = [UITextView new];
-        _descriptionTextView.backgroundColor = [UIColor clearColor];
-    }
-    
-    return _descriptionTextView;
 }
 
 @end

@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic, nonnull) CETaskUseCase *taskUseCase;
 
+@property (strong, nonatomic, nonnull) UITapGestureRecognizer *tapGesture;
+
 @end
 
 @implementation CECreateTaskViewController
@@ -53,7 +55,9 @@
     [self.view addSubview:self.backgroundImageView];
     [self.view addSubview:self.blurView];
     [self.view addSubview:self.tableView];
-
+    
+    [self.view addGestureRecognizer:self.tapGesture];
+    
     [self.view setNeedsUpdateConstraints];
     [self.view updateConstraintsIfNeeded];
 }
@@ -167,7 +171,7 @@
         _tableView.delegate = self;
         [_tableView registerClass:[CECreateTaskFormElementCell class] forCellReuseIdentifier:[CECreateTaskFormElementCell reuseIdentifier]];
         _tableView.rowHeight = UITableViewAutomaticDimension;
-        _tableView.estimatedRowHeight = 50.0;
+        _tableView.estimatedRowHeight = 100.0;
         _tableView.allowsSelection = NO;
         _tableView.backgroundColor = [UIColor clearColor];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -192,6 +196,15 @@
     }
     
     return _nextButton;
+}
+
+- (UITapGestureRecognizer *)tapGesture
+{
+    if (!_tapGesture) {
+        _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self.view action:@selector(endEditing:)];
+    }
+    
+    return _tapGesture;
 }
 
 @end
