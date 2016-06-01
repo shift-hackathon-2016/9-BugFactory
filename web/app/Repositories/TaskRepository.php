@@ -11,8 +11,13 @@ class TaskRepository
         return Task::with('owner', 'category', 'currency')->find($id);
     }
 
+    public function findActiveTask($id)
+    {
+        return Task::with('contracts')->where('id', $id)->whereNull('finished_at')->first();
+    }
+
     public function findByLocationIds(array $locationIds)
     {
-        return Task::whereIn('location_id', $locationIds)->get();
+        return Task::whereIn('location_id', $locationIds)->whereNull('finished_at');
     }
 }

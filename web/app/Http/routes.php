@@ -25,11 +25,16 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
 
     Route::group(['middleware' => 'api_auth'], function() {
 
+        Route::group(['prefix' => 'user'], function() {
+            Route::get('/balance/{id}', 'UserTransactionsController@getUserBalance');
+        });
+
         Route::group(['prefix' => 'notifications'], function() {
             Route::get('/', 'NotificationsController@index');
         });
 
         Route::group(['prefix' => 'tasks', 'middleware' => 'api_auth'], function() {
+            Route::patch('/finish', 'TasksController@finish');
             Route::post('/', 'TasksController@create');
             Route::get('/{id}', 'TasksController@index')->where('id', '[0-9]+');
             Route::delete('/{id}', 'TasksController@delete')->where('id', '[0-9]+');
@@ -54,7 +59,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
         });
 
         Route::post('/devices/create', 'DevicesController@store');
-Route::get('/tasks/nearby', 'TasksController@nearby');
+        Route::get('/tasks/nearby', 'TasksController@nearby');
 
 
         Route::group(['prefix' => 'transaction'], function() {

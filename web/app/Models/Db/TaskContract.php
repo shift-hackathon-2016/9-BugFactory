@@ -6,11 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class TaskContract extends Model
 {
-    protected $dates = [
-        'created_at',
-        'updated_at',
-        'finished_at'
-    ];
 
     protected $fillable = [
         'user_id',
