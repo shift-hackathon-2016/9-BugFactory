@@ -24,12 +24,6 @@ class TasksController extends BaseApiController
 
     public function create(Request $request)
     {
-        $validator = $this->validator($request->all());
-
-        if ($validator->fails()) {
-            return $this->responseError('Invalid data');
-        }
-
         $data = [
             'category_id' => 4,
             'user_id' => Auth::id(),
