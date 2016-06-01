@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Db\Location;
 use App\Models\Db\Task;
 use App\Models\Db\UserTransaction;
 use App\Repositories\LocationPointRepository;
-use App\Repositories\LocationRepository;
 use App\Repositories\TaskRepository;
 use App\UseCase\TaskUseCase;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -37,12 +36,19 @@ class TasksController extends BaseApiController
             'amount' => $request->amount,
             'starts_at' => $request->starts_at,
             'ends_at' => $request->ends_at,
-
         ];
 
-        if (!empty($request->location_id)) {
-            $data['location_id'] = $request->location_id;
-        }
+        $locationRequestData = $request->get('location');
+        $location = Location::create([
+            'latitude' => $locationRequestData['latitude'],
+            'longitude' => $locationRequestData['latitude'],
+            'city' => $locationRequestData['longitude'],
+            'country' => $locationRequestData['country'],
+            'street' => $locationRequestData['street'],
+            'zip' => $locationRequestData['zip'],
+         ]);
+
+        $data['location_id'] = $location->id;
 
         Task::create($data);
 
@@ -68,12 +74,11 @@ class TasksController extends BaseApiController
     {
         return Validator::make($data, [
             'category_id' => 'required|int',
-            'location_id' => 'int',
             'description' => 'required',
             'currency_id' => 'required',
             'amount' => 'required',
             'starts_at' => 'required|int',
-            'ends_at' => 'required|int',
+            'ends_at' => 'required|int'
         ]);
     }
 
