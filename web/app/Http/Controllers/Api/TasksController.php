@@ -44,7 +44,7 @@ class TasksController extends BaseApiController
         $locationRequestData = $request->get('location');
         $location = Location::create([
             'latitude' => $locationRequestData['latitude'],
-            'longitude' => $locationRequestData['latitude'],
+            'longitude' => $locationRequestData['longitude'],
             'city' => '',
             'country' => '',
             'street' => '',
