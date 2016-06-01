@@ -73,7 +73,7 @@ class TasksController extends BaseApiController
         $lat = $request->latitude;
         $lon = $request->longitude;
 
-        if (!$lat || !$lon) {
+        if ($lat === null || $lon === null) {
             return $this->responseError('Invalid latitude or longitude specified');
         }
 
