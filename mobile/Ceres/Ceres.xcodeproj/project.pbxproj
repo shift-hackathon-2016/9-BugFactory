@@ -1,0 +1,1354 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3826BD051CFDD15900E049D5 /* CELocalPushNotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD041CFDD15900E049D5 /* CELocalPushNotificationService.m */; };
+		3826BD091CFDDF2700E049D5 /* CEHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD081CFDDF2700E049D5 /* CEHomeViewController.m */; };
+		3826BD0D1CFDE48B00E049D5 /* CEMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD0C1CFDE48B00E049D5 /* CEMapViewController.m */; };
+		3826BD111CFDFE6800E049D5 /* CENotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD101CFDFE6800E049D5 /* CENotificationsViewController.m */; };
+		3826BD151CFDFFCA00E049D5 /* CENotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD141CFDFFCA00E049D5 /* CENotificationCell.m */; };
+		3826BD191CFDFFD800E049D5 /* CENotificationCellPresentable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD181CFDFFD800E049D5 /* CENotificationCellPresentable.m */; };
+		3826BD1D1CFE02FA00E049D5 /* CENotificationsUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD1C1CFE02FA00E049D5 /* CENotificationsUseCase.m */; };
+		3826BD231CFE03CD00E049D5 /* CENetworkNotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD221CFE03CD00E049D5 /* CENetworkNotificationService.m */; };
+		3826BD271CFE09DB00E049D5 /* CENotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD261CFE09DB00E049D5 /* CENotification.m */; };
+		3826BD2B1CFE0A1100E049D5 /* CENotification+CEJSONMappable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD2A1CFE0A1100E049D5 /* CENotification+CEJSONMappable.m */; };
+		3826BD321CFE0CC200E049D5 /* CELocalNavigationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD311CFE0CC200E049D5 /* CELocalNavigationService.m */; };
+		3826BD381CFE0E1C00E049D5 /* CELocalNavigationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD371CFE0E1C00E049D5 /* CELocalNavigationProvider.m */; };
+		3826BD3C1CFE2CA300E049D5 /* CECreateTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD3B1CFE2CA300E049D5 /* CECreateTaskViewController.m */; };
+		3826BD401CFE2EAA00E049D5 /* CECreateTaskFormElementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD3F1CFE2EAA00E049D5 /* CECreateTaskFormElementCell.m */; };
+		3826BD441CFE2F4B00E049D5 /* CECreateTaskFormElementCellPresentable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD431CFE2F4B00E049D5 /* CECreateTaskFormElementCellPresentable.m */; };
+		3826BD481CFE307600E049D5 /* CETaskUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD471CFE307600E049D5 /* CETaskUseCase.m */; };
+		3826BD4E1CFE31E000E049D5 /* CENetworkTaskService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD4D1CFE31E000E049D5 /* CENetworkTaskService.m */; };
+		3826BD521CFE331F00E049D5 /* CETask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD511CFE331F00E049D5 /* CETask.m */; };
+		3826BD561CFE336200E049D5 /* CETask+CEJSONMappable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD551CFE336200E049D5 /* CETask+CEJSONMappable.m */; };
+		3826BD5C1CFE36C000E049D5 /* CELocalDeviceLocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD5B1CFE36C000E049D5 /* CELocalDeviceLocationService.m */; };
+		3826BD601CFE390D00E049D5 /* CETextFieldFormElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD5F1CFE390D00E049D5 /* CETextFieldFormElement.m */; };
+		3826BD631CFE3A3E00E049D5 /* CEDatePickerFormElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD621CFE3A3E00E049D5 /* CEDatePickerFormElement.m */; };
+		3826BD671CFE421700E049D5 /* CECreateTaskMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD661CFE421700E049D5 /* CECreateTaskMapViewController.m */; };
+		3826BD6B1CFE4EDB00E049D5 /* CECreateTaskConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD6A1CFE4EDB00E049D5 /* CECreateTaskConfirmationViewController.m */; };
+		3826BD6F1CFE647E00E049D5 /* CETaskMapPinPresentable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD6E1CFE647E00E049D5 /* CETaskMapPinPresentable.m */; };
+		3826BD731CFE657200E049D5 /* CELocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD721CFE657200E049D5 /* CELocation.m */; };
+		3826BD771CFE684500E049D5 /* CELocation+CEJSONMappable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD761CFE684500E049D5 /* CELocation+CEJSONMappable.m */; };
+		3826BD7B1CFE70BA00E049D5 /* CETaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD7A1CFE70BA00E049D5 /* CETaskViewController.m */; };
+		3826BD7F1CFE72F100E049D5 /* CETaskPresentable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD7E1CFE72F100E049D5 /* CETaskPresentable.m */; };
+		3826BD831CFE7BDF00E049D5 /* UIViewController+CurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD821CFE7BDF00E049D5 /* UIViewController+CurrentViewController.m */; };
+		388808671CFD7DDD00D68AFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808661CFD7DDD00D68AFE /* main.m */; };
+		3888086A1CFD7DDD00D68AFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808691CFD7DDD00D68AFE /* AppDelegate.m */; };
+		388808751CFD7DDD00D68AFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388808731CFD7DDD00D68AFE /* LaunchScreen.storyboard */; };
+		388808851CFD816400D68AFE /* CEAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808841CFD816400D68AFE /* CEAPIClient.m */; };
+		388808891CFD84F800D68AFE /* CEResourceRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808881CFD84F800D68AFE /* CEResourceRequestSerializer.m */; };
+		3888088C1CFD851E00D68AFE /* CEResourceResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888088B1CFD851E00D68AFE /* CEResourceResponseSerializer.m */; };
+		388808951CFD858600D68AFE /* NSError+CEErrorContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808941CFD858600D68AFE /* NSError+CEErrorContext.m */; };
+		3888089F1CFD87D000D68AFE /* CEResourceErrorContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888089E1CFD87D000D68AFE /* CEResourceErrorContext.m */; };
+		388808A31CFD8D2E00D68AFE /* CEResourceNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808A21CFD8D2E00D68AFE /* CEResourceNetworkService.m */; };
+		388808A91CFD8DFE00D68AFE /* CENetworkAuthorizationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808A81CFD8DFE00D68AFE /* CENetworkAuthorizationService.m */; };
+		388808AF1CFD8E7E00D68AFE /* CENetworkAuthenticationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808AE1CFD8E7E00D68AFE /* CENetworkAuthenticationService.m */; };
+		388808B31CFD8F0100D68AFE /* CEContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808B21CFD8F0100D68AFE /* CEContext.m */; };
+		388808B71CFD8F4200D68AFE /* NSObject+PropertyEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808B61CFD8F4200D68AFE /* NSObject+PropertyEnumerator.m */; };
+		388808BB1CFD8F7E00D68AFE /* CEObjectProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808BA1CFD8F7E00D68AFE /* CEObjectProperty.m */; };
+		388808BF1CFD939E00D68AFE /* CEUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808BE1CFD939E00D68AFE /* CEUser.m */; };
+		388808C41CFD93CC00D68AFE /* CEUser+CEJSONMappable.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808C31CFD93CC00D68AFE /* CEUser+CEJSONMappable.m */; };
+		388808D01CFD97CE00D68AFE /* CERootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808CF1CFD97CE00D68AFE /* CERootViewController.m */; };
+		388808D61CFD9C7D00D68AFE /* CENetworkDeviceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808D51CFD9C7D00D68AFE /* CENetworkDeviceService.m */; };
+		388808DF1CFD9E3F00D68AFE /* CEDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808DE1CFD9E3F00D68AFE /* CEDevice.m */; };
+		388808E31CFD9E5D00D68AFE /* CEDevice+CEJSONMappable.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808E21CFD9E5D00D68AFE /* CEDevice+CEJSONMappable.m */; };
+		388808E61CFDA3B300D68AFE /* CEDevice+CurrentDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808E51CFDA3B300D68AFE /* CEDevice+CurrentDevice.m */; };
+		388808F31CFDA54700D68AFE /* CELocalKeychainStorageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808F21CFDA54700D68AFE /* CELocalKeychainStorageService.m */; };
+		388808FB1CFDA87200D68AFE /* CELocalDeviceUDIDProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808FA1CFDA87200D68AFE /* CELocalDeviceUDIDProvider.m */; };
+		388809001CFDA88D00D68AFE /* CELocalDeviceNotificationsTokenProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808FF1CFDA88D00D68AFE /* CELocalDeviceNotificationsTokenProvider.m */; };
+		388809041CFDAB0800D68AFE /* CEAuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388809031CFDAB0800D68AFE /* CEAuthenticationViewController.m */; };
+		388809091CFDB1A500D68AFE /* CEUserAuthenticationUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 388809081CFDB1A500D68AFE /* CEUserAuthenticationUseCase.m */; };
+		3888090F1CFDBC7B00D68AFE /* login.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3888090E1CFDBC7B00D68AFE /* login.gif */; };
+		38B1AF201CFE98A600F42C38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B1AF1F1CFE98A600F42C38 /* Assets.xcassets */; };
+		38B1AF221CFEA06600F42C38 /* notifications.gif in Resources */ = {isa = PBXBuildFile; fileRef = 38B1AF211CFEA06600F42C38 /* notifications.gif */; };
+		38B1AF241CFEA63900F42C38 /* task.gif in Resources */ = {isa = PBXBuildFile; fileRef = 38B1AF231CFEA63900F42C38 /* task.gif */; };
+		77A58D38AC2A139890930E51 /* libPods-Ceres.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4354B7A8CCB9F75BA7F221B /* libPods-Ceres.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3826BD011CFDD14700E049D5 /* CEPushNotificationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEPushNotificationService.h; sourceTree = "<group>"; };
+		3826BD031CFDD15900E049D5 /* CELocalPushNotificationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CELocalPushNotificationService.h; sourceTree = "<group>"; };
+		3826BD041CFDD15900E049D5 /* CELocalPushNotificationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CELocalPushNotificationService.m; sourceTree = "<group>"; };
+		3826BD071CFDDF2700E049D5 /* CEHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEHomeViewController.h; sourceTree = "<group>"; };
+		3826BD081CFDDF2700E049D5 /* CEHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEHomeViewController.m; sourceTree = "<group>"; };
+		3826BD0B1CFDE48B00E049D5 /* CEMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEMapViewController.h; sourceTree = "<group>"; };
+		3826BD0C1CFDE48B00E049D5 /* CEMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEMapViewController.m; sourceTree = "<group>"; };
+		3826BD0F1CFDFE6800E049D5 /* CENotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENotificationsViewController.h; sourceTree = "<group>"; };
+		3826BD101CFDFE6800E049D5 /* CENotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENotificationsViewController.m; sourceTree = "<group>"; };
+		3826BD131CFDFFCA00E049D5 /* CENotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENotificationCell.h; sourceTree = "<group>"; };
+		3826BD141CFDFFCA00E049D5 /* CENotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENotificationCell.m; sourceTree = "<group>"; };
+		3826BD171CFDFFD800E049D5 /* CENotificationCellPresentable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENotificationCellPresentable.h; sourceTree = "<group>"; };
+		3826BD181CFDFFD800E049D5 /* CENotificationCellPresentable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENotificationCellPresentable.m; sourceTree = "<group>"; };
+		3826BD1B1CFE02FA00E049D5 /* CENotificationsUseCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENotificationsUseCase.h; sourceTree = "<group>"; };
+		3826BD1C1CFE02FA00E049D5 /* CENotificationsUseCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENotificationsUseCase.m; sourceTree = "<group>"; };
+		3826BD1F1CFE03B600E049D5 /* CENotificationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENotificationService.h; sourceTree = "<group>"; };
+		3826BD211CFE03CD00E049D5 /* CENetworkNotificationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENetworkNotificationService.h; sourceTree = "<group>"; };
+		3826BD221CFE03CD00E049D5 /* CENetworkNotificationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENetworkNotificationService.m; sourceTree = "<group>"; };
+		3826BD251CFE09DB00E049D5 /* CENotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENotification.h; sourceTree = "<group>"; };
+		3826BD261CFE09DB00E049D5 /* CENotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENotification.m; sourceTree = "<group>"; };
+		3826BD291CFE0A1100E049D5 /* CENotification+CEJSONMappable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CENotification+CEJSONMappable.h"; sourceTree = "<group>"; };
+		3826BD2A1CFE0A1100E049D5 /* CENotification+CEJSONMappable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CENotification+CEJSONMappable.m"; sourceTree = "<group>"; };
+		3826BD2D1CFE0C2400E049D5 /* CENavigationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENavigationService.h; sourceTree = "<group>"; };
+		3826BD2F1CFE0C9900E049D5 /* CERoutable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CERoutable.h; sourceTree = "<group>"; };
+		3826BD301CFE0CC200E049D5 /* CELocalNavigationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CELocalNavigationService.h; sourceTree = "<group>"; };
+		3826BD311CFE0CC200E049D5 /* CELocalNavigationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CELocalNavigationService.m; sourceTree = "<group>"; };
+		3826BD341CFE0DFE00E049D5 /* CENavigationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENavigationProvider.h; sourceTree = "<group>"; };
+		3826BD361CFE0E1C00E049D5 /* CELocalNavigationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CELocalNavigationProvider.h; sourceTree = "<group>"; };
+		3826BD371CFE0E1C00E049D5 /* CELocalNavigationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CELocalNavigationProvider.m; sourceTree = "<group>"; };
+		3826BD3A1CFE2CA300E049D5 /* CECreateTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CECreateTaskViewController.h; sourceTree = "<group>"; };
+		3826BD3B1CFE2CA300E049D5 /* CECreateTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CECreateTaskViewController.m; sourceTree = "<group>"; };
+		3826BD3E1CFE2EAA00E049D5 /* CECreateTaskFormElementCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CECreateTaskFormElementCell.h; sourceTree = "<group>"; };
+		3826BD3F1CFE2EAA00E049D5 /* CECreateTaskFormElementCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CECreateTaskFormElementCell.m; sourceTree = "<group>"; };
+		3826BD421CFE2F4B00E049D5 /* CECreateTaskFormElementCellPresentable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CECreateTaskFormElementCellPresentable.h; sourceTree = "<group>"; };
+		3826BD431CFE2F4B00E049D5 /* CECreateTaskFormElementCellPresentable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CECreateTaskFormElementCellPresentable.m; sourceTree = "<group>"; };
+		3826BD461CFE307600E049D5 /* CETaskUseCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETaskUseCase.h; sourceTree = "<group>"; };
+		3826BD471CFE307600E049D5 /* CETaskUseCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETaskUseCase.m; sourceTree = "<group>"; };
+		3826BD4A1CFE31CB00E049D5 /* CETaskService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETaskService.h; sourceTree = "<group>"; };
+		3826BD4C1CFE31E000E049D5 /* CENetworkTaskService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENetworkTaskService.h; sourceTree = "<group>"; };
+		3826BD4D1CFE31E000E049D5 /* CENetworkTaskService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENetworkTaskService.m; sourceTree = "<group>"; };
+		3826BD501CFE331F00E049D5 /* CETask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETask.h; sourceTree = "<group>"; };
+		3826BD511CFE331F00E049D5 /* CETask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETask.m; sourceTree = "<group>"; };
+		3826BD541CFE336200E049D5 /* CETask+CEJSONMappable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CETask+CEJSONMappable.h"; sourceTree = "<group>"; };
+		3826BD551CFE336200E049D5 /* CETask+CEJSONMappable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CETask+CEJSONMappable.m"; sourceTree = "<group>"; };
+		3826BD581CFE36AE00E049D5 /* CEDeviceLocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEDeviceLocationService.h; sourceTree = "<group>"; };
+		3826BD5A1CFE36C000E049D5 /* CELocalDeviceLocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CELocalDeviceLocationService.h; sourceTree = "<group>"; };
+		3826BD5B1CFE36C000E049D5 /* CELocalDeviceLocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CELocalDeviceLocationService.m; sourceTree = "<group>"; };
+		3826BD5E1CFE390D00E049D5 /* CETextFieldFormElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETextFieldFormElement.h; sourceTree = "<group>"; };
+		3826BD5F1CFE390D00E049D5 /* CETextFieldFormElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETextFieldFormElement.m; sourceTree = "<group>"; };
+		3826BD611CFE3A3E00E049D5 /* CEDatePickerFormElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEDatePickerFormElement.h; sourceTree = "<group>"; };
+		3826BD621CFE3A3E00E049D5 /* CEDatePickerFormElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEDatePickerFormElement.m; sourceTree = "<group>"; };
+		3826BD651CFE421700E049D5 /* CECreateTaskMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CECreateTaskMapViewController.h; sourceTree = "<group>"; };
+		3826BD661CFE421700E049D5 /* CECreateTaskMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CECreateTaskMapViewController.m; sourceTree = "<group>"; };
+		3826BD691CFE4EDB00E049D5 /* CECreateTaskConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CECreateTaskConfirmationViewController.h; sourceTree = "<group>"; };
+		3826BD6A1CFE4EDB00E049D5 /* CECreateTaskConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CECreateTaskConfirmationViewController.m; sourceTree = "<group>"; };
+		3826BD6D1CFE647E00E049D5 /* CETaskMapPinPresentable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETaskMapPinPresentable.h; sourceTree = "<group>"; };
+		3826BD6E1CFE647E00E049D5 /* CETaskMapPinPresentable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETaskMapPinPresentable.m; sourceTree = "<group>"; };
+		3826BD711CFE657200E049D5 /* CELocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CELocation.h; sourceTree = "<group>"; };
+		3826BD721CFE657200E049D5 /* CELocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CELocation.m; sourceTree = "<group>"; };
+		3826BD751CFE684500E049D5 /* CELocation+CEJSONMappable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CELocation+CEJSONMappable.h"; sourceTree = "<group>"; };
+		3826BD761CFE684500E049D5 /* CELocation+CEJSONMappable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CELocation+CEJSONMappable.m"; sourceTree = "<group>"; };
+		3826BD791CFE70BA00E049D5 /* CETaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETaskViewController.h; sourceTree = "<group>"; };
+		3826BD7A1CFE70BA00E049D5 /* CETaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETaskViewController.m; sourceTree = "<group>"; };
+		3826BD7D1CFE72F100E049D5 /* CETaskPresentable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETaskPresentable.h; sourceTree = "<group>"; };
+		3826BD7E1CFE72F100E049D5 /* CETaskPresentable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETaskPresentable.m; sourceTree = "<group>"; };
+		3826BD811CFE7BDF00E049D5 /* UIViewController+CurrentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CurrentViewController.h"; sourceTree = "<group>"; };
+		3826BD821CFE7BDF00E049D5 /* UIViewController+CurrentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CurrentViewController.m"; sourceTree = "<group>"; };
+		388808621CFD7DDD00D68AFE /* Ceres.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ceres.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		388808661CFD7DDD00D68AFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		388808681CFD7DDD00D68AFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		388808691CFD7DDD00D68AFE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		388808741CFD7DDD00D68AFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		388808761CFD7DDD00D68AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		388808831CFD816400D68AFE /* CEAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEAPIClient.h; sourceTree = "<group>"; };
+		388808841CFD816400D68AFE /* CEAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEAPIClient.m; sourceTree = "<group>"; };
+		388808861CFD81E200D68AFE /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		388808871CFD84F800D68AFE /* CEResourceRequestSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEResourceRequestSerializer.h; sourceTree = "<group>"; };
+		388808881CFD84F800D68AFE /* CEResourceRequestSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEResourceRequestSerializer.m; sourceTree = "<group>"; };
+		3888088A1CFD851E00D68AFE /* CEResourceResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEResourceResponseSerializer.h; sourceTree = "<group>"; };
+		3888088B1CFD851E00D68AFE /* CEResourceResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEResourceResponseSerializer.m; sourceTree = "<group>"; };
+		388808931CFD858600D68AFE /* NSError+CEErrorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+CEErrorContext.h"; sourceTree = "<group>"; };
+		388808941CFD858600D68AFE /* NSError+CEErrorContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+CEErrorContext.m"; sourceTree = "<group>"; };
+		388808991CFD86AF00D68AFE /* CEErrorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEErrorContext.h; sourceTree = "<group>"; };
+		3888089D1CFD87D000D68AFE /* CEResourceErrorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEResourceErrorContext.h; sourceTree = "<group>"; };
+		3888089E1CFD87D000D68AFE /* CEResourceErrorContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEResourceErrorContext.m; sourceTree = "<group>"; };
+		388808A01CFD8D0400D68AFE /* CENetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENetworkService.h; sourceTree = "<group>"; };
+		388808A11CFD8D2E00D68AFE /* CEResourceNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEResourceNetworkService.h; sourceTree = "<group>"; };
+		388808A21CFD8D2E00D68AFE /* CEResourceNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEResourceNetworkService.m; sourceTree = "<group>"; };
+		388808A51CFD8DE900D68AFE /* CEAuthorizationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEAuthorizationService.h; sourceTree = "<group>"; };
+		388808A71CFD8DFE00D68AFE /* CENetworkAuthorizationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENetworkAuthorizationService.h; sourceTree = "<group>"; };
+		388808A81CFD8DFE00D68AFE /* CENetworkAuthorizationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENetworkAuthorizationService.m; sourceTree = "<group>"; };
+		388808AB1CFD8E3300D68AFE /* CEAuthenticationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEAuthenticationService.h; sourceTree = "<group>"; };
+		388808AD1CFD8E7E00D68AFE /* CENetworkAuthenticationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENetworkAuthenticationService.h; sourceTree = "<group>"; };
+		388808AE1CFD8E7E00D68AFE /* CENetworkAuthenticationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENetworkAuthenticationService.m; sourceTree = "<group>"; };
+		388808B11CFD8F0100D68AFE /* CEContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEContext.h; sourceTree = "<group>"; };
+		388808B21CFD8F0100D68AFE /* CEContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEContext.m; sourceTree = "<group>"; };
+		388808B51CFD8F4200D68AFE /* NSObject+PropertyEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertyEnumerator.h"; sourceTree = "<group>"; };
+		388808B61CFD8F4200D68AFE /* NSObject+PropertyEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertyEnumerator.m"; sourceTree = "<group>"; };
+		388808B91CFD8F7E00D68AFE /* CEObjectProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEObjectProperty.h; sourceTree = "<group>"; };
+		388808BA1CFD8F7E00D68AFE /* CEObjectProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEObjectProperty.m; sourceTree = "<group>"; };
+		388808BD1CFD939E00D68AFE /* CEUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEUser.h; sourceTree = "<group>"; };
+		388808BE1CFD939E00D68AFE /* CEUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEUser.m; sourceTree = "<group>"; };
+		388808C21CFD93CC00D68AFE /* CEUser+CEJSONMappable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CEUser+CEJSONMappable.h"; sourceTree = "<group>"; };
+		388808C31CFD93CC00D68AFE /* CEUser+CEJSONMappable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CEUser+CEJSONMappable.m"; sourceTree = "<group>"; };
+		388808C61CFD93DB00D68AFE /* CEJSONMappable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEJSONMappable.h; sourceTree = "<group>"; };
+		388808CE1CFD97CE00D68AFE /* CERootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CERootViewController.h; sourceTree = "<group>"; };
+		388808CF1CFD97CE00D68AFE /* CERootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CERootViewController.m; sourceTree = "<group>"; };
+		388808D21CFD9C0400D68AFE /* CEDeviceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEDeviceService.h; sourceTree = "<group>"; };
+		388808D41CFD9C7D00D68AFE /* CENetworkDeviceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CENetworkDeviceService.h; sourceTree = "<group>"; };
+		388808D51CFD9C7D00D68AFE /* CENetworkDeviceService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CENetworkDeviceService.m; sourceTree = "<group>"; };
+		388808DD1CFD9E3F00D68AFE /* CEDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEDevice.h; sourceTree = "<group>"; };
+		388808DE1CFD9E3F00D68AFE /* CEDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEDevice.m; sourceTree = "<group>"; };
+		388808E11CFD9E5D00D68AFE /* CEDevice+CEJSONMappable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CEDevice+CEJSONMappable.h"; sourceTree = "<group>"; };
+		388808E21CFD9E5D00D68AFE /* CEDevice+CEJSONMappable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CEDevice+CEJSONMappable.m"; sourceTree = "<group>"; };
+		388808E41CFDA3B300D68AFE /* CEDevice+CurrentDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CEDevice+CurrentDevice.h"; sourceTree = "<group>"; };
+		388808E51CFDA3B300D68AFE /* CEDevice+CurrentDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CEDevice+CurrentDevice.m"; sourceTree = "<group>"; };
+		388808EF1CFDA53000D68AFE /* CEKeychainStorageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEKeychainStorageService.h; sourceTree = "<group>"; };
+		388808F11CFDA54700D68AFE /* CELocalKeychainStorageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CELocalKeychainStorageService.h; sourceTree = "<group>"; };
+		388808F21CFDA54700D68AFE /* CELocalKeychainStorageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CELocalKeychainStorageService.m; sourceTree = "<group>"; };
+		388808F71CFDA87200D68AFE /* CEDeviceUDIDProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEDeviceUDIDProvider.h; sourceTree = "<group>"; };
+		388808F91CFDA87200D68AFE /* CELocalDeviceUDIDProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CELocalDeviceUDIDProvider.h; sourceTree = "<group>"; };
+		388808FA1CFDA87200D68AFE /* CELocalDeviceUDIDProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CELocalDeviceUDIDProvider.m; sourceTree = "<group>"; };
+		388808FC1CFDA87F00D68AFE /* CEDeviceNotificationsTokenProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEDeviceNotificationsTokenProvider.h; sourceTree = "<group>"; };
+		388808FE1CFDA88D00D68AFE /* CELocalDeviceNotificationsTokenProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CELocalDeviceNotificationsTokenProvider.h; sourceTree = "<group>"; };
+		388808FF1CFDA88D00D68AFE /* CELocalDeviceNotificationsTokenProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CELocalDeviceNotificationsTokenProvider.m; sourceTree = "<group>"; };
+		388809021CFDAB0800D68AFE /* CEAuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEAuthenticationViewController.h; sourceTree = "<group>"; };
+		388809031CFDAB0800D68AFE /* CEAuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEAuthenticationViewController.m; sourceTree = "<group>"; };
+		388809071CFDB1A500D68AFE /* CEUserAuthenticationUseCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEUserAuthenticationUseCase.h; sourceTree = "<group>"; };
+		388809081CFDB1A500D68AFE /* CEUserAuthenticationUseCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEUserAuthenticationUseCase.m; sourceTree = "<group>"; };
+		3888090E1CFDBC7B00D68AFE /* login.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = login.gif; sourceTree = "<group>"; };
+		38B1AF1F1CFE98A600F42C38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38B1AF211CFEA06600F42C38 /* notifications.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = notifications.gif; sourceTree = "<group>"; };
+		38B1AF231CFEA63900F42C38 /* task.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = task.gif; sourceTree = "<group>"; };
+		8256A205A9242BD6CB3A49A7 /* Pods-Ceres.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ceres.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ceres/Pods-Ceres.release.xcconfig"; sourceTree = "<group>"; };
+		B9BA6EB06461DF84068F3F11 /* Pods-Ceres.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ceres.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ceres/Pods-Ceres.debug.xcconfig"; sourceTree = "<group>"; };
+		F4354B7A8CCB9F75BA7F221B /* libPods-Ceres.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ceres.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3888085F1CFD7DDD00D68AFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77A58D38AC2A139890930E51 /* libPods-Ceres.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3826BD001CFDD13E00E049D5 /* PushNotification */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD021CFDD14B00E049D5 /* Local */,
+				3826BD011CFDD14700E049D5 /* CEPushNotificationService.h */,
+			);
+			path = PushNotification;
+			sourceTree = "<group>";
+		};
+		3826BD021CFDD14B00E049D5 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD031CFDD15900E049D5 /* CELocalPushNotificationService.h */,
+				3826BD041CFDD15900E049D5 /* CELocalPushNotificationService.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		3826BD061CFDDF1D00E049D5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD071CFDDF2700E049D5 /* CEHomeViewController.h */,
+				3826BD081CFDDF2700E049D5 /* CEHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3826BD0A1CFDE48000E049D5 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD6C1CFE644400E049D5 /* Presentables */,
+				3826BD0B1CFDE48B00E049D5 /* CEMapViewController.h */,
+				3826BD0C1CFDE48B00E049D5 /* CEMapViewController.m */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		3826BD0E1CFDFE5E00E049D5 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD161CFDFFD000E049D5 /* Presentables */,
+				3826BD121CFDFFA500E049D5 /* Cells */,
+				3826BD0F1CFDFE6800E049D5 /* CENotificationsViewController.h */,
+				3826BD101CFDFE6800E049D5 /* CENotificationsViewController.m */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		3826BD121CFDFFA500E049D5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD131CFDFFCA00E049D5 /* CENotificationCell.h */,
+				3826BD141CFDFFCA00E049D5 /* CENotificationCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3826BD161CFDFFD000E049D5 /* Presentables */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD171CFDFFD800E049D5 /* CENotificationCellPresentable.h */,
+				3826BD181CFDFFD800E049D5 /* CENotificationCellPresentable.m */,
+			);
+			path = Presentables;
+			sourceTree = "<group>";
+		};
+		3826BD1A1CFE02E600E049D5 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD1B1CFE02FA00E049D5 /* CENotificationsUseCase.h */,
+				3826BD1C1CFE02FA00E049D5 /* CENotificationsUseCase.m */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		3826BD1E1CFE039D00E049D5 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD201CFE03BF00E049D5 /* Network */,
+				3826BD1F1CFE03B600E049D5 /* CENotificationService.h */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		3826BD201CFE03BF00E049D5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD211CFE03CD00E049D5 /* CENetworkNotificationService.h */,
+				3826BD221CFE03CD00E049D5 /* CENetworkNotificationService.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3826BD241CFE09CE00E049D5 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD251CFE09DB00E049D5 /* CENotification.h */,
+				3826BD261CFE09DB00E049D5 /* CENotification.m */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		3826BD281CFE0A0000E049D5 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD291CFE0A1100E049D5 /* CENotification+CEJSONMappable.h */,
+				3826BD2A1CFE0A1100E049D5 /* CENotification+CEJSONMappable.m */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		3826BD2C1CFE0BFB00E049D5 /* NavigationService */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD2E1CFE0C2900E049D5 /* Local */,
+				3826BD2D1CFE0C2400E049D5 /* CENavigationService.h */,
+				3826BD2F1CFE0C9900E049D5 /* CERoutable.h */,
+			);
+			path = NavigationService;
+			sourceTree = "<group>";
+		};
+		3826BD2E1CFE0C2900E049D5 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD301CFE0CC200E049D5 /* CELocalNavigationService.h */,
+				3826BD311CFE0CC200E049D5 /* CELocalNavigationService.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		3826BD331CFE0DCE00E049D5 /* NavigationProvider */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD351CFE0E1500E049D5 /* Local */,
+				3826BD341CFE0DFE00E049D5 /* CENavigationProvider.h */,
+			);
+			path = NavigationProvider;
+			sourceTree = "<group>";
+		};
+		3826BD351CFE0E1500E049D5 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD361CFE0E1C00E049D5 /* CELocalNavigationProvider.h */,
+				3826BD371CFE0E1C00E049D5 /* CELocalNavigationProvider.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		3826BD391CFE2C9200E049D5 /* CreateTask */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD5D1CFE38FC00E049D5 /* Views */,
+				3826BD411CFE2F3C00E049D5 /* Presentables */,
+				3826BD3D1CFE2E7500E049D5 /* Cells */,
+				3826BD3A1CFE2CA300E049D5 /* CECreateTaskViewController.h */,
+				3826BD3B1CFE2CA300E049D5 /* CECreateTaskViewController.m */,
+			);
+			path = CreateTask;
+			sourceTree = "<group>";
+		};
+		3826BD3D1CFE2E7500E049D5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD3E1CFE2EAA00E049D5 /* CECreateTaskFormElementCell.h */,
+				3826BD3F1CFE2EAA00E049D5 /* CECreateTaskFormElementCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3826BD411CFE2F3C00E049D5 /* Presentables */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD421CFE2F4B00E049D5 /* CECreateTaskFormElementCellPresentable.h */,
+				3826BD431CFE2F4B00E049D5 /* CECreateTaskFormElementCellPresentable.m */,
+			);
+			path = Presentables;
+			sourceTree = "<group>";
+		};
+		3826BD451CFE306F00E049D5 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD461CFE307600E049D5 /* CETaskUseCase.h */,
+				3826BD471CFE307600E049D5 /* CETaskUseCase.m */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		3826BD491CFE31C300E049D5 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD4B1CFE31D000E049D5 /* Network */,
+				3826BD4A1CFE31CB00E049D5 /* CETaskService.h */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		3826BD4B1CFE31D000E049D5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD4C1CFE31E000E049D5 /* CENetworkTaskService.h */,
+				3826BD4D1CFE31E000E049D5 /* CENetworkTaskService.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3826BD4F1CFE331900E049D5 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD501CFE331F00E049D5 /* CETask.h */,
+				3826BD511CFE331F00E049D5 /* CETask.m */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		3826BD531CFE332600E049D5 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD541CFE336200E049D5 /* CETask+CEJSONMappable.h */,
+				3826BD551CFE336200E049D5 /* CETask+CEJSONMappable.m */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		3826BD571CFE369C00E049D5 /* DeviceLocation */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD591CFE36B700E049D5 /* Local */,
+				3826BD581CFE36AE00E049D5 /* CEDeviceLocationService.h */,
+			);
+			path = DeviceLocation;
+			sourceTree = "<group>";
+		};
+		3826BD591CFE36B700E049D5 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD5A1CFE36C000E049D5 /* CELocalDeviceLocationService.h */,
+				3826BD5B1CFE36C000E049D5 /* CELocalDeviceLocationService.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		3826BD5D1CFE38FC00E049D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD5E1CFE390D00E049D5 /* CETextFieldFormElement.h */,
+				3826BD5F1CFE390D00E049D5 /* CETextFieldFormElement.m */,
+				3826BD611CFE3A3E00E049D5 /* CEDatePickerFormElement.h */,
+				3826BD621CFE3A3E00E049D5 /* CEDatePickerFormElement.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3826BD641CFE420A00E049D5 /* CreateTaskMap */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD651CFE421700E049D5 /* CECreateTaskMapViewController.h */,
+				3826BD661CFE421700E049D5 /* CECreateTaskMapViewController.m */,
+			);
+			path = CreateTaskMap;
+			sourceTree = "<group>";
+		};
+		3826BD681CFE4EC900E049D5 /* CreateTaskConfirmation */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD691CFE4EDB00E049D5 /* CECreateTaskConfirmationViewController.h */,
+				3826BD6A1CFE4EDB00E049D5 /* CECreateTaskConfirmationViewController.m */,
+			);
+			path = CreateTaskConfirmation;
+			sourceTree = "<group>";
+		};
+		3826BD6C1CFE644400E049D5 /* Presentables */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD6D1CFE647E00E049D5 /* CETaskMapPinPresentable.h */,
+				3826BD6E1CFE647E00E049D5 /* CETaskMapPinPresentable.m */,
+			);
+			path = Presentables;
+			sourceTree = "<group>";
+		};
+		3826BD701CFE656A00E049D5 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD711CFE657200E049D5 /* CELocation.h */,
+				3826BD721CFE657200E049D5 /* CELocation.m */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		3826BD741CFE683800E049D5 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD751CFE684500E049D5 /* CELocation+CEJSONMappable.h */,
+				3826BD761CFE684500E049D5 /* CELocation+CEJSONMappable.m */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		3826BD781CFE70A700E049D5 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD7C1CFE72E400E049D5 /* Presentable */,
+				3826BD791CFE70BA00E049D5 /* CETaskViewController.h */,
+				3826BD7A1CFE70BA00E049D5 /* CETaskViewController.m */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		3826BD7C1CFE72E400E049D5 /* Presentable */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD7D1CFE72F100E049D5 /* CETaskPresentable.h */,
+				3826BD7E1CFE72F100E049D5 /* CETaskPresentable.m */,
+			);
+			path = Presentable;
+			sourceTree = "<group>";
+		};
+		3826BD801CFE7BB300E049D5 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD811CFE7BDF00E049D5 /* UIViewController+CurrentViewController.h */,
+				3826BD821CFE7BDF00E049D5 /* UIViewController+CurrentViewController.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		388808591CFD7DDD00D68AFE = {
+			isa = PBXGroup;
+			children = (
+				388808641CFD7DDD00D68AFE /* Ceres */,
+				388808631CFD7DDD00D68AFE /* Products */,
+				5BBB5D3B8FCA0D733D761C24 /* Pods */,
+				B04AF057642F91F9B2B989E3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		388808631CFD7DDD00D68AFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				388808621CFD7DDD00D68AFE /* Ceres.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		388808641CFD7DDD00D68AFE /* Ceres */ = {
+			isa = PBXGroup;
+			children = (
+				388808681CFD7DDD00D68AFE /* AppDelegate.h */,
+				388808691CFD7DDD00D68AFE /* AppDelegate.m */,
+				388809051CFDB18600D68AFE /* UseCase */,
+				388808CB1CFD97B500D68AFE /* UI */,
+				388808C51CFD93D000D68AFE /* Protocols */,
+				388808961CFD864900D68AFE /* Models */,
+				388808C01CFD93AA00D68AFE /* Mappers */,
+				3888087C1CFD80CD00D68AFE /* Services */,
+				388808E71CFDA42D00D68AFE /* Providers */,
+				3888087E1CFD812300D68AFE /* Networking */,
+				3888088D1CFD854500D68AFE /* Extensions */,
+				388808B01CFD8EEC00D68AFE /* Context */,
+				388808651CFD7DDD00D68AFE /* Supporting Files */,
+				388808C81CFD979900D68AFE /* Resources */,
+			);
+			path = Ceres;
+			sourceTree = "<group>";
+		};
+		388808651CFD7DDD00D68AFE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				388808731CFD7DDD00D68AFE /* LaunchScreen.storyboard */,
+				388808761CFD7DDD00D68AFE /* Info.plist */,
+				388808661CFD7DDD00D68AFE /* main.m */,
+				388808861CFD81E200D68AFE /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3888087C1CFD80CD00D68AFE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD741CFE683800E049D5 /* Location */,
+				3826BD571CFE369C00E049D5 /* DeviceLocation */,
+				3826BD491CFE31C300E049D5 /* Task */,
+				3826BD2C1CFE0BFB00E049D5 /* NavigationService */,
+				3826BD1E1CFE039D00E049D5 /* Notification */,
+				3826BD001CFDD13E00E049D5 /* PushNotification */,
+				388808EE1CFDA51C00D68AFE /* KeychainStorage */,
+				388808D11CFD9BEE00D68AFE /* Device */,
+				388808AA1CFD8E2100D68AFE /* Authentication */,
+				388808A41CFD8DCB00D68AFE /* Authorization */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3888087E1CFD812300D68AFE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				388808811CFD813B00D68AFE /* APIClient */,
+				388808801CFD813200D68AFE /* Protocol */,
+				3888087F1CFD812C00D68AFE /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3888087F1CFD812C00D68AFE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				388808A11CFD8D2E00D68AFE /* CEResourceNetworkService.h */,
+				388808A21CFD8D2E00D68AFE /* CEResourceNetworkService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		388808801CFD813200D68AFE /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				388808A01CFD8D0400D68AFE /* CENetworkService.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		388808811CFD813B00D68AFE /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				388808821CFD814900D68AFE /* Serializers */,
+				388808831CFD816400D68AFE /* CEAPIClient.h */,
+				388808841CFD816400D68AFE /* CEAPIClient.m */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		388808821CFD814900D68AFE /* Serializers */ = {
+			isa = PBXGroup;
+			children = (
+				388808871CFD84F800D68AFE /* CEResourceRequestSerializer.h */,
+				388808881CFD84F800D68AFE /* CEResourceRequestSerializer.m */,
+				3888088A1CFD851E00D68AFE /* CEResourceResponseSerializer.h */,
+				3888088B1CFD851E00D68AFE /* CEResourceResponseSerializer.m */,
+			);
+			path = Serializers;
+			sourceTree = "<group>";
+		};
+		3888088D1CFD854500D68AFE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD801CFE7BB300E049D5 /* UIViewController */,
+				388808D71CFD9D5C00D68AFE /* UIDevice */,
+				388808B41CFD8F2B00D68AFE /* NSObject */,
+				388808921CFD858600D68AFE /* NSError */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		388808921CFD858600D68AFE /* NSError */ = {
+			isa = PBXGroup;
+			children = (
+				388808931CFD858600D68AFE /* NSError+CEErrorContext.h */,
+				388808941CFD858600D68AFE /* NSError+CEErrorContext.m */,
+			);
+			path = NSError;
+			sourceTree = "<group>";
+		};
+		388808961CFD864900D68AFE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD701CFE656A00E049D5 /* Location */,
+				3826BD4F1CFE331900E049D5 /* Task */,
+				3826BD241CFE09CE00E049D5 /* Notification */,
+				388808DC1CFD9E3700D68AFE /* Device */,
+				388808BC1CFD918500D68AFE /* User */,
+				388808B81CFD8F7400D68AFE /* ObjectProperty */,
+				388808981CFD86A800D68AFE /* ErrorContext */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		388808981CFD86A800D68AFE /* ErrorContext */ = {
+			isa = PBXGroup;
+			children = (
+				3888089C1CFD87C600D68AFE /* Resource */,
+				388808991CFD86AF00D68AFE /* CEErrorContext.h */,
+			);
+			path = ErrorContext;
+			sourceTree = "<group>";
+		};
+		3888089C1CFD87C600D68AFE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3888089D1CFD87D000D68AFE /* CEResourceErrorContext.h */,
+				3888089E1CFD87D000D68AFE /* CEResourceErrorContext.m */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		388808A41CFD8DCB00D68AFE /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				388808A61CFD8DF000D68AFE /* Network */,
+				388808A51CFD8DE900D68AFE /* CEAuthorizationService.h */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		388808A61CFD8DF000D68AFE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				388808A71CFD8DFE00D68AFE /* CENetworkAuthorizationService.h */,
+				388808A81CFD8DFE00D68AFE /* CENetworkAuthorizationService.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		388808AA1CFD8E2100D68AFE /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				388808AC1CFD8E5C00D68AFE /* Network */,
+				388808AB1CFD8E3300D68AFE /* CEAuthenticationService.h */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		388808AC1CFD8E5C00D68AFE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				388808AD1CFD8E7E00D68AFE /* CENetworkAuthenticationService.h */,
+				388808AE1CFD8E7E00D68AFE /* CENetworkAuthenticationService.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		388808B01CFD8EEC00D68AFE /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				388808B11CFD8F0100D68AFE /* CEContext.h */,
+				388808B21CFD8F0100D68AFE /* CEContext.m */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		388808B41CFD8F2B00D68AFE /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				388808B51CFD8F4200D68AFE /* NSObject+PropertyEnumerator.h */,
+				388808B61CFD8F4200D68AFE /* NSObject+PropertyEnumerator.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		388808B81CFD8F7400D68AFE /* ObjectProperty */ = {
+			isa = PBXGroup;
+			children = (
+				388808B91CFD8F7E00D68AFE /* CEObjectProperty.h */,
+				388808BA1CFD8F7E00D68AFE /* CEObjectProperty.m */,
+			);
+			path = ObjectProperty;
+			sourceTree = "<group>";
+		};
+		388808BC1CFD918500D68AFE /* User */ = {
+			isa = PBXGroup;
+			children = (
+				388808BD1CFD939E00D68AFE /* CEUser.h */,
+				388808BE1CFD939E00D68AFE /* CEUser.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		388808C01CFD93AA00D68AFE /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD531CFE332600E049D5 /* Task */,
+				3826BD281CFE0A0000E049D5 /* Notification */,
+				388808E01CFD9E4D00D68AFE /* Device */,
+				388808C11CFD93B000D68AFE /* User */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		388808C11CFD93B000D68AFE /* User */ = {
+			isa = PBXGroup;
+			children = (
+				388808C21CFD93CC00D68AFE /* CEUser+CEJSONMappable.h */,
+				388808C31CFD93CC00D68AFE /* CEUser+CEJSONMappable.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		388808C51CFD93D000D68AFE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				388808C61CFD93DB00D68AFE /* CEJSONMappable.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		388808C81CFD979900D68AFE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				38B1AF1F1CFE98A600F42C38 /* Assets.xcassets */,
+				3888090D1CFDBC6900D68AFE /* Gifs */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		388808CB1CFD97B500D68AFE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				388808CC1CFD97BA00D68AFE /* ViewControllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		388808CC1CFD97BA00D68AFE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD781CFE70A700E049D5 /* Task */,
+				3826BD681CFE4EC900E049D5 /* CreateTaskConfirmation */,
+				3826BD641CFE420A00E049D5 /* CreateTaskMap */,
+				3826BD391CFE2C9200E049D5 /* CreateTask */,
+				3826BD0E1CFDFE5E00E049D5 /* Notifications */,
+				3826BD0A1CFDE48000E049D5 /* Map */,
+				388809011CFDAAF700D68AFE /* Authentication */,
+				3826BD061CFDDF1D00E049D5 /* Home */,
+				388808CD1CFD97C000D68AFE /* Root */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		388808CD1CFD97C000D68AFE /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				388808CE1CFD97CE00D68AFE /* CERootViewController.h */,
+				388808CF1CFD97CE00D68AFE /* CERootViewController.m */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		388808D11CFD9BEE00D68AFE /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				388808D31CFD9C0A00D68AFE /* Network */,
+				388808D21CFD9C0400D68AFE /* CEDeviceService.h */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		388808D31CFD9C0A00D68AFE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				388808D41CFD9C7D00D68AFE /* CENetworkDeviceService.h */,
+				388808D51CFD9C7D00D68AFE /* CENetworkDeviceService.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		388808D71CFD9D5C00D68AFE /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				388808E41CFDA3B300D68AFE /* CEDevice+CurrentDevice.h */,
+				388808E51CFDA3B300D68AFE /* CEDevice+CurrentDevice.m */,
+			);
+			path = UIDevice;
+			sourceTree = "<group>";
+		};
+		388808DC1CFD9E3700D68AFE /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				388808DD1CFD9E3F00D68AFE /* CEDevice.h */,
+				388808DE1CFD9E3F00D68AFE /* CEDevice.m */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		388808E01CFD9E4D00D68AFE /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				388808E11CFD9E5D00D68AFE /* CEDevice+CEJSONMappable.h */,
+				388808E21CFD9E5D00D68AFE /* CEDevice+CEJSONMappable.m */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		388808E71CFDA42D00D68AFE /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD331CFE0DCE00E049D5 /* NavigationProvider */,
+				388808F51CFDA87200D68AFE /* DeviceNotificationsToken */,
+				388808F61CFDA87200D68AFE /* DeviceUDID */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		388808EE1CFDA51C00D68AFE /* KeychainStorage */ = {
+			isa = PBXGroup;
+			children = (
+				388808F01CFDA53400D68AFE /* Local */,
+				388808EF1CFDA53000D68AFE /* CEKeychainStorageService.h */,
+			);
+			path = KeychainStorage;
+			sourceTree = "<group>";
+		};
+		388808F01CFDA53400D68AFE /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				388808F11CFDA54700D68AFE /* CELocalKeychainStorageService.h */,
+				388808F21CFDA54700D68AFE /* CELocalKeychainStorageService.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		388808F51CFDA87200D68AFE /* DeviceNotificationsToken */ = {
+			isa = PBXGroup;
+			children = (
+				388808FD1CFDA88400D68AFE /* Local */,
+				388808FC1CFDA87F00D68AFE /* CEDeviceNotificationsTokenProvider.h */,
+			);
+			path = DeviceNotificationsToken;
+			sourceTree = "<group>";
+		};
+		388808F61CFDA87200D68AFE /* DeviceUDID */ = {
+			isa = PBXGroup;
+			children = (
+				388808F71CFDA87200D68AFE /* CEDeviceUDIDProvider.h */,
+				388808F81CFDA87200D68AFE /* Local */,
+			);
+			path = DeviceUDID;
+			sourceTree = "<group>";
+		};
+		388808F81CFDA87200D68AFE /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				388808F91CFDA87200D68AFE /* CELocalDeviceUDIDProvider.h */,
+				388808FA1CFDA87200D68AFE /* CELocalDeviceUDIDProvider.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		388808FD1CFDA88400D68AFE /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				388808FE1CFDA88D00D68AFE /* CELocalDeviceNotificationsTokenProvider.h */,
+				388808FF1CFDA88D00D68AFE /* CELocalDeviceNotificationsTokenProvider.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		388809011CFDAAF700D68AFE /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				388809021CFDAB0800D68AFE /* CEAuthenticationViewController.h */,
+				388809031CFDAB0800D68AFE /* CEAuthenticationViewController.m */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		388809051CFDB18600D68AFE /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD451CFE306F00E049D5 /* Task */,
+				3826BD1A1CFE02E600E049D5 /* Notifications */,
+				388809061CFDB19400D68AFE /* UserAuthentication */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		388809061CFDB19400D68AFE /* UserAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				388809071CFDB1A500D68AFE /* CEUserAuthenticationUseCase.h */,
+				388809081CFDB1A500D68AFE /* CEUserAuthenticationUseCase.m */,
+			);
+			path = UserAuthentication;
+			sourceTree = "<group>";
+		};
+		3888090D1CFDBC6900D68AFE /* Gifs */ = {
+			isa = PBXGroup;
+			children = (
+				38B1AF231CFEA63900F42C38 /* task.gif */,
+				38B1AF211CFEA06600F42C38 /* notifications.gif */,
+				3888090E1CFDBC7B00D68AFE /* login.gif */,
+			);
+			path = Gifs;
+			sourceTree = "<group>";
+		};
+		5BBB5D3B8FCA0D733D761C24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9BA6EB06461DF84068F3F11 /* Pods-Ceres.debug.xcconfig */,
+				8256A205A9242BD6CB3A49A7 /* Pods-Ceres.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B04AF057642F91F9B2B989E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4354B7A8CCB9F75BA7F221B /* libPods-Ceres.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		388808611CFD7DDD00D68AFE /* Ceres */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 388808791CFD7DDD00D68AFE /* Build configuration list for PBXNativeTarget "Ceres" */;
+			buildPhases = (
+				4194B63C63407013BC15848E /* 📦 Check Pods Manifest.lock */,
+				3888085E1CFD7DDD00D68AFE /* Sources */,
+				3888085F1CFD7DDD00D68AFE /* Frameworks */,
+				388808601CFD7DDD00D68AFE /* Resources */,
+				148438D32E59E9BBC79D2B7B /* 📦 Embed Pods Frameworks */,
+				5F781EF0D53710F3CF04BC86 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ceres;
+			productName = Ceres;
+			productReference = 388808621CFD7DDD00D68AFE /* Ceres.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3888085A1CFD7DDD00D68AFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CE;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Ceres;
+				TargetAttributes = {
+					388808611CFD7DDD00D68AFE = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 3888085D1CFD7DDD00D68AFE /* Build configuration list for PBXProject "Ceres" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 388808591CFD7DDD00D68AFE;
+			productRefGroup = 388808631CFD7DDD00D68AFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				388808611CFD7DDD00D68AFE /* Ceres */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		388808601CFD7DDD00D68AFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3888090F1CFDBC7B00D68AFE /* login.gif in Resources */,
+				38B1AF201CFE98A600F42C38 /* Assets.xcassets in Resources */,
+				38B1AF241CFEA63900F42C38 /* task.gif in Resources */,
+				388808751CFD7DDD00D68AFE /* LaunchScreen.storyboard in Resources */,
+				38B1AF221CFEA06600F42C38 /* notifications.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		148438D32E59E9BBC79D2B7B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ceres/Pods-Ceres-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4194B63C63407013BC15848E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5F781EF0D53710F3CF04BC86 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ceres/Pods-Ceres-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3888085E1CFD7DDD00D68AFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				388808951CFD858600D68AFE /* NSError+CEErrorContext.m in Sources */,
+				388808F31CFDA54700D68AFE /* CELocalKeychainStorageService.m in Sources */,
+				3888088C1CFD851E00D68AFE /* CEResourceResponseSerializer.m in Sources */,
+				3826BD401CFE2EAA00E049D5 /* CECreateTaskFormElementCell.m in Sources */,
+				3826BD5C1CFE36C000E049D5 /* CELocalDeviceLocationService.m in Sources */,
+				388809001CFDA88D00D68AFE /* CELocalDeviceNotificationsTokenProvider.m in Sources */,
+				3826BD671CFE421700E049D5 /* CECreateTaskMapViewController.m in Sources */,
+				388808E31CFD9E5D00D68AFE /* CEDevice+CEJSONMappable.m in Sources */,
+				3826BD521CFE331F00E049D5 /* CETask.m in Sources */,
+				3826BD321CFE0CC200E049D5 /* CELocalNavigationService.m in Sources */,
+				3826BD0D1CFDE48B00E049D5 /* CEMapViewController.m in Sources */,
+				3826BD601CFE390D00E049D5 /* CETextFieldFormElement.m in Sources */,
+				388808BF1CFD939E00D68AFE /* CEUser.m in Sources */,
+				3888089F1CFD87D000D68AFE /* CEResourceErrorContext.m in Sources */,
+				388808B31CFD8F0100D68AFE /* CEContext.m in Sources */,
+				3826BD231CFE03CD00E049D5 /* CENetworkNotificationService.m in Sources */,
+				3826BD7F1CFE72F100E049D5 /* CETaskPresentable.m in Sources */,
+				388808C41CFD93CC00D68AFE /* CEUser+CEJSONMappable.m in Sources */,
+				388808AF1CFD8E7E00D68AFE /* CENetworkAuthenticationService.m in Sources */,
+				3826BD731CFE657200E049D5 /* CELocation.m in Sources */,
+				388808D61CFD9C7D00D68AFE /* CENetworkDeviceService.m in Sources */,
+				3826BD561CFE336200E049D5 /* CETask+CEJSONMappable.m in Sources */,
+				3826BD2B1CFE0A1100E049D5 /* CENotification+CEJSONMappable.m in Sources */,
+				3826BD151CFDFFCA00E049D5 /* CENotificationCell.m in Sources */,
+				388808A91CFD8DFE00D68AFE /* CENetworkAuthorizationService.m in Sources */,
+				3826BD631CFE3A3E00E049D5 /* CEDatePickerFormElement.m in Sources */,
+				388808B71CFD8F4200D68AFE /* NSObject+PropertyEnumerator.m in Sources */,
+				3826BD4E1CFE31E000E049D5 /* CENetworkTaskService.m in Sources */,
+				388808FB1CFDA87200D68AFE /* CELocalDeviceUDIDProvider.m in Sources */,
+				3826BD6F1CFE647E00E049D5 /* CETaskMapPinPresentable.m in Sources */,
+				3826BD3C1CFE2CA300E049D5 /* CECreateTaskViewController.m in Sources */,
+				3826BD7B1CFE70BA00E049D5 /* CETaskViewController.m in Sources */,
+				388808891CFD84F800D68AFE /* CEResourceRequestSerializer.m in Sources */,
+				388808A31CFD8D2E00D68AFE /* CEResourceNetworkService.m in Sources */,
+				388808E61CFDA3B300D68AFE /* CEDevice+CurrentDevice.m in Sources */,
+				3826BD6B1CFE4EDB00E049D5 /* CECreateTaskConfirmationViewController.m in Sources */,
+				3826BD481CFE307600E049D5 /* CETaskUseCase.m in Sources */,
+				388809091CFDB1A500D68AFE /* CEUserAuthenticationUseCase.m in Sources */,
+				388808BB1CFD8F7E00D68AFE /* CEObjectProperty.m in Sources */,
+				388808D01CFD97CE00D68AFE /* CERootViewController.m in Sources */,
+				388808851CFD816400D68AFE /* CEAPIClient.m in Sources */,
+				3826BD271CFE09DB00E049D5 /* CENotification.m in Sources */,
+				3826BD441CFE2F4B00E049D5 /* CECreateTaskFormElementCellPresentable.m in Sources */,
+				388809041CFDAB0800D68AFE /* CEAuthenticationViewController.m in Sources */,
+				3826BD091CFDDF2700E049D5 /* CEHomeViewController.m in Sources */,
+				3826BD191CFDFFD800E049D5 /* CENotificationCellPresentable.m in Sources */,
+				3888086A1CFD7DDD00D68AFE /* AppDelegate.m in Sources */,
+				3826BD831CFE7BDF00E049D5 /* UIViewController+CurrentViewController.m in Sources */,
+				388808671CFD7DDD00D68AFE /* main.m in Sources */,
+				3826BD051CFDD15900E049D5 /* CELocalPushNotificationService.m in Sources */,
+				3826BD111CFDFE6800E049D5 /* CENotificationsViewController.m in Sources */,
+				3826BD1D1CFE02FA00E049D5 /* CENotificationsUseCase.m in Sources */,
+				388808DF1CFD9E3F00D68AFE /* CEDevice.m in Sources */,
+				3826BD771CFE684500E049D5 /* CELocation+CEJSONMappable.m in Sources */,
+				3826BD381CFE0E1C00E049D5 /* CELocalNavigationProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		388808731CFD7DDD00D68AFE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				388808741CFD7DDD00D68AFE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		388808771CFD7DDD00D68AFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		388808781CFD7DDD00D68AFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3888087A1CFD7DDD00D68AFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9BA6EB06461DF84068F3F11 /* Pods-Ceres.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Aron Balog (ERUMC44G8T)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)/PrefixHeader.pch";
+				INFOPLIST_FILE = Ceres/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.getceres.Ceres;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bf108627-4433-4598-bb32-12028e1bd1ee";
+			};
+			name = Debug;
+		};
+		3888087B1CFD7DDD00D68AFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8256A205A9242BD6CB3A49A7 /* Pods-Ceres.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)/PrefixHeader.pch";
+				INFOPLIST_FILE = Ceres/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.getceres.Ceres;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3888085D1CFD7DDD00D68AFE /* Build configuration list for PBXProject "Ceres" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				388808771CFD7DDD00D68AFE /* Debug */,
+				388808781CFD7DDD00D68AFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		388808791CFD7DDD00D68AFE /* Build configuration list for PBXNativeTarget "Ceres" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3888087A1CFD7DDD00D68AFE /* Debug */,
+				3888087B1CFD7DDD00D68AFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3888085A1CFD7DDD00D68AFE /* Project object */;
+}

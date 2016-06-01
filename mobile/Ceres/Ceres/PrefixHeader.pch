@@ -1,0 +1,43 @@
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <AFNetworking/AFNetworking.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ObjectiveSugar/ObjectiveSugar.h>
+#import <FLAnimatedImage/FLAnimatedImage.h>
+#import <GoogleMaps/GoogleMaps.h>
+
+#import "CEAPIClient.h"
+
+#define MAS_SHORTHAND
+#import <Masonry/Masonry.h>
+
+#import "CEContext.h"
+
+//protocols
+#import "CEJSONMappable.h"
+
+//extensions
+#import "NSError+CEErrorContext.h"
+#import "NSObject+PropertyEnumerator.h"
+#import "CEDevice+CurrentDevice.h"
+
+//models
+#import "CEErrorContext.h"
+#import "CEUser.h"
+#import "CENotification.h"
+#import "CETask.h"
+#import "CELocation.h"
+
+//services
+#import "CEAuthenticationService.h"
+#import "CEDeviceService.h"
+#import "CEKeychainStorageService.h"
+#import "CEPushNotificationService.h"
+#import "CETaskService.h"
+
+//providers
+#import "CEDeviceUDIDProvider.h"
+#import "CEDeviceNotificationsTokenProvider.h"
+
+#endif

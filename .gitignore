@@ -7,3 +7,4 @@ web/.env
 web/.idea/*
 .idea/
 *.orig
+mobile/Ceres/Pods/*
