@@ -19,7 +19,7 @@ class TaskRepository
 
     public function findByLocationIds(array $locationIds)
     {
-        return Task::whereIn('location_id', $locationIds)->whereNull('finished_at')->whereNot('user_id', Auth::id());
+        return Task::whereIn('location_id', $locationIds)->whereNull('finished_at')->where('user_id', '!=', Auth::id());
     }
 
     public function findByCategory($categoryId)
