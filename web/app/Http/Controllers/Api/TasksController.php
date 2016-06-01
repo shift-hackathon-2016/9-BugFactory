@@ -6,9 +6,11 @@ use App\Models\Db\Location;
 use App\Models\Db\Task;
 use App\Models\Db\UserTransaction;
 use App\Repositories\LocationPointRepository;
+use App\Repositories\LocationRepository;
 use App\Repositories\TaskRepository;
 use App\UseCase\TaskUseCase;
 use Illuminate\Http\Request;
+
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -36,6 +38,7 @@ class TasksController extends BaseApiController
             'amount' => $request->amount,
             'starts_at' => $request->starts_at,
             'ends_at' => $request->ends_at,
+
         ];
 
         $locationRequestData = $request->get('location');
@@ -78,7 +81,7 @@ class TasksController extends BaseApiController
             'currency_id' => 'required',
             'amount' => 'required',
             'starts_at' => 'required|int',
-            'ends_at' => 'required|int'
+            'ends_at' => 'required|int',
         ]);
     }
 
@@ -96,5 +99,11 @@ class TasksController extends BaseApiController
         })->toArray();
 
         return $taskRepository->findByLocationIds($locationIds)->with('location')->get();
+
+    }
+
+    public function getByCategory($categoryId, TaskUseCase $useCase)
+    {
+        return $useCase->getByCategory($categoryId);
     }
 }

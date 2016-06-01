@@ -19,7 +19,7 @@ class TaskCategoriesController extends Controller
         return view('Admin.task_categories')->with('categories', $categories);
     }
 
-    public function edit($id, TaskCategoriesUseCase $useCase)
+    public function edit($id)
     {
         if (!$category = TaskCategory::find($id)) {
             return redirect('/');

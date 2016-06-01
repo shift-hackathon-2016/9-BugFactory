@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return redirect('/dashboard');
+    return redirect('/users/list');
 });
 
 Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
@@ -37,6 +37,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
             Route::patch('/finish', 'TasksController@finish');
             Route::post('/', 'TasksController@create');
             Route::get('/{id}', 'TasksController@index')->where('id', '[0-9]+');
+            Route::get('/category/{id}', 'TasksController@getByCategory')->where('id', '[0-9]+');
             Route::delete('/{id}', 'TasksController@delete')->where('id', '[0-9]+');
         });
 
@@ -55,7 +56,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
             Route::get('/{id}', 'TaskContractsController@index')->where('id', '[0-9]+');
             Route::get('/user/{id}', 'TaskContractsController@getByUser')->where('id', '[0-9]+');
             Route::get('/task/{id}', 'TaskContractsController@getByTask')->where('id', '[0-9]+');
-            Route::post('/', 'TaskContractsController@create');//
+            Route::post('/', 'TaskContractsController@create');
         });
 
         Route::post('/devices/create', 'DevicesController@store');
@@ -88,7 +89,7 @@ Route::group(['middleware' => 'admin'], function() {
 
         Route::get('dashboard', 'DashboardController@index');
 
-        Route::group(['prefix' => 'user'], function() {
+        Route::group(['prefix' => 'users'], function() {
 
 
             Route::get('/edit/{id}', 'AdminUserController@showEdit');
@@ -105,7 +106,6 @@ Route::group(['middleware' => 'admin'], function() {
             Route::get('/create', 'TaskCategoriesController@getCreate');
             Route::get('/edit/{id}', 'TaskCategoriesController@edit')->where('id', '[0-9]+');
             Route::post('/edit/{id}', 'TaskCategoriesController@save')->where('id', '[0-9]+');
-            Route::get('/{id}', 'TaskCategoriesController@index')->where('id', '[0-9]+');
             Route::post('/create', 'TaskCategoriesController@create');
         });
 
