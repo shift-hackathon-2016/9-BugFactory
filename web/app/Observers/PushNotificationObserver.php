@@ -17,8 +17,6 @@ class PushNotificationObserver
         Queue::push(function($job) use($model, $device) {
             $aws = new AwsSnsGateway();
             $aws->sendPushNotificationToMobileDevice($model, $device);
-
-            $job->delete();
         });
     }
 }
