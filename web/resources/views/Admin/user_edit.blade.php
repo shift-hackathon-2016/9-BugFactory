@@ -51,7 +51,7 @@
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12">{{ $field['label'] }} @if($field['required'])<span class="required">*</span>@endif
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="{{ $field['name'] }}" value="@if(old($field['name']) !== null) {{ old($field['name']) }} @else {{ $field['value'] }} @endif" @if($field['required']) required="required" @endif class="form-control col-md-7 col-xs-12">
+                                        <input type="text" name="{{ $field['name'] }}" value="@if(old($field['name']) !== null){{ old($field['name']) }}@else{{ $field['value'] }}@endif"@if($field['required']) required="required" @endif class="form-control col-md-7 col-xs-12">
 
                                         @if($errors->has($field['name']))
                                         <ul class="parsley-errors-list filled" id="parsley-id-5">
