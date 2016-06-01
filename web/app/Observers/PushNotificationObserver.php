@@ -14,9 +14,11 @@ class PushNotificationObserver
     {
         $deviceRepository = new DeviceRepository();
         $device = $deviceRepository->findById($model->user_device_id);
-        Queue::push(function() use($model, $device) {
+        Queue::push(function($job) use($model, $device) {
             $aws = new AwsSnsGateway();
             $aws->sendPushNotificationToMobileDevice($model, $device);
+
+            $job->delete();
         });
     }
 }
