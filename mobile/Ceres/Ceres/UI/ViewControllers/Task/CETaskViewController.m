@@ -50,6 +50,7 @@
     [self.view addSubview:self.containerView];
     [self.containerView addSubview:self.iconImageView];
     [self.containerView addSubview:self.descriptionLabel];
+    [self.containerView addSubview:self.descriptionTextView];
     [self.containerView addSubview:self.closeButton];
     [self.containerView addSubview:self.applyButton];
     
@@ -80,6 +81,12 @@
         make.right.equalTo(self.view).with.insets(UIEdgeInsetsMake(40, 40, 0, 40));
         make.left.equalTo(self.iconImageView.right).with.offset(10.0);
         make.centerY.equalTo(self.iconImageView);
+    }];
+    
+    [self.descriptionTextView remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.iconImageView.bottom);
+        make.left.right.equalTo(self.view);
+        make.bottom.equalTo(self.closeButton.top);
     }];
     
     [self.closeButton remakeConstraints:^(MASConstraintMaker *make) {

@@ -95,6 +95,8 @@
         _iconImageView.backgroundColor = [UIColor darkGrayColor];
         _iconImageView.layer.cornerRadius = 20;
         _iconImageView.layer.masksToBounds = YES;
+        _iconImageView.image = [[UIImage imageNamed:@"hiring-sign"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        _iconImageView.tintColor = [UIColor whiteColor];
     }
     
     return _iconImageView;
