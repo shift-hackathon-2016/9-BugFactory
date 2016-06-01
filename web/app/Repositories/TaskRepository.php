@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Db\Task;
+use Illuminate\Support\Facades\Auth;
 
 class TaskRepository
 {
@@ -18,7 +19,7 @@ class TaskRepository
 
     public function findByLocationIds(array $locationIds)
     {
-        return Task::whereIn('location_id', $locationIds)->whereNull('finished_at');
+        return Task::whereIn('location_id', $locationIds)->whereNull('finished_at')->whereNot('user_id', Auth::id());
     }
 
     public function findByCategory($categoryId)
