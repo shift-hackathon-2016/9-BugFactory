@@ -61,4 +61,9 @@ class TaskUseCase
             ]);
         }
     }
+
+    public function getByCategory($categoryId)
+    {
+        return $this->taskRepository->findByCategory($categoryId)->with('location')->get();
+    }
 }

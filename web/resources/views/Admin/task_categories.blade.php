@@ -39,7 +39,7 @@
                                         <td class=" ">{{ $category->id }}</td>
                                         <td class=" ">{{ $category->parent_id }}</td>
                                         <td class=" ">{{ $category->name }}</td>
-                                        <td class=" last"><a href="/task-categories/{{ $category->id }}">View</a>
+                                        <td class=" last"><a href="/task-categories/edit/{{ $category->id }}">Edit</a>
                                         </td>
                                     </tr>
                                     @endforeach

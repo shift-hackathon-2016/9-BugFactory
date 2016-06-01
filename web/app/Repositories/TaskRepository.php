@@ -20,4 +20,9 @@ class TaskRepository
     {
         return Task::whereIn('location_id', $locationIds)->whereNull('finished_at');
     }
+
+    public function findByCategory($categoryId)
+    {
+        return Task::where('category_id', $categoryId)->whereNull('finished_at');
+    }
 }
