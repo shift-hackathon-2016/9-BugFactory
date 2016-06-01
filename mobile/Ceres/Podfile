@@ -10,6 +10,7 @@ def commonPods
     pod 'ObjectiveSugar'
     pod 'Masonry'
     pod 'FLAnimatedImage', '~> 1.0'
+    pod 'GoogleMaps'
 end
 
 target 'Ceres' do

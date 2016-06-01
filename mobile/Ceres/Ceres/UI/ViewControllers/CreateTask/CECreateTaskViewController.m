@@ -90,7 +90,7 @@
 
 - (void)nextScreen
 {
-    [[CEContext defaultContext].navigationService openRoute:@"task/map" params:nil navigationType:CENavigationTypePush completion:nil];
+    [[CEContext defaultContext].navigationService openRoute:@"task/create/map" params:nil navigationType:CENavigationTypePush completion:nil];
 }
 
 #pragma mark - Properties
@@ -104,6 +104,7 @@
         [_tableView registerClass:[CECreateTaskFormElementCell class] forCellReuseIdentifier:[CECreateTaskFormElementCell reuseIdentifier]];
         _tableView.rowHeight = UITableViewAutomaticDimension;
         _tableView.estimatedRowHeight = 50.0;
+        _tableView.allowsSelection = NO;
     }
     
     return _tableView;

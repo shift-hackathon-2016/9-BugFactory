@@ -18,6 +18,8 @@
     id <CENavigationProvider> provider = [CEContext defaultContext].navigationProvider;
     provider.rootViewController = self.rootViewController;
     
+    [GMSServices provideAPIKey:@"AIzaSyAL2p_LdOCKKbQNl9L6yv-NxqFxmFJdFn0"];
+    
     return YES;
 }
 

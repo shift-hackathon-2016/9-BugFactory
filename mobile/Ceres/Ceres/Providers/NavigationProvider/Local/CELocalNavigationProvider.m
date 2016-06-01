@@ -1,5 +1,7 @@
 #import "CELocalNavigationProvider.h"
 
+#import "UIViewController+CurrentViewController.h"
+
 @implementation CELocalNavigationProvider
 
 @synthesize rootViewController = _rootViewController;
@@ -19,6 +21,11 @@
 {
     _rootViewController = rootViewController;
     self.currentViewController = rootViewController;
+}
+
+- (UIViewController *)currentViewController
+{
+    return [UIViewController currentViewController];
 }
 
 @end

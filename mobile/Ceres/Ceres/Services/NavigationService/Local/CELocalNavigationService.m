@@ -5,6 +5,8 @@
 
 #import "CEHomeViewController.h"
 #import "CECreateTaskMapViewController.h"
+#import "CECreateTaskConfirmationViewController.h"
+#import "CETaskViewController.h"
 
 static NSString * const kRouteParamPrefix = @":";
 
@@ -20,7 +22,9 @@ static NSString * const kRouteParamPrefix = @":";
 {
     return @{
              @"home":[CEHomeViewController class],
-             @"task/map":[CECreateTaskMapViewController class]
+             @"task/create/map":[CECreateTaskMapViewController class],
+             @"task/create/confirm":[CECreateTaskConfirmationViewController class],
+             @"task/:id":[CETaskViewController class]
              };
 }
 

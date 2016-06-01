@@ -5,6 +5,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ObjectiveSugar/ObjectiveSugar.h>
 #import <FLAnimatedImage/FLAnimatedImage.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 #import "CEAPIClient.h"
 
@@ -25,6 +26,8 @@
 #import "CEErrorContext.h"
 #import "CEUser.h"
 #import "CENotification.h"
+#import "CETask.h"
+#import "CELocation.h"
 
 //services
 #import "CEAuthenticationService.h"

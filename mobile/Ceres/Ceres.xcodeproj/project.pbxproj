@@ -30,6 +30,13 @@
 		3826BD601CFE390D00E049D5 /* CETextFieldFormElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD5F1CFE390D00E049D5 /* CETextFieldFormElement.m */; };
 		3826BD631CFE3A3E00E049D5 /* CEDatePickerFormElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD621CFE3A3E00E049D5 /* CEDatePickerFormElement.m */; };
 		3826BD671CFE421700E049D5 /* CECreateTaskMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD661CFE421700E049D5 /* CECreateTaskMapViewController.m */; };
+		3826BD6B1CFE4EDB00E049D5 /* CECreateTaskConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD6A1CFE4EDB00E049D5 /* CECreateTaskConfirmationViewController.m */; };
+		3826BD6F1CFE647E00E049D5 /* CETaskMapPinPresentable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD6E1CFE647E00E049D5 /* CETaskMapPinPresentable.m */; };
+		3826BD731CFE657200E049D5 /* CELocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD721CFE657200E049D5 /* CELocation.m */; };
+		3826BD771CFE684500E049D5 /* CELocation+CEJSONMappable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD761CFE684500E049D5 /* CELocation+CEJSONMappable.m */; };
+		3826BD7B1CFE70BA00E049D5 /* CETaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD7A1CFE70BA00E049D5 /* CETaskViewController.m */; };
+		3826BD7F1CFE72F100E049D5 /* CETaskPresentable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD7E1CFE72F100E049D5 /* CETaskPresentable.m */; };
+		3826BD831CFE7BDF00E049D5 /* UIViewController+CurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3826BD821CFE7BDF00E049D5 /* UIViewController+CurrentViewController.m */; };
 		388808671CFD7DDD00D68AFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808661CFD7DDD00D68AFE /* main.m */; };
 		3888086A1CFD7DDD00D68AFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808691CFD7DDD00D68AFE /* AppDelegate.m */; };
 		388808751CFD7DDD00D68AFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388808731CFD7DDD00D68AFE /* LaunchScreen.storyboard */; };
@@ -115,6 +122,20 @@
 		3826BD621CFE3A3E00E049D5 /* CEDatePickerFormElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEDatePickerFormElement.m; sourceTree = "<group>"; };
 		3826BD651CFE421700E049D5 /* CECreateTaskMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CECreateTaskMapViewController.h; sourceTree = "<group>"; };
 		3826BD661CFE421700E049D5 /* CECreateTaskMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CECreateTaskMapViewController.m; sourceTree = "<group>"; };
+		3826BD691CFE4EDB00E049D5 /* CECreateTaskConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CECreateTaskConfirmationViewController.h; sourceTree = "<group>"; };
+		3826BD6A1CFE4EDB00E049D5 /* CECreateTaskConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CECreateTaskConfirmationViewController.m; sourceTree = "<group>"; };
+		3826BD6D1CFE647E00E049D5 /* CETaskMapPinPresentable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETaskMapPinPresentable.h; sourceTree = "<group>"; };
+		3826BD6E1CFE647E00E049D5 /* CETaskMapPinPresentable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETaskMapPinPresentable.m; sourceTree = "<group>"; };
+		3826BD711CFE657200E049D5 /* CELocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CELocation.h; sourceTree = "<group>"; };
+		3826BD721CFE657200E049D5 /* CELocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CELocation.m; sourceTree = "<group>"; };
+		3826BD751CFE684500E049D5 /* CELocation+CEJSONMappable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CELocation+CEJSONMappable.h"; sourceTree = "<group>"; };
+		3826BD761CFE684500E049D5 /* CELocation+CEJSONMappable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CELocation+CEJSONMappable.m"; sourceTree = "<group>"; };
+		3826BD791CFE70BA00E049D5 /* CETaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETaskViewController.h; sourceTree = "<group>"; };
+		3826BD7A1CFE70BA00E049D5 /* CETaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETaskViewController.m; sourceTree = "<group>"; };
+		3826BD7D1CFE72F100E049D5 /* CETaskPresentable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETaskPresentable.h; sourceTree = "<group>"; };
+		3826BD7E1CFE72F100E049D5 /* CETaskPresentable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETaskPresentable.m; sourceTree = "<group>"; };
+		3826BD811CFE7BDF00E049D5 /* UIViewController+CurrentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CurrentViewController.h"; sourceTree = "<group>"; };
+		3826BD821CFE7BDF00E049D5 /* UIViewController+CurrentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CurrentViewController.m"; sourceTree = "<group>"; };
 		388808621CFD7DDD00D68AFE /* Ceres.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ceres.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		388808661CFD7DDD00D68AFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		388808681CFD7DDD00D68AFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -226,6 +247,7 @@
 		3826BD0A1CFDE48000E049D5 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				3826BD6C1CFE644400E049D5 /* Presentables */,
 				3826BD0B1CFDE48B00E049D5 /* CEMapViewController.h */,
 				3826BD0C1CFDE48B00E049D5 /* CEMapViewController.m */,
 			);
@@ -456,6 +478,70 @@
 			path = CreateTaskMap;
 			sourceTree = "<group>";
 		};
+		3826BD681CFE4EC900E049D5 /* CreateTaskConfirmation */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD691CFE4EDB00E049D5 /* CECreateTaskConfirmationViewController.h */,
+				3826BD6A1CFE4EDB00E049D5 /* CECreateTaskConfirmationViewController.m */,
+			);
+			path = CreateTaskConfirmation;
+			sourceTree = "<group>";
+		};
+		3826BD6C1CFE644400E049D5 /* Presentables */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD6D1CFE647E00E049D5 /* CETaskMapPinPresentable.h */,
+				3826BD6E1CFE647E00E049D5 /* CETaskMapPinPresentable.m */,
+			);
+			path = Presentables;
+			sourceTree = "<group>";
+		};
+		3826BD701CFE656A00E049D5 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD711CFE657200E049D5 /* CELocation.h */,
+				3826BD721CFE657200E049D5 /* CELocation.m */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		3826BD741CFE683800E049D5 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD751CFE684500E049D5 /* CELocation+CEJSONMappable.h */,
+				3826BD761CFE684500E049D5 /* CELocation+CEJSONMappable.m */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		3826BD781CFE70A700E049D5 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD7C1CFE72E400E049D5 /* Presentable */,
+				3826BD791CFE70BA00E049D5 /* CETaskViewController.h */,
+				3826BD7A1CFE70BA00E049D5 /* CETaskViewController.m */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		3826BD7C1CFE72E400E049D5 /* Presentable */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD7D1CFE72F100E049D5 /* CETaskPresentable.h */,
+				3826BD7E1CFE72F100E049D5 /* CETaskPresentable.m */,
+			);
+			path = Presentable;
+			sourceTree = "<group>";
+		};
+		3826BD801CFE7BB300E049D5 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3826BD811CFE7BDF00E049D5 /* UIViewController+CurrentViewController.h */,
+				3826BD821CFE7BDF00E049D5 /* UIViewController+CurrentViewController.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 		388808591CFD7DDD00D68AFE = {
 			isa = PBXGroup;
 			children = (
@@ -509,6 +595,7 @@
 		3888087C1CFD80CD00D68AFE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3826BD741CFE683800E049D5 /* Location */,
 				3826BD571CFE369C00E049D5 /* DeviceLocation */,
 				3826BD491CFE31C300E049D5 /* Task */,
 				3826BD2C1CFE0BFB00E049D5 /* NavigationService */,
@@ -573,6 +660,7 @@
 		3888088D1CFD854500D68AFE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3826BD801CFE7BB300E049D5 /* UIViewController */,
 				388808D71CFD9D5C00D68AFE /* UIDevice */,
 				388808B41CFD8F2B00D68AFE /* NSObject */,
 				388808921CFD858600D68AFE /* NSError */,
@@ -592,6 +680,7 @@
 		388808961CFD864900D68AFE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3826BD701CFE656A00E049D5 /* Location */,
 				3826BD4F1CFE331900E049D5 /* Task */,
 				3826BD241CFE09CE00E049D5 /* Notification */,
 				388808DC1CFD9E3700D68AFE /* Device */,
@@ -740,6 +829,8 @@
 		388808CC1CFD97BA00D68AFE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3826BD781CFE70A700E049D5 /* Task */,
+				3826BD681CFE4EC900E049D5 /* CreateTaskConfirmation */,
 				3826BD641CFE420A00E049D5 /* CreateTaskMap */,
 				3826BD391CFE2C9200E049D5 /* CreateTask */,
 				3826BD0E1CFDFE5E00E049D5 /* Notifications */,
@@ -1060,8 +1151,10 @@
 				3888089F1CFD87D000D68AFE /* CEResourceErrorContext.m in Sources */,
 				388808B31CFD8F0100D68AFE /* CEContext.m in Sources */,
 				3826BD231CFE03CD00E049D5 /* CENetworkNotificationService.m in Sources */,
+				3826BD7F1CFE72F100E049D5 /* CETaskPresentable.m in Sources */,
 				388808C41CFD93CC00D68AFE /* CEUser+CEJSONMappable.m in Sources */,
 				388808AF1CFD8E7E00D68AFE /* CENetworkAuthenticationService.m in Sources */,
+				3826BD731CFE657200E049D5 /* CELocation.m in Sources */,
 				388808D61CFD9C7D00D68AFE /* CENetworkDeviceService.m in Sources */,
 				3826BD561CFE336200E049D5 /* CETask+CEJSONMappable.m in Sources */,
 				3826BD2B1CFE0A1100E049D5 /* CENotification+CEJSONMappable.m in Sources */,
@@ -1071,10 +1164,13 @@
 				388808B71CFD8F4200D68AFE /* NSObject+PropertyEnumerator.m in Sources */,
 				3826BD4E1CFE31E000E049D5 /* CENetworkTaskService.m in Sources */,
 				388808FB1CFDA87200D68AFE /* CELocalDeviceUDIDProvider.m in Sources */,
+				3826BD6F1CFE647E00E049D5 /* CETaskMapPinPresentable.m in Sources */,
 				3826BD3C1CFE2CA300E049D5 /* CECreateTaskViewController.m in Sources */,
+				3826BD7B1CFE70BA00E049D5 /* CETaskViewController.m in Sources */,
 				388808891CFD84F800D68AFE /* CEResourceRequestSerializer.m in Sources */,
 				388808A31CFD8D2E00D68AFE /* CEResourceNetworkService.m in Sources */,
 				388808E61CFDA3B300D68AFE /* CEDevice+CurrentDevice.m in Sources */,
+				3826BD6B1CFE4EDB00E049D5 /* CECreateTaskConfirmationViewController.m in Sources */,
 				3826BD481CFE307600E049D5 /* CETaskUseCase.m in Sources */,
 				388809091CFDB1A500D68AFE /* CEUserAuthenticationUseCase.m in Sources */,
 				388808BB1CFD8F7E00D68AFE /* CEObjectProperty.m in Sources */,
@@ -1086,11 +1182,13 @@
 				3826BD091CFDDF2700E049D5 /* CEHomeViewController.m in Sources */,
 				3826BD191CFDFFD800E049D5 /* CENotificationCellPresentable.m in Sources */,
 				3888086A1CFD7DDD00D68AFE /* AppDelegate.m in Sources */,
+				3826BD831CFE7BDF00E049D5 /* UIViewController+CurrentViewController.m in Sources */,
 				388808671CFD7DDD00D68AFE /* main.m in Sources */,
 				3826BD051CFDD15900E049D5 /* CELocalPushNotificationService.m in Sources */,
 				3826BD111CFDFE6800E049D5 /* CENotificationsViewController.m in Sources */,
 				3826BD1D1CFE02FA00E049D5 /* CENotificationsUseCase.m in Sources */,
 				388808DF1CFD9E3F00D68AFE /* CEDevice.m in Sources */,
+				3826BD771CFE684500E049D5 /* CELocation+CEJSONMappable.m in Sources */,
 				3826BD381CFE0E1C00E049D5 /* CELocalNavigationProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

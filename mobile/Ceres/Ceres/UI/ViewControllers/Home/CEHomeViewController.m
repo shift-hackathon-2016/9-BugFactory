@@ -18,14 +18,13 @@
 {
     self = [self init];
     
-    self.delegate = self;
-    
     return self;
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.delegate = self;
+   
     [self loadViewControllers];
 }
 

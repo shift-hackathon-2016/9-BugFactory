@@ -5,6 +5,9 @@
 #import "CEDatePickerFormElement.h"
 #import "CETextFieldFormElement.h"
 
+#import "CETaskMapPinPresentable.h"
+#import "CETaskPresentable.h"
+
 @interface CETaskUseCase ()
 
 @property (strong, nonatomic, nonnull) id <CETaskService> taskService;
@@ -24,7 +27,16 @@
     return [[[self.deviceLocationService currentDeviceLocation] flattenMap:^RACStream *(CLLocation *location) {
         return [self.taskService tasksForCoordinate:location.coordinate];
     }] map:^id(NSArray *tasks) {
-        return tasks;
+        return [tasks map:^id(CETask *task) {
+            return [CETaskMapPinPresentable presentableWithTask:task];
+        }];
+    }];
+}
+
+- (RACSignal *)presentTaskWithTaskId:(NSString *)taskId
+{
+    return [[self.taskService taskWithTaskId:taskId] map:^id(CETask *task) {
+        return [CETaskPresentable presentableWithTask:task];
     }];
 }
 
