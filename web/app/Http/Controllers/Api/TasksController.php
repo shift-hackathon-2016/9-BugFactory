@@ -29,7 +29,7 @@ class TasksController extends BaseApiController
             'user_id' => Auth::id(),
             'description' => $request->description,
             'currency_id' => 2,
-            'amount' => 0,
+            'amount' => 0.0,
             'starts_at' => $request->starts_at,
             'ends_at' => '0000-00-00 00:00:00',
 
