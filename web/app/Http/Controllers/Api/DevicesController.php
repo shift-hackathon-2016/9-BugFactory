@@ -15,7 +15,11 @@ class DevicesController extends BaseApiController
         try {
             $userId = ['user_id' => Auth::user()->id];
             $params = $request->only(['name', 'udid', 'notifications_token']);
-            $device = Device::create(array_merge($userId, $params));
+
+            $device = Device::where('udid', $request->udid)->first();
+            if (!$device) {
+                $device = Device::create(array_merge($userId, $params));
+            }
 
             $awsToken = $aws->registerMobileDevice($device);
             $device->update(['aws_notifications_token' => $awsToken]);
