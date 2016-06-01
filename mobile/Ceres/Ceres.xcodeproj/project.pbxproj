@@ -53,7 +53,6 @@
 		388808BB1CFD8F7E00D68AFE /* CEObjectProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808BA1CFD8F7E00D68AFE /* CEObjectProperty.m */; };
 		388808BF1CFD939E00D68AFE /* CEUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808BE1CFD939E00D68AFE /* CEUser.m */; };
 		388808C41CFD93CC00D68AFE /* CEUser+CEJSONMappable.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808C31CFD93CC00D68AFE /* CEUser+CEJSONMappable.m */; };
-		388808CA1CFD979900D68AFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 388808C91CFD979900D68AFE /* Assets.xcassets */; };
 		388808D01CFD97CE00D68AFE /* CERootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808CF1CFD97CE00D68AFE /* CERootViewController.m */; };
 		388808D61CFD9C7D00D68AFE /* CENetworkDeviceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808D51CFD9C7D00D68AFE /* CENetworkDeviceService.m */; };
 		388808DF1CFD9E3F00D68AFE /* CEDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 388808DE1CFD9E3F00D68AFE /* CEDevice.m */; };
@@ -65,6 +64,9 @@
 		388809041CFDAB0800D68AFE /* CEAuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388809031CFDAB0800D68AFE /* CEAuthenticationViewController.m */; };
 		388809091CFDB1A500D68AFE /* CEUserAuthenticationUseCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 388809081CFDB1A500D68AFE /* CEUserAuthenticationUseCase.m */; };
 		3888090F1CFDBC7B00D68AFE /* login.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3888090E1CFDBC7B00D68AFE /* login.gif */; };
+		38B1AF201CFE98A600F42C38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B1AF1F1CFE98A600F42C38 /* Assets.xcassets */; };
+		38B1AF221CFEA06600F42C38 /* notifications.gif in Resources */ = {isa = PBXBuildFile; fileRef = 38B1AF211CFEA06600F42C38 /* notifications.gif */; };
+		38B1AF241CFEA63900F42C38 /* task.gif in Resources */ = {isa = PBXBuildFile; fileRef = 38B1AF231CFEA63900F42C38 /* task.gif */; };
 		77A58D38AC2A139890930E51 /* libPods-Ceres.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4354B7A8CCB9F75BA7F221B /* libPods-Ceres.a */; };
 /* End PBXBuildFile section */
 
@@ -174,7 +176,6 @@
 		388808C21CFD93CC00D68AFE /* CEUser+CEJSONMappable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CEUser+CEJSONMappable.h"; sourceTree = "<group>"; };
 		388808C31CFD93CC00D68AFE /* CEUser+CEJSONMappable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CEUser+CEJSONMappable.m"; sourceTree = "<group>"; };
 		388808C61CFD93DB00D68AFE /* CEJSONMappable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEJSONMappable.h; sourceTree = "<group>"; };
-		388808C91CFD979900D68AFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		388808CE1CFD97CE00D68AFE /* CERootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CERootViewController.h; sourceTree = "<group>"; };
 		388808CF1CFD97CE00D68AFE /* CERootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CERootViewController.m; sourceTree = "<group>"; };
 		388808D21CFD9C0400D68AFE /* CEDeviceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEDeviceService.h; sourceTree = "<group>"; };
@@ -200,6 +201,9 @@
 		388809071CFDB1A500D68AFE /* CEUserAuthenticationUseCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEUserAuthenticationUseCase.h; sourceTree = "<group>"; };
 		388809081CFDB1A500D68AFE /* CEUserAuthenticationUseCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEUserAuthenticationUseCase.m; sourceTree = "<group>"; };
 		3888090E1CFDBC7B00D68AFE /* login.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = login.gif; sourceTree = "<group>"; };
+		38B1AF1F1CFE98A600F42C38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38B1AF211CFEA06600F42C38 /* notifications.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = notifications.gif; sourceTree = "<group>"; };
+		38B1AF231CFEA63900F42C38 /* task.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = task.gif; sourceTree = "<group>"; };
 		8256A205A9242BD6CB3A49A7 /* Pods-Ceres.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ceres.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ceres/Pods-Ceres.release.xcconfig"; sourceTree = "<group>"; };
 		B9BA6EB06461DF84068F3F11 /* Pods-Ceres.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ceres.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ceres/Pods-Ceres.debug.xcconfig"; sourceTree = "<group>"; };
 		F4354B7A8CCB9F75BA7F221B /* libPods-Ceres.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ceres.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -812,8 +816,8 @@
 		388808C81CFD979900D68AFE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				38B1AF1F1CFE98A600F42C38 /* Assets.xcassets */,
 				3888090D1CFDBC6900D68AFE /* Gifs */,
-				388808C91CFD979900D68AFE /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -991,6 +995,8 @@
 		3888090D1CFDBC6900D68AFE /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
+				38B1AF231CFEA63900F42C38 /* task.gif */,
+				38B1AF211CFEA06600F42C38 /* notifications.gif */,
 				3888090E1CFDBC7B00D68AFE /* login.gif */,
 			);
 			path = Gifs;
@@ -1074,9 +1080,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				388808CA1CFD979900D68AFE /* Assets.xcassets in Resources */,
 				3888090F1CFDBC7B00D68AFE /* login.gif in Resources */,
+				38B1AF201CFE98A600F42C38 /* Assets.xcassets in Resources */,
+				38B1AF241CFEA63900F42C38 /* task.gif in Resources */,
 				388808751CFD7DDD00D68AFE /* LaunchScreen.storyboard in Resources */,
+				38B1AF221CFEA06600F42C38 /* notifications.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

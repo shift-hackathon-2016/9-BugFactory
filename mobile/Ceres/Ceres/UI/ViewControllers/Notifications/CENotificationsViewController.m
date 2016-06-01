@@ -6,6 +6,8 @@
 
 @interface CENotificationsViewController () <UITableViewDelegate, UITableViewDataSource>
 
+@property (strong, nonatomic, nonnull) FLAnimatedImageView *backgroundImageView;
+@property (strong, nonatomic, nonnull) UIVisualEffectView *blurView;
 @property (strong, nonatomic, nonnull) UITableView *tableView;
 
 @property (strong, nonatomic, nonnull) NSArray *cellPresentables;
@@ -20,8 +22,11 @@
 {
     self = [super init];
     
-    
-    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
+    imageView.image = [UIImage imageNamed:@"logo"];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.navigationItem.titleView = imageView;
+
     return self;
 }
 
@@ -41,6 +46,8 @@
 
 - (void)loadSubviews
 {
+    [self.view addSubview:self.backgroundImageView];
+    [self.view addSubview:self.blurView];
     [self.view addSubview:self.tableView];
     
     [self.view setNeedsUpdateConstraints];
@@ -49,6 +56,14 @@
 
 - (void)updateViewConstraints
 {
+    [self.backgroundImageView remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.left.right.equalTo(self.view);
+    }];
+    
+    [self.blurView remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.bottom.right.equalTo(self.view);
+    }];
+    
     [self.tableView remakeConstraints:^(MASConstraintMaker *make) {
         make.top.left.bottom.right.equalTo(self.view);
     }];
@@ -103,6 +118,31 @@
 
 #pragma mark - Properties
 
+- (FLAnimatedImageView *)backgroundImageView
+{
+    if (!_backgroundImageView) {
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"notifications" ofType:@"gif"];
+        NSData *data = [NSData dataWithContentsOfFile:filePath];
+        
+        FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:data];
+        _backgroundImageView = [FLAnimatedImageView new];
+        _backgroundImageView.animatedImage = image;
+    }
+    
+    return _backgroundImageView;
+}
+
+- (UIVisualEffectView *)blurView
+{
+    if (!_blurView) {
+        UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        _blurView = [[UIVisualEffectView alloc] initWithEffect:blur];
+//        _blurView.alpha = 0.9;
+    }
+    
+    return _blurView;
+}
+
 - (UITableView *)tableView
 {
     if (!_tableView) {
@@ -112,6 +152,8 @@
         _tableView.rowHeight = UITableViewAutomaticDimension;
         _tableView.estimatedRowHeight = 50.0;
         [_tableView registerClass:[CENotificationCell class] forCellReuseIdentifier:[CENotificationCell reuseIdentifier]];
+        _tableView.backgroundColor = [UIColor clearColor];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     
     return _tableView;

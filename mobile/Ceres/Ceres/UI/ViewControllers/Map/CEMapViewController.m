@@ -18,6 +18,10 @@
 {
     self = [super init];
     
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
+    imageView.image = [UIImage imageNamed:@"logo"];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.navigationItem.titleView = imageView;
     
     return self;
 }
@@ -114,4 +118,5 @@
     
     return _taskUseCase;
 }
+
 @end

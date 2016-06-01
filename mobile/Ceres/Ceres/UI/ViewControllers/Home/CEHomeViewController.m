@@ -43,8 +43,8 @@
 {
     NSArray *viewControllers = @[
              [[UINavigationController alloc] initWithRootViewController:self.mapViewController],
-             [[UINavigationController alloc] initWithRootViewController:self.notificationsViewController],
-             [[UINavigationController alloc] initWithRootViewController:self.createTaskViewController]
+             [[UINavigationController alloc] initWithRootViewController:self.createTaskViewController],
+             [[UINavigationController alloc] initWithRootViewController:self.notificationsViewController]
              ];
     
     [viewControllers each:^(__kindof UIViewController *viewController) {
@@ -60,6 +60,9 @@
 {
     if (!_mapViewController) {
         _mapViewController = [CEMapViewController new];
+        UIImage *image = [[UIImage imageNamed:@"wagon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"Find job" image:image selectedImage:image];
+        _mapViewController.tabBarItem = item;
     }
     
     return _mapViewController;
@@ -69,7 +72,10 @@
 {
     if (!_notificationsViewController) {
         _notificationsViewController = [CENotificationsViewController new];
-        
+        UIImage *image = [[UIImage imageNamed:@"notifications"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"Notifications" image:image selectedImage:image];
+        _notificationsViewController.tabBarItem = item;
+
     }
     
     return _notificationsViewController;
@@ -79,6 +85,10 @@
 {
     if (!_createTaskViewController) {
         _createTaskViewController = [CECreateTaskViewController new];
+        UIImage *image = [[UIImage imageNamed:@"add"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"Create" image:image selectedImage:image];
+        _createTaskViewController.tabBarItem = item;
+
     }
     
     return _createTaskViewController;
