@@ -40,4 +40,21 @@
     }];
 }
 
+- (RACSignal *)createTask:(CETask *)task
+{
+    NSDictionary *parameters = @{
+                                 @"description": task.descriptionObject,
+                                 @"location": @{
+                                         @"latitude":task.location.latitude,
+                                         @"longitude":task.location.longitude
+                                         },
+                                 @"starts_at":@(task.startsAt.timeIntervalSince1970),
+                                 @"ends_at":@(task.endsAt.timeIntervalSince1970)
+                                 };
+    
+    return [[self.APIClient POST:@"tasks" parameters:parameters] map:^id(id value) {
+        return nil;
+    }];
+}
+
 @end

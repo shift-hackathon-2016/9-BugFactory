@@ -47,7 +47,14 @@
     }];
 }
 
-+ (CETask *)submitTask
+- (RACSignal *)createTask
+{
+    return [[self.taskService createTask:[self submitableTask]] map:^id(id value) {
+        return nil;
+    }];
+}
+
+- (CETask *)submitableTask
 {
     static dispatch_once_t onceToken;
     static id instance;
@@ -87,7 +94,7 @@
     endDatePresentable.title = NSLocalizedString(@"End date", nil);
     endDatePresentable.formElementType = CEFormElementTypeEndDate;
     
-    return @[descriptionPresentable, startDatePresentable, endDatePresentable];
+    return @[descriptionPresentable, startDatePresentable];
 }
 
 #pragma mark - Properties

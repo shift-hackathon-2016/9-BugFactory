@@ -26,7 +26,8 @@
     imageView.image = [UIImage imageNamed:@"logo"];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.navigationItem.titleView = imageView;
-
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     return self;
 }
 

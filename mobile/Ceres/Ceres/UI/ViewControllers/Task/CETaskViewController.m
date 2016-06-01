@@ -225,6 +225,7 @@
 {
     if (!_descriptionTextView) {
         _descriptionTextView = [UITextView new];
+        _descriptionTextView.backgroundColor = [UIColor clearColor];
     }
     
     return _descriptionTextView;

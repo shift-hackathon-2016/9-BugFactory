@@ -1,9 +1,13 @@
 #import "CECreateTaskMapViewController.h"
 
+#import "CETaskUseCase.h"
+
 @interface CECreateTaskMapViewController () <GMSMapViewDelegate>
 
 @property (strong, nonatomic, nonnull) GMSMapView *mapView;
 @property (strong, nonatomic, nonnull) UIBarButtonItem *nextButton;
+@property (strong, nonatomic, nonnull) GMSMarker *marker;
+@property (strong, nonatomic, nonnull) CETaskUseCase *taskUseCase;
 
 @end
 
@@ -47,9 +51,9 @@
 {
     [self.mapView clear];
     
-    GMSMarker *marker = [GMSMarker markerWithPosition:coordinate];
-    marker.map = self.mapView;
-    marker.draggable = YES;
+    self.marker = [GMSMarker markerWithPosition:coordinate];
+    self.marker.map = self.mapView;
+    self.marker.draggable = YES;
     
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:coordinate.latitude longitude:coordinate.longitude zoom:17.0];
     [self.mapView animateToCameraPosition:camera];
@@ -59,6 +63,14 @@
 
 - (void)nextScreen
 {
+    CETask *task = [self.taskUseCase submitableTask];
+    
+    CELocation *location = [CELocation new];
+    location.latitude = @(self.marker.position.latitude);
+    location.longitude = @(self.marker.position.longitude);
+    
+    task.location = location;
+    
     [[CEContext defaultContext].navigationService openRoute:@"task/create/confirm" params:nil navigationType:CENavigationTypeModal completion:nil];
 }
 
@@ -81,6 +93,15 @@
     }
     
     return _nextButton;
+}
+
+- (CETaskUseCase *)taskUseCase
+{
+    if (!_taskUseCase) {
+        _taskUseCase = [CETaskUseCase new];
+    }
+    
+    return _taskUseCase;
 }
 
 @end

@@ -47,6 +47,7 @@
 {
     if (!_textView) {
         _textView = [UITextView new];
+        _textView.backgroundColor = [UIColor clearColor];
     }
     
     return _textView;

@@ -1,11 +1,14 @@
 #import "CECreateTaskConfirmationViewController.h"
 
+#import "CETaskUseCase.h"
+
 @interface CECreateTaskConfirmationViewController ()
 
 @property (strong, nonatomic, nonnull) UIVisualEffectView *blurView;
 @property (strong, nonatomic, nonnull) UIView *containerView;
 @property (strong, nonatomic, nonnull) UIButton *confirmButton;
 @property (strong, nonatomic, nonnull) UIButton *cancelButton;
+@property (strong, nonatomic, nonnull) CETaskUseCase *taskUseCase;
 
 @end
 
@@ -66,9 +69,13 @@
 - (void)startObserving
 {
     @weakify(self);
-    [[self.cancelButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+    [[[self.cancelButton rac_signalForControlEvents:UIControlEventTouchUpInside] flattenMap:^RACStream *(id value) {
+        return [self.taskUseCase createTask];
+    }] subscribeNext:^(id x) {
         @strongify(self);
         [self dismissViewControllerAnimated:YES completion:nil];
+    } error:^(NSError *error) {
+        
     }];
 }
 
@@ -112,6 +119,15 @@
     }
     
     return _cancelButton;
+}
+
+- (CETaskUseCase *)taskUseCase
+{
+    if (!_taskUseCase) {
+        _taskUseCase = [CETaskUseCase new];
+    }
+    
+    return _taskUseCase;
 }
 
 @end
