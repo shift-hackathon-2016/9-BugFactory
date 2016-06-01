@@ -22,7 +22,7 @@ class AuthController extends BaseApiController
         $credentials = $request->only(["email", "password"]);
 
         if (Auth::attempt($credentials, true)) {
-            return $this->responseOk();
+            return Auth::user();
         }
 
         return $this->responseUnauthorized();

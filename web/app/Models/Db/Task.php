@@ -14,6 +14,7 @@ class Task extends Model
         'updated_at',
         'ends_at',
         'starts_at',
+        'finished_at',
     ];
 
     protected $fillable = [
@@ -24,7 +25,8 @@ class Task extends Model
         'currency_id',
         'amount',
         'ends_at',
-        'starts_at'
+        'starts_at',
+        'finished_at',
     ];
 
     public function setAmountAttribute($value)

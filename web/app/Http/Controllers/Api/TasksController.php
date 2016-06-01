@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Db\Task;
+use App\Models\Db\UserTransaction;
 use App\Repositories\LocationPointRepository;
 use App\Repositories\LocationRepository;
 use App\Repositories\TaskRepository;
@@ -55,6 +56,14 @@ class TasksController extends BaseApiController
         return $this->responseOk();
     }
 
+    public function finish(Request $request, TaskUseCase $useCase)
+    {
+        $useCase->finish($request->id);
+
+        return $this->responseOk();
+    }
+
+
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -81,6 +90,6 @@ class TasksController extends BaseApiController
             return $item->location_id;
         })->toArray();
 
-        return $taskRepository->findByLocationIds($locationIds);
+        return $taskRepository->findByLocationIds($locationIds)->with('locations')->get();
     }
 }
