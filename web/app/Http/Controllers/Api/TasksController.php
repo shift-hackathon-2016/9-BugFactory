@@ -45,13 +45,14 @@ class TasksController extends BaseApiController
         $location = Location::create([
             'latitude' => $locationRequestData['latitude'],
             'longitude' => $locationRequestData['latitude'],
-            'city' => $locationRequestData['longitude'],
-            'country' => $locationRequestData['country'],
-            'street' => $locationRequestData['street'],
-            'zip' => $locationRequestData['zip'],
+            'city' => '',
+            'country' => '',
+            'street' => '',
+            'zip' => '',
          ]);
 
         $data['location_id'] = $location->id;
+        $data['user_id'] = Auth::id();
 
         Task::create($data);
 
