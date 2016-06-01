@@ -48,9 +48,6 @@
                         <input type="password" class="form-control" placeholder="Password" name="password" required="" />
                     </div>
                     <div>
-                        <p class="error">Invalid credentials</p>
-                    </div>
-                    <div>
                         <button type="submit" class="btn btn-default submit">Log in</button>
                         {{--<a class="reset_pass" href="#">Lost your password?</a>--}}
                         {{-- @todo-mario: do we need forgot pw? --}}

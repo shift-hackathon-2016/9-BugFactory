@@ -31,11 +31,11 @@ class TasksController extends BaseApiController
         }
 
         $data = [
-            'category_id' => $request->category_id,
+            'category_id' => 4,
             'user_id' => Auth::id(),
             'description' => $request->description,
-            'currency_id' => $request->currency_id,
-            'amount' => $request->amount,
+            'currency_id' => 2,
+            'amount' => 0,
             'starts_at' => $request->starts_at,
             'ends_at' => $request->ends_at,
 
@@ -76,10 +76,10 @@ class TasksController extends BaseApiController
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'category_id' => 'required|int',
+            //'category_id' => 'required|int',
             'description' => 'required',
-            'currency_id' => 'required',
-            'amount' => 'required',
+            //'currency_id' => 'required',
+            //'amount' => 'required',
             'starts_at' => 'required|int',
             'ends_at' => 'required|int',
         ]);
