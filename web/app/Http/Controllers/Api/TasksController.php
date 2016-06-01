@@ -95,6 +95,6 @@ class TasksController extends BaseApiController
             return $item->location_id;
         })->toArray();
 
-        return $taskRepository->findByLocationIds($locationIds)->with('locations')->get();
+        return $taskRepository->findByLocationIds($locationIds)->with('location')->get();
     }
 }
