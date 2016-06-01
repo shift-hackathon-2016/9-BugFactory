@@ -36,6 +36,15 @@
     [super updateConstraints];
 }
 
+- (RACSignal *)valueChanged
+{
+    @weakify(self);
+    return [[self.datePicker rac_signalForControlEvents:UIControlEventValueChanged] map:^id(id value) {
+        @strongify(self);
+        return self.datePicker.date;
+    }];
+}
+
 #pragma mark - Properties
 
 - (UIDatePicker *)datePicker

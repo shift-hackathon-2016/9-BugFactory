@@ -9,6 +9,7 @@
 @property (strong, nonatomic, nonnull) UIVisualEffectView *blurView;
 @property (strong, nonatomic, nonnull) UILabel *descriptionLabel;
 @property (strong, nonatomic, nonnull) UIButton *closeButton;
+@property (strong, nonatomic, nonnull) UIButton *applyButton;
 
 @property (strong, nonatomic, nonnull) CETaskUseCase *taskUseCase;
 
@@ -22,7 +23,7 @@
 {
     self = [self init];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    self.hidesBottomBarWhenPushed = YES;
     
     self.taskId = params[@"id"];
     
@@ -38,6 +39,7 @@
     [self.view addSubview:self.blurView];
     [self.view addSubview:self.descriptionLabel];
     [self.view addSubview:self.closeButton];
+    [self.view addSubview:self.applyButton];
     
     [self.view setNeedsUpdateConstraints];
     [self.view updateConstraintsIfNeeded];
@@ -58,6 +60,12 @@
         make.height.equalTo(@50);
     }];
     
+    [self.applyButton remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.bottom.equalTo(self.closeButton.top);
+        make.height.equalTo(@50);
+    }];
+    
     [super updateViewConstraints];
 }
 
@@ -74,6 +82,17 @@
     [[self.closeButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
         [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    
+    [[[self.applyButton rac_signalForControlEvents:UIControlEventTouchUpInside] flattenMap:^RACStream *(id value) {
+        @strongify(self);
+        return [self.taskUseCase applyToTaskWithTaskId:self.taskId];
+    }] subscribeNext:^(id x) {
+        @strongify(self);
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } error:^(NSError *error) {
+        
     }];
 }
 
@@ -114,9 +133,22 @@
         _closeButton = [UIButton buttonWithType:UIButtonTypeSystem];
         [_closeButton setTitle:NSLocalizedString(@"CLOSE", nil) forState:UIControlStateNormal];
         _closeButton.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.8];
+        _closeButton.tintColor = [UIColor whiteColor];
     }
     
     return _closeButton;
+}
+
+- (UIButton *)applyButton
+{
+    if (!_applyButton) {
+        _applyButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [_applyButton setTitle:NSLocalizedString(@"APPLY", nil) forState:UIControlStateNormal];
+        _applyButton.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:0.4];
+        _applyButton.tintColor = [UIColor whiteColor];
+    }
+    
+    return _applyButton;
 }
 
 @end

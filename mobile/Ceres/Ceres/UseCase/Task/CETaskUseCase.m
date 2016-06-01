@@ -40,22 +40,53 @@
     }];
 }
 
+- (RACSignal *)applyToTaskWithTaskId:(NSString *)taskId
+{
+    return [[self.taskService applyToTaskWithTaskId:taskId] map:^id(id value) {
+        return nil;
+    }];
+}
+
++ (CETask *)submitTask
+{
+    static dispatch_once_t onceToken;
+    static id instance;
+    dispatch_once(&onceToken, ^{
+        instance = [CETask new];
+    });
+    
+    return instance;
+}
+
 #pragma mark - Private
 
 - (NSArray *)presentables
 {
     CECreateTaskFormElementCellPresentable *descriptionPresentable = [CECreateTaskFormElementCellPresentable new];
-    descriptionPresentable.formElementView = [CETextFieldFormElement new];
+    CETextFieldFormElement *descriptionView = [CETextFieldFormElement new];
+    descriptionPresentable.formElementView = descriptionView;
+    RAC(descriptionPresentable, formValue) = [[descriptionView valueChanged] takeUntil:descriptionPresentable.rac_willDeallocSignal];
+    
     descriptionPresentable.title = NSLocalizedString(@"Description", nil);
+    descriptionPresentable.formElementType = CEFormElementTypeDescription;
     
     CECreateTaskFormElementCellPresentable *startDatePresentable = [CECreateTaskFormElementCellPresentable new];
-    startDatePresentable.formElementView = [CEDatePickerFormElement new];
+    CEDatePickerFormElement *startDateView = [CEDatePickerFormElement new];
+    startDatePresentable.formElementView = startDateView;
+    RAC(startDatePresentable, formValue) = [[startDateView valueChanged] takeUntil:startDatePresentable.rac_willDeallocSignal];
+
     startDatePresentable.title = NSLocalizedString(@"Start date", nil);
+    startDatePresentable.formElementType = CEFormElementTypeStartDate;
     
     CECreateTaskFormElementCellPresentable *endDatePresentable = [CECreateTaskFormElementCellPresentable new];
-    endDatePresentable.formElementView = [CEDatePickerFormElement new];
+    
+    CEDatePickerFormElement *endDateView = [CEDatePickerFormElement new];
+    endDatePresentable.formElementView = endDateView;
+    RAC(endDatePresentable, formValue) = [[endDateView valueChanged] takeUntil:endDatePresentable.rac_willDeallocSignal];
+    
     endDatePresentable.title = NSLocalizedString(@"End date", nil);
-
+    endDatePresentable.formElementType = CEFormElementTypeEndDate;
+    
     return @[descriptionPresentable, startDatePresentable, endDatePresentable];
 }
 

@@ -2,4 +2,6 @@
 
 @interface CETextFieldFormElement : UIView
 
+- (RACSignal *)valueChanged;
+
 @end

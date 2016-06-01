@@ -67,7 +67,7 @@
     }];
 }
 
-#pragma mark - UITableViewDelegate
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -81,14 +81,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[CENotificationCell reuseIdentifier] forIndexPath:indexPath];
+    CENotificationCell *cell = [tableView dequeueReusableCellWithIdentifier:[CENotificationCell reuseIdentifier] forIndexPath:indexPath];
     
+    CENotificationCellPresentable *presentable = self.cellPresentables[indexPath.row];
     
+    [cell configureWithPresentable:presentable];
     
     return cell;
 }
 
-#pragma mark - UITableViewDataSource
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CENotificationCellPresentable *presentable = self.cellPresentables[indexPath.row];
+
+    NSString *route = [NSString stringWithFormat:@"task/%@", presentable.objectId];
+    
+    [[CEContext defaultContext].navigationService openRoute:route params:nil navigationType:CENavigationTypeModal completion:nil];
+}
 
 #pragma mark - Properties
 
@@ -98,6 +109,8 @@
         _tableView = [UITableView new];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.rowHeight = UITableViewAutomaticDimension;
+        _tableView.estimatedRowHeight = 50.0;
         [_tableView registerClass:[CENotificationCell class] forCellReuseIdentifier:[CENotificationCell reuseIdentifier]];
     }
     

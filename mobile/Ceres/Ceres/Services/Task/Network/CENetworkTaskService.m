@@ -30,4 +30,14 @@
     }];
 }
 
+- (RACSignal *)applyToTaskWithTaskId:(NSString *)taskId
+{
+    NSDictionary *parameters = @{
+                                 @"task_id": taskId
+                                 };
+    return [[self.APIClient POST:@"task-applications" parameters:parameters] map:^id(id value) {
+        return nil;
+    }];
+}
+
 @end

@@ -36,6 +36,11 @@
     [super updateConstraints];
 }
 
+- (RACSignal *)valueChanged
+{
+    return [self.textView rac_textSignal];
+}
+
 #pragma mark - Properties
 
 - (UITextView *)textView

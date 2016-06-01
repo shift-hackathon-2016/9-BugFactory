@@ -67,7 +67,7 @@
     CETaskMapPinPresentable *presentable = marker.userData;
     
     NSString *route = [NSString stringWithFormat:@"task/%@", presentable.taskId];
-    [[CEContext defaultContext].navigationService openRoute:route params:@{} navigationType:CENavigationTypePush completion:nil];
+    [[CEContext defaultContext].navigationService openRoute:route params:@{} navigationType:CENavigationTypeModal completion:nil];
     
     return YES;
 }

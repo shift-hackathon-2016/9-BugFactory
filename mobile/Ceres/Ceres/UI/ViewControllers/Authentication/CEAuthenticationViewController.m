@@ -59,7 +59,7 @@
     }];
     
     [self.containerView remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view);
+        make.top.equalTo(self.view).with.offset(100.0);
         make.left.right.equalTo(self.view).with.insets(UIEdgeInsetsMake(0, 20, 0, 20));
     }];
     

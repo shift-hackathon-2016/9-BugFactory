@@ -7,6 +7,7 @@
     CENotification *object = [self new];
     
     object.identifier = JSON[@"id"];
+    object.objectId = JSON[@"object_id"];
     
     return object;
 }

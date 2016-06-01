@@ -2,4 +2,6 @@
 
 @interface CEDatePickerFormElement : UIView
 
+- (RACSignal *)valueChanged;
+
 @end

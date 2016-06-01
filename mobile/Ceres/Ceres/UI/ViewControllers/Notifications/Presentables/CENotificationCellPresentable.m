@@ -6,6 +6,9 @@
 {
     CENotificationCellPresentable *presentable = [CENotificationCellPresentable new];
     
+    presentable.title = @"New lead";
+    presentable.descriptionObject = @"Description";
+    presentable.objectId = notification.objectId;
     
     return presentable;
 }
