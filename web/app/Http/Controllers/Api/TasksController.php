@@ -37,7 +37,7 @@ class TasksController extends BaseApiController
             'currency_id' => 2,
             'amount' => 0,
             'starts_at' => $request->starts_at,
-            'ends_at' => $request->ends_at,
+            'ends_at' => '0000-00-00 00:00:00',
 
         ];
 
@@ -82,7 +82,7 @@ class TasksController extends BaseApiController
             //'currency_id' => 'required',
             //'amount' => 'required',
             'starts_at' => 'required|int',
-            'ends_at' => 'required|int',
+//            'ends_at' => 'required|int',
         ]);
     }
 
